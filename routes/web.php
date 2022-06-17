@@ -17,6 +17,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/val', function () {
+    return view('val.home');
+});
+
+Route::post('/val', function () {
+
+    request()->validate([
+        'email' => ['required','Email', 'max:50'],
+        'password' => ['required','confirmed', 'min:8', 'max:12'],
+        'name' => ['required','max:20'],
+    ]);
+
+    $utilisateur = \App\Models\Utilisateur::create([
+        'email'=>request('email'),
+        'password'=>request('password'),
+        'password_confirmation'=>request('password_confirmation'),
+        'name'=>request('name'),
+    ]);
+
+    return "bonjour";
+});
+
+
 Route::get('/hello', function () {
     return view('hello');
 });
