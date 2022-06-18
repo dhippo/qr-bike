@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/val', function () {
-    return view('val.home');
+Route::get('/signup', function () {
+    return view('val.signup');
 });
 
-Route::post('/val', function () {
+Route::post('/signup', function () {
 
     request()->validate([
         'email' => ['required','Email', 'max:50'],
@@ -36,7 +36,18 @@ Route::post('/val', function () {
         'name'=>request('name'),
     ]);
 
-    return "bonjour";
+    return view('val.signin');
+
+});
+
+Route::post('/signup', function () {
+
+    return view('val.home');
+
+});
+
+Route::get('/signin', function () {
+    return view('val.signin');
 });
 
 

@@ -55,7 +55,7 @@
                     </div>
 
                     <div class="mt-6">
-                        <form class="space-y-6" action="/val" method="post">
+                        <form class="space-y-6" action="/signin" method="post">
                             {{ csrf_field() }}
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700"> Name </label>
@@ -157,8 +157,9 @@
 
                             </div>
 
-                            <div>
-                                <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign up</button>
+                            <div class="flex">
+                                <button type="submit" class="w-5/12 mr-auto  justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
+                                <a  href="/signup" class="w-5/12 text-center justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign up</a>
                             </div>
                         </form>
                     </div>
@@ -166,7 +167,7 @@
             </div>
         </div>
         <div class="hidden lg:block relative w-0 flex-1">
-            <img class="absolute inset-0 w-full object-cover backimg" src="{{URL::asset('/images/bikebg1.jpg')}}" alt="">
+            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/bikebg1.jpg')}}" alt="">
         </div>
     </div>
 
