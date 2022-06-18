@@ -29,7 +29,7 @@ Route::post('/signup', function () {
         'name' => ['required','max:20'],
     ]);
 
-    $utilisateur = \App\Models\Utilisateur::create([
+    $utilisateur = \App\Models\Utisateur::create([
         'email'=>request('email'),
         'password'=>request('password'),
         'password_confirmation'=>request('password_confirmation'),
