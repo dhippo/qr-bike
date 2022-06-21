@@ -12,7 +12,7 @@
         <title>qr-bike</title>
 
     </head>
-    <body style="overflow: hidden">
+    <body>
 
         @yield('content')
 

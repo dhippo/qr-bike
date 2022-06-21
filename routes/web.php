@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignupController;
+use App\Http\Controllers\SigninController;
+use App\Http\Controllers\MyaccountController;
+use App\Http\Controllers\HealthinfoController1;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,44 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/signup', function () {
-    return view('val.signup');
-});
-
-Route::post('/signup', function () {
-
-    request()->validate([
-        'email' => ['required','Email', 'max:50'],
-        'password' => ['required','confirmed', 'min:8', 'max:12'],
-        'name' => ['required','max:20'],
-    ]);
-
-    $utilisateur = \App\Models\Utilisateur::create([
-        'email'=>request('email'),
-        'password'=>request('password'),
-        'password_confirmation'=>request('password_confirmation'),
-        'name'=>request('name'),
-    ]);
-
-    return view('val.signin');
-
-});
-
-Route::post('/signup', function () {
-
-    return view('val.home');
-
-});
-
-Route::get('/signin', function () {
-    return view('val.signin');
-});
 
 
-Route::get('/hello', function () {
-    return view('hello');
-});
+Route::get('/signup', [SignupController::class, 'formulaire']);
+
+Route::post('/signup', [SignupController::class, 'traitement']);
+
+Route::get('/signin', [SigninController::class, 'formulaire']);
+
+Route::post('/signin', [SigninController::class, 'traitement']);
+
+Route::get('/myaccount', [MyaccountController::class, 'traitement']);
+
+Route::view('/', 'welcome');
+
+Route::get('/edit-healthinfo', [HealthinfoController1::class, 'formulaire']);
+
+Route::post('/edit-healthinfo', [HealthinfoController1::class, 'traitement']);
+
+
+
