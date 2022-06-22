@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\infosante;
-use App\Models\Utilisateur;
+use App\Models\User;
 
-class HealthinfoController1 extends Controller
+class HealthinfoController extends Controller
 {
     public function formulaire()
     {
@@ -27,8 +26,7 @@ class HealthinfoController1 extends Controller
             'photo' => ['max:100'],
         ]);
 
-        $infosante = infosante::create([
-            'id'=>auth()->user()->id,
+        auth()->user()->update([
             'firstname'=>request('firstname'),
             'lastname'=>request('lastname'),
             'age'=>request('age'),

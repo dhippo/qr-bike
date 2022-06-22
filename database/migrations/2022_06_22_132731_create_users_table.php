@@ -15,12 +15,20 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->string('password_confirmation');
+            $table->string('lastname')->nullable();
+            $table->string('firstname')->nullable();
+            $table->string('age')->nullable();
+            $table->string('blood')->nullable();
+            $table->string('phoneContact')->nullable();
+            $table->string('nameContact')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('size')->nullable();
+            $table->string('photo')->nullable();
+            $table->string('doctor')->nullable();
+            $table->string('other')->nullable();
         });
     }
 
@@ -34,5 +42,3 @@ return new class extends Migration
         Schema::dropIfExists('users');
     }
 };
-
-

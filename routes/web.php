@@ -1,10 +1,10 @@
 <?php
 
+use App\Http\Controllers\HealthinfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\MyaccountController;
-use App\Http\Controllers\HealthinfoController1;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,9 +31,9 @@ Route::get('/myaccount', [MyaccountController::class, 'traitement']);
 
 Route::view('/', 'welcome');
 
-Route::get('/edit-healthinfo', [HealthinfoController1::class, 'formulaire']);
+Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
 
-Route::post('/edit-healthinfo', [HealthinfoController1::class, 'traitement']);
+Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 
 

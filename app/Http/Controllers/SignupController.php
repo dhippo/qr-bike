@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Utilisateur;
+use App\Models\User;
 
 class SignupController extends Controller
 {
@@ -16,14 +16,14 @@ class SignupController extends Controller
         request()->validate([
             'email' => ['required','Email', 'max:50'],
             'password' => ['required','confirmed', 'min:8', 'max:12'],
-            'name' => ['required','max:20'],
+
         ]);
 
-        $utilisateur = Utilisateur::create([
+        $user = User::create([
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
             'password_confirmation'=>bcrypt(request('password_confirmation')),
-            'name'=>request('name'),
+
         ]);
 
         return view('val.signin');
