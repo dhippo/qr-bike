@@ -12,7 +12,27 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('layouts.home');
+});
+
+Route::get('/a', function () {
+    return view('tmp');
+});
+
+Route::get('/welcome', function () {
+    return view('LaravelWelcome');
+});
+
+Route::get('/wel', function () {
+    return view('master');
+});
+
+Route::get('/login', [\App\Http\Controllers\RegisterController::class,'index']);
+Route::post('/login', [\App\Http\Controllers\RegisterController::class,'store'])->name('register');
+
+
+
+Route::get('/about', function () {
+    return view('informationAbout');
 });
