@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignupController;
+use App\Http\Controllers\SigninController;
+use App\Http\Controllers\MyaccountController;
+use App\Http\Controllers\HealthinfoController1;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +40,24 @@ Route::post('/login', [\App\Http\Controllers\RegisterController::class,'store'])
 Route::get('/about', function () {
     return view('informationAbout');
 });
+
+
+
+Route::get('/signup', [SignupController::class, 'formulaire']);
+
+Route::post('/signup', [SignupController::class, 'traitement']);
+
+Route::get('/signin', [SigninController::class, 'formulaire']);
+
+Route::post('/signin', [SigninController::class, 'traitement']);
+
+Route::get('/myaccount', [MyaccountController::class, 'traitement']);
+
+Route::view('/', 'welcome');
+
+Route::get('/edit-healthinfo', [HealthinfoController1::class, 'formulaire']);
+
+Route::post('/edit-healthinfo', [HealthinfoController1::class, 'traitement']);
+
+
+
