@@ -11,7 +11,18 @@ class HealthinfoController extends Controller
         return view('val.edit-healthinfo');
     }
 
+
+
     public function traitement() {
+
+
+
+        if(auth()->guest()) {
+            return redirect('/signin')->withErrors([
+                'password' => 'Vous devez vous connecté',
+            ]);
+        };
+
         request()->validate([
             'firstname' => ['required', 'max:50', 'alpha'],
             'lastname' => ['required', 'max:50', 'alpha'],

@@ -16,6 +16,12 @@ class MyaccountController extends Controller
             ]);
         };
 
+        if(auth()->guest()) {
+            return redirect('/signin')->withErrors([
+                'password' => 'Vous devez vous connecté',
+            ]);
+        };
+
 
         return view('val.myaccount');
     }
