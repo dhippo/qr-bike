@@ -13,6 +13,8 @@ class SignupController extends Controller
 
     public function traitement()
     {
+
+
         request()->validate([
             'email' => ['required','Email', 'max:50'],
             'password' => ['required','confirmed', 'min:8', 'max:12'],
