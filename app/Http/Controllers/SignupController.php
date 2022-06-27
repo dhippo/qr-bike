@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Str;
 
 class SignupController extends Controller
 {
@@ -25,7 +26,7 @@ class SignupController extends Controller
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
             'password_confirmation'=>bcrypt(request('password_confirmation')),
-
+            'token'=>Str::uuid(),
         ]);
 
         return view('val.signin');

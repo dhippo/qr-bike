@@ -31,11 +31,4 @@ class User extends Model implements Authenticatable
 
     public $timestamps = false;
 
-    public function initToken(){
-        if(is_null($this->token)){
-            $this->token = Str::uuid();
-        }
-        return $this->token;
-    }
-
 };

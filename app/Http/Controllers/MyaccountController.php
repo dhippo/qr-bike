@@ -16,10 +16,8 @@ class MyaccountController extends Controller
             ]);
         };
 
-        if(auth()->guest()) {
-            return redirect('/signin')->withErrors([
-                'password' => 'Vous devez vous connecté',
-            ]);
+        if(is_null(auth()->user()->blood)){
+            return redirect('/edit-healthinfo');
         };
 
 
