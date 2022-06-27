@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>QR Bike</title>
+        <title>(test email)QR Bike</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -21,7 +23,7 @@
         </style>
     </head>
     <h1 class="text-3xl font-bold underline">
-        Hello world!
+        Check your email !
     </h1>
     <body class="antialiased">
 
