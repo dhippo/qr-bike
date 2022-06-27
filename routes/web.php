@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HealthinfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
@@ -41,6 +42,9 @@ Route::get('/about', function () {
     return view('informationAbout');
 });
 
+Route::get('/bouton', function () {
+    return view('testBouton');
+});
 
 
 Route::get('/signup', [SignupController::class, 'formulaire']);

@@ -2,4 +2,6 @@
 
 @section('content')
     <p>bien vu</p>
+
+
 @endsection
