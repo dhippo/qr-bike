@@ -19,7 +19,6 @@ class SignupController extends Controller
         request()->validate([
             'email' => ['required','Email', 'max:50'],
             'password' => ['required','confirmed', 'min:8', 'max:12'],
-
         ]);
 
         $user = User::create([
