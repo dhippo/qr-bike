@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 
-use App\Models\Utilisateur;
 
 class SigninController extends Controller
 {
@@ -25,7 +25,7 @@ class SigninController extends Controller
         ]);
 
         if($res) {
-             return redirect('/myaccount');
+            return redirect('/myaccount');
         }
 
         return back()->withInput()->withErrors([
@@ -34,4 +34,4 @@ class SigninController extends Controller
 
     }
 
-}
+};

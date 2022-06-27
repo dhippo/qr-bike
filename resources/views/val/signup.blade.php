@@ -4,7 +4,7 @@
 
     <div class="min-h-full flex">
         <div class="mt-n h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-            <div style="margin-top: -40px" class="mx-auto w-full max-w-sm lg:w-96">
+            <div style="margin-top: -60px" class="mx-auto w-full max-w-sm lg:w-96">
                 <div class="sm:mx-auto sm:w-full sm:max-w-md">
                     <img class="mx-auto h-40 w-auto" src="{{URL::asset('/images/logo.png')}}" alt="Workflow">
                     <h2 class="text-center text-2xl font-extrabold text-gray-900">Sign up with your :</h2>
