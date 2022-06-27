@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Str;
 
 class User extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
+
     protected $fillable = [
         'email',
         'password',
         'password_confirmation',
+        'token',
         'utilisateur_id',
         'firstname',
         'lastname',
@@ -25,6 +28,14 @@ class User extends Model implements Authenticatable
         'blood',
         'other',
         'doctor'];
+
     public $timestamps = false;
+
+    public function initToken(){
+        if(is_null($this->token)){
+            $this->token = Str::uuid();
+        }
+        return $this->token;
+    }
 
 };
