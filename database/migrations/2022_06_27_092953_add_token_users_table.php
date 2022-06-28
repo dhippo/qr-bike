@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
+
             $table->string('token')->nullable()->after('password_confirmation');
         });
     }
@@ -25,9 +26,12 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
-            //
-            $table->dropColumn('token');
-        });
+
+
+          Schema::table('users', function (Blueprint $table) {
+
+                   $table->dropColumn('token');
+                });
+
     }
 };
