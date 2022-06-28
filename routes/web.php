@@ -4,7 +4,9 @@ use App\Http\Controllers\HealthinfoController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
+use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MyaccountController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -56,11 +58,16 @@ Route::post('/signin', [SigninController::class, 'traitement']);
 
 Route::get('/myaccount', [MyaccountController::class, 'traitement']);
 
-Route::view('/', 'welcome');
-
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
 
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
+
+Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
+
+Route::get('/public/{token}', [PublicController::class, 'showInfo']);
+
+
+
 
 
 

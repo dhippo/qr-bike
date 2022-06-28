@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 
 class MyaccountController extends Controller
@@ -16,13 +17,15 @@ class MyaccountController extends Controller
             ]);
         };
 
-        if(auth()->guest()) {
-            return redirect('/signin')->withErrors([
-                'password' => 'Vous devez vous connecté',
-            ]);
+        if(is_null(auth()->user()->blood)){
+            return redirect('/edit-healthinfo');
         };
 
+        $token = auth()->user()->token;
 
-        return view('val.myaccount');
+        $qrcode = QrCode::size(200)->generate("http://127.0.0.1/public/$token");
+
+        return view("val.myaccount", compact('qrcode'));
+
     }
 }
