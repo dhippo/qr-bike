@@ -9,7 +9,11 @@ class SignupController extends Controller
 {
     public function formulaire()
     {
-        return view('val.signup');
+        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+        $randomImg = $collection->random();
+        return view('val.signup', [
+            'randomImg' => $randomImg,
+        ]);
     }
 
     public function traitement()
@@ -26,6 +30,11 @@ class SignupController extends Controller
             'token'=>Str::uuid(),
         ]);
 
-        return view('val.signin');
+        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+        $randomImg = $collection->random();
+        return view('val.signin', [
+            'randomImg' => $randomImg,
+        ]);
+
     }
 }

@@ -9,7 +9,11 @@ class SigninController extends Controller
 {
     public function formulaire()
     {
-        return view('val.signin');
+        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+        $randomImg = $collection->random();
+        return view('val.signin', [
+            'randomImg' => $randomImg,
+        ]);
     }
 
     public function traitement()
