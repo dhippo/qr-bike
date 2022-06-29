@@ -15,6 +15,7 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+
     /*namespace App\Models;
 
 use Illuminate\Contracts\Auth\Authenticatable;
@@ -23,6 +24,7 @@ use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
 class User extends Model implements Authenticatable
 {
     use BasicAuthenticatable;*/
+
 
     /**
      * The attributes that are mass assignable.

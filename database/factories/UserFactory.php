@@ -25,11 +25,14 @@ class UserFactory extends Factory
             //'firstname' => $this->faker->firstName(),
             'name' => $this->faker->name(),
             'email' => $this->faker->unique()->safeEmail,
-            'password'=> Hash::make('password'),
-            'password_confirmation' => 'password',
+
+            'password'=> Hash::make('password') ,
+
+            'password_confirmation' => 'password test',
             // 'password' => hash::make($this->faker->password), // password
            // 'remember_token' => Str::uuid(),
             //'token' => Str::uuid(),
+
         ];
     }
 
