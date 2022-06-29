@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\CheckEmail;
 use App\Models\User;
 use http\Env\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class SignupController extends Controller
@@ -76,6 +78,8 @@ class SignupController extends Controller
 
 
             $message = 'Regardez votre messagerie';
+            Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
+
             return redirect(route('signup', ['message' => $message]));
         }
     }
