@@ -9,7 +9,7 @@
 
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-        <title>qr-bike</title>
+        <title>first draft</title>
 
     </head>
     <body>

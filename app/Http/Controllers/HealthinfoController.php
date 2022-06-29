@@ -6,6 +6,7 @@ use App\Models\User;
 
 class HealthinfoController extends Controller
 {
+
     public function formulaire()
     {
         return view('val.edit-healthinfo');
