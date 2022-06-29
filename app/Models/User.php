@@ -81,7 +81,7 @@ class User extends Authenticatable
 
         /* 1 */
 
-        'email_verified_at' => 'datetime',
+
     ];
 
     public $timestamps = false;
