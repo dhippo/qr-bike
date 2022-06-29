@@ -27,7 +27,13 @@ class User extends Model implements Authenticatable
         'weight',
         'blood',
         'other',
-        'doctor'];
+        'nameDoctor',
+        'phoneDoctor',
+        'sex',
+        'city',
+        'country',
+        'active_token',
+        ];
 
     public $timestamps = false;
 
