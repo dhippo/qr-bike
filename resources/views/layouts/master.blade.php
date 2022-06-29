@@ -25,7 +25,10 @@
                                  myqrcode.info
                                  codeqr.me
                                  codeqr.tech
+                                 mycodeqr.me
 
+                    -infos
+                    -
 
         --->
 

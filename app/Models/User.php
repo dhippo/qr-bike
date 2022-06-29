@@ -28,39 +28,37 @@ class User extends Authenticatable
 
         'email',
         'token',
+        'active_token',
         'password',
         'password_confirmation',
 
         /* Profil */
 
+        'sex',
         'firstname',
         'lastname',
-        'sex',
-        'birth_date',
         'phone',
         'country',
         'city',
-        'address',
-
-
+        'photo',
 
         /* Health infos */
 
-        'photo',
         'age',
         'size',
         'weight',
         'blood',
+        'other',
 
-        'doctor',
-
-        /* Others infos */
+        /* Contacts */
 
         'nameContact',
-        'phoneContact',
-        'about',
+        'phonecontact',
 
-        'other'
+        'nameDoctor',
+        'phoneDoctor',
+
+
                 ];
 
 
@@ -70,7 +68,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
+        //'password',
        // 'remember_token',
     ];
 
