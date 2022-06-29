@@ -22,10 +22,10 @@
                     -indicateur de masse : graisse, muscle, os ....
                     - si user < 18 ans, on peut demander le responsable legal
                     -domaine :
-
                                  myqrcode.info
                                  codeqr.me
                                  codeqr.tech
+
 
         --->
 
