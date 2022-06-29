@@ -31,13 +31,8 @@ class MyaccountController extends Controller
         $nameContact = auth()->user()->nameContact;
         $weight = auth()->user()->weight;
         $size = auth()->user()->size;
-        $phone = auth()->user()->phone;
-        $sex = auth()->user()->sex;
         $photo = auth()->user()->photo;
-        $nameDoctor = auth()->user()->nameDoctor;
-        $phoneDoctor = auth()->user()->phoneDoctor;
-        $country = auth()->user()->country;
-        $city = auth()->user()->city;
+        $doctor = auth()->user()->doctor;
         $other = auth()->user()->other;
 
         $qrcode = QrCode::size(200)->generate("http://127.0.0.1/public/$token");
@@ -53,12 +48,7 @@ class MyaccountController extends Controller
             'weight' => $weight,
             'size' => $size,
             'photo' => $photo,
-            'nameDoctor' => $nameDoctor,
-            'phoneDoctor' => $phoneDoctor,
-            'sex' => $sex,
-            'phone' => $phone,
-            'country' => $country,
-            'city' => $city,
+            'doctor' => $doctor,
             'other' => $other,
         ]);
 
