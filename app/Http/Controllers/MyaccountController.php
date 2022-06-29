@@ -22,10 +22,35 @@ class MyaccountController extends Controller
         };
 
         $token = auth()->user()->token;
+        $email = auth()->user()->email;
+        $lastname = auth()->user()->lastname;
+        $firstname = auth()->user()->firstname;
+        $age = auth()->user()->age;
+        $blood = auth()->user()->blood;
+        $phoneContact = auth()->user()->phoneContact;
+        $nameContact = auth()->user()->nameContact;
+        $weight = auth()->user()->weight;
+        $size = auth()->user()->size;
+        $photo = auth()->user()->photo;
+        $doctor = auth()->user()->doctor;
+        $other = auth()->user()->other;
 
         $qrcode = QrCode::size(200)->generate("http://127.0.0.1/public/$token");
 
-        return view("val.myaccount", compact('qrcode'));
+        return view("val.myaccount", compact('qrcode'), [
+            'email' => $email,
+            'lastname' => $lastname,
+            'firstname' => $firstname,
+            'age' => $age,
+            'blood' => $blood,
+            'phoneContact' => $phoneContact,
+            'nameContact' => $nameContact,
+            'weight' => $weight,
+            'size' => $size,
+            'photo' => $photo,
+            'doctor' => $doctor,
+            'other' => $other,
+        ]);
 
     }
 }
