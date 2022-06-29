@@ -11,6 +11,8 @@ class CheckEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
+    public $url;
+
     /**
      * Create a new message instance.
      *
@@ -21,6 +23,8 @@ class CheckEmail extends Mailable
         //
     }
 
+
+
     /**
      * Build the message.
      *
@@ -29,6 +33,6 @@ class CheckEmail extends Mailable
     public function build()
     {
         $url = null;
-        return $this->markdown('mails.check-email',['url' => $url]);
+        return $this->markdown('mails.check-email',['url' => $this->url]);
     }
 }

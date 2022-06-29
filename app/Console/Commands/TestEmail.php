@@ -30,7 +30,13 @@ class TestEmail extends Command
     public function handle()
     {
         $this->info('Email !!!');
-        Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
+        $url = route('login');
+
+        $checkEmail = new CheckEmail();
+        $checkEmail->url = $url;
+
+
+        Mail::to('durandhippolyte@gmail.com')->send($checkEmail);
         return 0;
     }
 }

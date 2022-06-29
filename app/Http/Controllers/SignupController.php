@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use http\Env\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Str;
 
 class SignupController extends Controller
@@ -37,11 +40,17 @@ class SignupController extends Controller
         return view('val.signin');
     }
 
+    /**
+     * Check with if email is valid (magic URL)
+     *
+     * @return Application|RedirectResponse|Redirector
+     */
     public function checkEmail (){
 
         request()->validate([
             'email' => ['required', 'email']
         ]);
+
         $email = request('email');
 
         $user = User::where('email', $email)->first();
@@ -55,17 +64,14 @@ class SignupController extends Controller
                 return redirect(route('signup', ['message' => $message]));
             }
 
-            //si active_token = 1
-
-
-
         }else{
             $user = User::create([
                 'email'=>request('email'),
+                'password'=>request('password'),
+                'password_confirmation'=>request('password_confirmation'),
                 'token'=>Str::uuid(),
                 ]);
 
-            // on envoie un email et....
 
             $message = 'Regardez votre messagerie';
             return redirect(route('signup', ['message' => $message]));

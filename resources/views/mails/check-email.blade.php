@@ -1,7 +1,7 @@
 @component('mail::message')
 # Introduction
 
-The body of your message.
+YOU JUST SUSCRIBE
 
 @component('mail::button', ['url' => $url])
 Button Text
