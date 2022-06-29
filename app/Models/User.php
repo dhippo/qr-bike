@@ -16,6 +16,7 @@ class User extends Model implements Authenticatable
         'password',
         'password_confirmation',
         'token',
+        'active_token',
         'utilisateur_id',
         'firstname',
         'lastname',

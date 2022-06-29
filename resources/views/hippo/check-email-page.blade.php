@@ -1,0 +1,1 @@
+Check your email inbox to activate your account

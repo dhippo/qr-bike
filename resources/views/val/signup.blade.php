@@ -55,6 +55,10 @@
                     </div>
 
                     <div class="mt-6">
+                        test
+                        @if ($message)
+                           <p class="text-3xl font-bold p-12 bg-amber-300"> {{ $message }} </p>
+                        @endif
                         <form class="space-y-6" action="/signup" method="post">
                             {{ csrf_field() }}
 

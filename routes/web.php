@@ -24,11 +24,11 @@ Route::get('/', function (){
 });
 
 
-Route::get('/signup', [SignupController::class, 'formulaire']);
+Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 
-Route::post('/signup', [SignupController::class, 'traitement']);
+Route::post('/signup', [SignupController::class, 'checkEmail']);
 
-Route::get('/signin', [SigninController::class, 'formulaire']);
+Route::get('/signin', [SigninController::class, 'formulaire'])->name('login');
 
 Route::post('/signin', [SigninController::class, 'traitement']);
 
