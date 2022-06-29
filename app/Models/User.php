@@ -8,23 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Sanctum\HasApiTokens;
-
 use Illuminate\Support\Str;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-
-    /*namespace App\Models;
-
-use Illuminate\Contracts\Auth\Authenticatable;
-use Illuminate\Auth\Authenticatable as BasicAuthenticatable;
-
-class User extends Model implements Authenticatable
-{
-    use BasicAuthenticatable;*/
-
+    /*namespace App\Models;use Illuminate\Contracts\Auth\Authenticatable;use Illuminate\Auth\Authenticatable as BasicAuthenticatable;class User extends Model implements Authenticatable{use BasicAuthenticatable;*/
 
     /**
      * The attributes that are mass assignable.
@@ -33,23 +23,46 @@ class User extends Model implements Authenticatable
      */
 
     protected $fillable = [
-        'name',
+
+        /* 1 */
+
         'email',
+        'token',
         'password',
         'password_confirmation',
-        'token',
-        'utilisateur_id',
+
+        /* Profil */
+
         'firstname',
         'lastname',
-        'phoneContact',
-        'nameContact',
+        'sex',
+        'birth_date',
+        'phone',
+        'country',
+        'city',
+        'address',
+
+
+
+        /* Health infos */
+
         'photo',
         'age',
         'size',
         'weight',
         'blood',
-        'other',
-        'doctor'];
+
+        'doctor',
+
+        /* Others infos */
+
+        'nameContact',
+        'phoneContact',
+        'about',
+
+        'other'
+                ];
+
 
     /**
      * The attributes that should be hidden for serialization.
@@ -57,7 +70,7 @@ class User extends Model implements Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        //'password',
+        'password',
        // 'remember_token',
     ];
 
@@ -67,7 +80,10 @@ class User extends Model implements Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        //'email_verified_at' => 'datetime',
+
+        /* 1 */
+
+        'email_verified_at' => 'datetime',
     ];
 
     public $timestamps = false;

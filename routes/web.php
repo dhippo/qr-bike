@@ -23,11 +23,11 @@ Route::get('/', function () {
 });
 
 Route::get('/a', function () {
-    return view('tmp');
+    return view('steph.tmp');
 });
 
 Route::get('/welcome', function () {
-    return view('LaravelWelcome');
+    return view('steph.LaravelWelcome');
 });
 
 Route::get('/wel', function () {
@@ -40,11 +40,11 @@ Route::post('/login', [\App\Http\Controllers\RegisterController::class,'store'])
 
 
 Route::get('/about', function () {
-    return view('informationAbout');
+    return view('steph.informationAbout');
 });
 
 Route::get('/bouton', function () {
-    return view('testBouton');
+    return view('steph.testBouton');
 });
 
 
