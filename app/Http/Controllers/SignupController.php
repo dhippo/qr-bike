@@ -21,24 +21,24 @@ class SignupController extends Controller
         return view('val.signup', ['message'=>$message]);
     }
 
-    public function traitement()
-    {
-
-
-        request()->validate([
-            'email' => ['required','Email', 'max:50'],
-            'password' => ['required','confirmed', 'min:8', 'max:12'],
-        ]);
-
-        $user = User::create([
-            'email'=>request('email'),
-            'password'=>bcrypt(request('password')),
-            'password_confirmation'=>bcrypt(request('password_confirmation')),
-            'token'=>Str::uuid(),
-        ]);
-
-        return view('val.signin');
-    }
+//    public function traitement()
+//    {
+//
+//
+//        request()->validate([
+//            'email' => ['required','Email', 'max:50'],
+//            'password' => ['required','confirmed', 'min:8', 'max:12'],
+//        ]);
+//
+//        $user = User::create([
+//            'email'=>request('email'),
+//            'password'=>bcrypt(request('password')),
+//            'password_confirmation'=>bcrypt(request('password_confirmation')),
+//            'token'=>Str::uuid(),
+//        ]);
+//
+//        return view('val.signin');
+//    }
 
     /**
      * Check with if email is valid (magic URL)
