@@ -1,0 +1,33 @@
+
+input{
+    max-width: 15vw;
+}
+
+form{
+    width: 45vw;
+    padding:3vw;
+    box-shadow: 0px 0px 60px 10px darkgrey;
+    border-radius: 50px;
+    display: flex;
+    -webkit-animation: animform 1s ease-in-out forwards;
+    animation: animform 1s ease-in-out forwards;
+}
+
+@-webkit-keyframes animform {
+    from {
+        transform : translateY(50vw);
+    }
+    to{
+        transform : translateY(0vw);
+    }
+}
+
+@keyframes animform {
+    from {
+        transform : translateY(50vw);
+    }
+    to{
+        transform : translateY(0vw);
+    }
+}
+

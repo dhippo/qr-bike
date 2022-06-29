@@ -19,7 +19,7 @@ class HealthinfoController extends Controller
 
         if(auth()->guest()) {
             return redirect('/signin')->withErrors([
-                'password' => 'Vous devez vous connecté',
+                'password' => 'Vous devez vous connecter',
             ]);
         };
 
