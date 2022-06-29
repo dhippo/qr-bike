@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use http\Env\Request;
 use Illuminate\Support\Str;
 
 class SignupController extends Controller
@@ -16,27 +17,66 @@ class SignupController extends Controller
         ]);
     }
 
-    public function traitement()
-    {
+//    public function traitement()
+//    {
+//
+//
+//        request()->validate([
+//            'email' => ['required','Email', 'max:50'],
+//            'password' => ['required','confirmed'],
+//        ]);
+//
+//        $user = User::create([
+//            'email'=>request('email'),
+//            'password'=>bcrypt(request('password')),
+//            'password_confirmation'=>bcrypt(request('password_confirmation')),
+//            'token'=>Str::uuid(),
+//        ]);
+//
+//        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+//        $randomImg = $collection->random();
+//        return view('val.signin', [
+//            'randomImg' => $randomImg,
+//        ]);
+//
+//    }
 
+    /**
+     * Check with if email is valid (magic URL)
+     *
+     * @return Application|RedirectResponse|Redirector
+     */
+    public function traitement (){
 
         request()->validate([
-            'email' => ['required','Email', 'max:50'],
-            'password' => ['required','confirmed', 'min:8', 'max:12'],
+            'email' => ['required', 'email'],
+            'password' => ['required','confirmed'],
         ]);
 
-        $user = User::create([
-            'email'=>request('email'),
-            'password'=>bcrypt(request('password')),
-            'password_confirmation'=>bcrypt(request('password_confirmation')),
-            'token'=>Str::uuid(),
-        ]);
+        $email = request('email');
 
-        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-        $randomImg = $collection->random();
-        return view('val.signin', [
-            'randomImg' => $randomImg,
-        ]);
+        $user = User::where('email', $email)->first();
+        if($user){
+            //si active_token = 0 : check your email
+            if($user->active_token) {
+                $message = 'Votre compte est déjà actif';
+                return redirect(route('signin', ['message' => $message]));
+            }else{
+                $message = 'Vous devez valider votre email dans votre messagerie';
+                return redirect(route('signup', ['message' => $message]));
+            }
 
+        }else{
+            $user = User::create([
+                'email'=>request('email'),
+                'password'=>request('password'),
+                'password_confirmation'=>request('password_confirmation'),
+                'token'=>Str::uuid(),
+            ]);
+
+
+            $message = 'Regardez votre messagerie';
+            return redirect(route('signup', ['message' => $message]));
+        }
     }
 }

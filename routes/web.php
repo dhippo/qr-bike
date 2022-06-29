@@ -21,11 +21,11 @@ use App\Http\Controllers\MyaccountController;
 
 
 
-Route::get('/signup', [SignupController::class, 'formulaire']);
+Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 
 Route::post('/signup', [SignupController::class, 'traitement']);
 
-Route::get('/signin', [SigninController::class, 'formulaire']);
+Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');;
 
 Route::post('/signin', [SigninController::class, 'traitement']);
 
