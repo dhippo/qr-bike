@@ -310,6 +310,9 @@
                                         <!-- Current: "border-pink-500 text-gray-900", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
                                         <a href="#" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" aria-current="page"> Profile </a>
 
+                                        <a href="#" style="margin-left: 17.5vw" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"> Health </a>
+
+                                        <a href="#" style="margin-left: 17vw" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"> Contact</a>
 
                                     </nav>
                                 </div>
@@ -317,55 +320,116 @@
                         </div>
 
                         <!-- Description list -->
-                        <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Phone</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">{{$phone}}</dd>
-                                </div>
+                        <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+                            <dl style="width: 55px; min-width: 55px" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Email</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">{{$email}}</dd>
-                                </div>
+                                <div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">FirstName</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$firstname}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Country/City</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">{{$country}}/{{$city}}</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">LastName</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$lastname}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Team</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Product Development</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Email</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$email}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Location</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">San Francisco</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Country</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$country}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Sits</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Oasis, 4th floor</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">City</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$city}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Salary</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">$145,000</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Phone</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$phone}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Birthday</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">June 8, 1990</dd>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <dt class="text-sm font-medium text-gray-500">About</dt>
-                                    <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
-                                        <p>{{$other}}</p>
-                                    </dd>
                                 </div>
                             </dl>
+
+                            <dl style="margin-left: 17.5vw; width: 52px; min-width: 52px" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                                <div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">BloodGroup</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$blood}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Sex</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$sex}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Age</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$age}}yo</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Size</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$size}}cm</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Weight</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$weight}}kg</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-2">
+                                        <dt class="text-sm font-medium text-gray-500">About</dt>
+                                        <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
+                                            <p style="width: 200px; flex-wrap: wrap">{{$other}}</p>
+                                        </dd>
+                                    </div>
+
+                                </div>
+                            </dl>
+
+                            <dl style="margin-left: 17vw" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                                <div>
+
+                                    <div class="sm:col-span-2">
+                                        <dt class="text-sm font-medium text-gray-500">About</dt>
+                                        <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
+                                            <p>{{$other}}</p>
+                                        </dd>
+                                    </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Team</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">Product Development</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Location</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">San Francisco</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Sits</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">Oasis, 4th floor</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Salary</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">$145,000</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Birthday</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">June 8, 1990</dd>
+                                    </div>
+                                </div>
+                            </dl>
+
                         </div>
                 </main>
 
