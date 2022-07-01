@@ -20,8 +20,9 @@ use App\Http\Controllers\MyaccountController;
 */
 
 Route::get('/e', function () {
-    return 'Hello World';
+    return view('steph.tmp');
 });
+
 Route::get('/signup', [SignupController::class, 'formulaire']);
 
 Route::post('/signup', [SignupController::class, 'traitement']);

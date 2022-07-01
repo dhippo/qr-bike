@@ -19,7 +19,6 @@ class User extends Model implements Authenticatable
 
         'email',
         'password',
-        'password_confirmation',
         'token',
         'active_token',
 
@@ -44,8 +43,7 @@ class User extends Model implements Authenticatable
         /* Contacts */
 
         'nameContact',
-        'phonecontact',
-
+        'phoneContact',
         'nameDoctor',
         'phoneDoctor',
 
