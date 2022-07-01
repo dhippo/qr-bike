@@ -22,7 +22,7 @@ use App\Http\Controllers\MyaccountController;
 
 
 Route::get('/test', function () {  //route pour tester 'formulaire'
-    return 'welcome';                   //steph
+    return view('welcome');                   //steph
 });
 
 Route::get('/signup', [SignupController::class, 'formulaire']);
