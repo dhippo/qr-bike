@@ -26,6 +26,7 @@ class User extends Model implements Authenticatable
 
         'sex',
         'firstname',
+        'infos',
         'lastname',
         'phone',
         'country',
@@ -57,7 +58,7 @@ class User extends Model implements Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        //'password',
+      // 'password2',
        // 'remember_token',
     ];
 
@@ -70,7 +71,9 @@ class User extends Model implements Authenticatable
 
         /* 1 */
 
-        'email_verified_at' => 'datetime',
+       // 'email_verified_at' => 'datetime',
+
+        'infos' => 'array',
     ];
 
     public $timestamps = false;
