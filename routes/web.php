@@ -21,6 +21,10 @@ use App\Http\Controllers\MyaccountController;
 
 
 
+Route::get('/test', function () {  //route pour tester 'formulaire'
+    return 'welcome';                   //steph
+});
+
 Route::get('/signup', [SignupController::class, 'formulaire']);
 
 Route::post('/signup', [SignupController::class, 'traitement']);
