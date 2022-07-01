@@ -2,9 +2,10 @@
 
 @section('content')
     @if($errorcheck)
+
     <div class="ml-3">
         <p class="text-sm text-red-700">
-            erreur:  {{$errorcheck}}
+            erreur:  {{$errorcheck->first('errorcheck')}}
         </p>
     </div>
     @endif
