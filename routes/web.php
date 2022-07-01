@@ -6,7 +6,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MyaccountController;
-
+use App\Http\Controllers\InfosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,11 +19,17 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
+//steph
+Route::get('/test', [InfosController::class, 'db']);
+
+
+Route::post('/test', [InfosController::class, 'db+']);
 
 
 Route::get('/test', function () {  //route pour tester 'formulaire'
-    return view('welcome');                   //steph
+    return view('welcome');
 });
+//endsteph
 
 Route::get('/signup', [SignupController::class, 'formulaire']);
 
@@ -42,6 +48,7 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
+
 
 
 
