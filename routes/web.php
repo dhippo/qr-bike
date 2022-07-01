@@ -19,6 +19,9 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
+Route::get('/', function (){
+    return view ('welcome');
+});
 
 
 Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');

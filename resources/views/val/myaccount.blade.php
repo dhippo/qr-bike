@@ -51,7 +51,15 @@
                     From: "translate-x-0"
                     To: "-translate-x-full"
                 -->
-                <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
+                <div  x-data="{ openWin: false }"  x-transition:enter="transition ease-linear duration-300"
+                      x-transition:enter-start="-translate-x-full opacity-0"
+                      x-transition:enter-end="translate-x-0 opacity-100"
+
+                      x-transition:leave="transition ease-in duration-300"
+                      x-transition:leave-start="translate-x-0 opacity-100"
+                      x-transition:leave-end="-translate-x-full opacity-0"
+
+                      x-show="openWin" class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
                     <!--
                       Close button, show/hide based on off-canvas menu state.
 
@@ -62,7 +70,7 @@
                         From: "opacity-100"
                         To: "opacity-0"
                     -->
-                    <div class="absolute top-0 right-0 -mr-12 pt-2">
+                    <div @click="openWin = !openWin" class="absolute top-0 right-0 -mr-12 pt-2">
                         <button type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                             <span class="sr-only">Close sidebar</span>
                             <!-- Heroicon name: outline/x -->
@@ -72,7 +80,7 @@
                         </button>
                     </div>
 
-                    <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+                    <div  class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                         <div class="flex-shrink-0 flex items-center px-4">
                             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-pink-500-mark-gray-900-text.svg" alt="Workflow">
                         </div>
@@ -182,7 +190,7 @@
                                     <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                                     </svg>
-                                    Dashboard
+                                    My Infos
                                 </a>
 
                                 <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
@@ -190,7 +198,7 @@
                                     <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
-                                    Calendar
+                                    My QR
                                 </a>
 
                                 <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
@@ -198,7 +206,7 @@
                                     <svg class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                                     </svg>
-                                    Teams
+                                    Edit Infos
                                 </a>
 
                                 <a href="#" class="bg-gray-200 text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md" aria-current="page">
@@ -206,7 +214,7 @@
                                     <svg class="text-gray-500 mr-3 flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
-                                    Directory
+                                    Emergency Phone
                                 </a>
 
                                 <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md">
@@ -241,7 +249,7 @@
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    Settings
+                                    Déconnexion
                                 </a>
                             </div>
                         </nav>
@@ -310,6 +318,9 @@
                                         <!-- Current: "border-pink-500 text-gray-900", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
                                         <a href="#" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" aria-current="page"> Profile </a>
 
+                                        <a href="#" style="margin-left: 17.5vw" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"> Health </a>
+
+                                        <a href="#" style="margin-left: 17vw" class="border-b-blue-900 text-gray-900 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm"> Contact</a>
 
                                     </nav>
                                 </div>
@@ -317,56 +328,105 @@
                         </div>
 
                         <!-- Description list -->
-                        <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Phone</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">{{}}</dd>
-                                </div>
+                        <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+                            <dl style="width: 55px; min-width: 55px" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Email</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">ricardocooper@example.com</dd>
-                                </div>
+                                <div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">FirstName</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$firstname}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Title</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Senior Front-End Developer</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">LastName</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$lastname}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Team</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Product Development</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Email</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$email}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Location</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">San Francisco</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Country</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$country}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Sits</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">Oasis, 4th floor</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">City</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$city}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Salary</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">$145,000</dd>
-                                </div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Phone</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$phone}}</dd>
+                                    </div>
 
-                                <div class="sm:col-span-1">
-                                    <dt class="text-sm font-medium text-gray-500">Birthday</dt>
-                                    <dd class="mt-1 text-sm text-gray-900">June 8, 1990</dd>
-                                </div>
-
-                                <div class="sm:col-span-2">
-                                    <dt class="text-sm font-medium text-gray-500">About</dt>
-                                    <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
-                                        <p>Tincidunt quam neque in cursus viverra orci, dapibus nec tristique. Nullam ut sit dolor consectetur urna, dui cras nec sed. Cursus risus congue arcu aenean posuere aliquam.</p>
-                                        <p>Et vivamus lorem pulvinar nascetur non. Pulvinar a sed platea rhoncus ac mauris amet. Urna, sem pretium sit pretium urna, senectus vitae. Scelerisque fermentum, cursus felis dui suspendisse velit pharetra. Augue et duis cursus maecenas eget quam lectus. Accumsan vitae nascetur pharetra rhoncus praesent dictum risus suspendisse.</p>
-                                    </dd>
                                 </div>
                             </dl>
+
+                            <dl style="margin-left: 17.5vw; width: 52px; min-width: 52px" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                                <div>
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">BloodGroup</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$blood}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Sex</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$sex}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Age</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$age}}yo</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Size</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$size}}cm</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Weight</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$weight}}kg</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-2">
+                                        <dt class="text-sm font-medium text-gray-500">About</dt>
+                                        <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
+                                            <p style="width: 200px; flex-wrap: wrap">{{$other}}</p>
+                                        </dd>
+                                    </div>
+
+                                </div>
+                            </dl>
+
+                            <dl style="margin-left: 17vw" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+                                <div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Name Contact</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$nameContact}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Phone Contact</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$phoneContact}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Name Doctor</dt>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$nameDoctor}}</dd>
+                                    </div>
+
+                                    <div class="sm:col-span-1">
+                                        <dt class="text-sm font-medium text-gray-500">Phone Doctor</dt>
+                                        <dd class="mt-1 text-sm text-gray-900">{{$phoneDoctor}}</dd>
+                                    </div>
+                                </div>
+                            </dl>
+
                         </div>
                 </main>
 
