@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Mail\CheckEmail;
 use App\Models\User;
 use http\Env\Request;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
@@ -19,29 +22,6 @@ class SignupController extends Controller
         ]);
     }
 
-//    public function traitement()
-//    {
-//
-//
-//        request()->validate([
-//            'email' => ['required','Email', 'max:50'],
-//            'password' => ['required','confirmed'],
-//        ]);
-//
-//        $user = User::create([
-//            'email'=>request('email'),
-//            'password'=>bcrypt(request('password')),
-//            'password_confirmation'=>bcrypt(request('password_confirmation')),
-//            'token'=>Str::uuid(),
-//        ]);
-//
-//        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-//        $randomImg = $collection->random();
-//        return view('val.signin', [
-//            'randomImg' => $randomImg,
-//        ]);
-//
-//    }
 
     /**
      * Check with if email is valid (magic URL)
@@ -80,7 +60,7 @@ class SignupController extends Controller
             $message = 'Regardez votre messagerie';
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
 
-            return redirect(route('signup', ['message' => $message]));
+            return redirect(route('signin', ['message' => $message]));
         }
     }
 }

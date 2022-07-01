@@ -1,12 +1,11 @@
 @component('mail::message')
-# Introduction
+# Welcome to MYQR.CODE
 
-The body of your message.
+Click on the button bellow to activate your account and start creating your own QR code. .
 
 @component('mail::button', ['url' => ''])
-Button Text
+Validate
 @endcomponent
 
-Thanks,<br>
-{{ config('app.name') }}
+Thanks
 @endcomponent
