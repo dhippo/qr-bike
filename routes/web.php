@@ -39,9 +39,15 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
+
 Route::get('/suscribe', [SignupController::class, 'formulaire'])->name('suscribe');
 
 Route::post('/suscribe', [SignupController::class, 'traitement']);
+
+Route::get('/login', [SigninController::class, 'formulaire'])->name('login');;
+
+Route::post('/login', [SigninController::class, 'traitement']);
+
 
 
 

@@ -9,6 +9,8 @@ use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\MessageBag;
 use Illuminate\Support\Str;
 
 class SignupController extends Controller
@@ -17,7 +19,7 @@ class SignupController extends Controller
     {
         $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
         $randomImg = $collection->random();
-        return view('val.signup', [
+        return view('auth.suscribe', [
             'randomImg' => $randomImg,
         ]);
     }
@@ -41,11 +43,13 @@ class SignupController extends Controller
         if($user){
             //si active_token = 0 : check your email
             if($user->active_token) {
-                $message = 'Votre compte est déjà actif';
-                return redirect(route('signin', ['message' => $message]));
+                $message = 'You already have an account';
+                return redirect(route('login', ['message' => $message]));
             }else{
-                $message = 'Vous devez valider votre email dans votre messagerie';
-                return redirect(route('signup', ['message' => $message]));
+                $message = 'Check your inbox and validate your account';
+
+                return redirect(route('suscribe', ['errorcheck' => $message]));
+ //               return Redirect::back()->withErrors($checkinbox);
             }
 
         }else{
@@ -57,10 +61,10 @@ class SignupController extends Controller
             ]);
 
 
-            $message = 'Regardez votre messagerie';
+//            $message = 'Regardez votre messagerie';
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
 
-            return redirect(route('signin', ['message' => $message]));
+            return redirect(route('suscribe', ['message' => $message]));
         }
     }
 }
