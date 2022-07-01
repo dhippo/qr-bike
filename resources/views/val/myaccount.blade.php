@@ -25,7 +25,7 @@
       <body class="h-full overflow-hidden">
       ```
     -->
-    <div class="h-full flex">
+    <div x-data="{ openWin: false }" class="h-full flex">
         <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
         <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
             <!--
@@ -38,9 +38,9 @@
                 From: "opacity-100"
                 To: "opacity-0"
             -->
-            <div class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
+            <div x-show="openWin" class="fixed inset-0 bg-gray-600 bg-opacity-75"></div>
 
-            <div class="fixed inset-0 flex z-40">
+            <div x-show="openWin" class="fixed inset-0 flex z-40">
                 <!--
                   Off-canvas menu, show/hide based on off-canvas menu state.
 
@@ -51,13 +51,13 @@
                     From: "translate-x-0"
                     To: "-translate-x-full"
                 -->
-                <div  x-data="{ openWin: false }"  x-transition:enter="transition ease-linear duration-300"
-                      x-transition:enter-start="-translate-x-full opacity-0"
+                <div  x-transition:enter="transition ease-linear duration-300"
+                      x-transition:enter-start="-translate-x-full opacity-80"
                       x-transition:enter-end="translate-x-0 opacity-100"
 
                       x-transition:leave="transition ease-in duration-300"
                       x-transition:leave-start="translate-x-0 opacity-100"
-                      x-transition:leave-end="-translate-x-full opacity-0"
+                      x-transition:leave-end="-translate-x-full opacity-80"
 
                       x-show="openWin" class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
                     <!--
@@ -264,7 +264,7 @@
                         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-pink-500.svg" alt="Workflow">
                     </div>
                     <div>
-                        <button type="button" class="-mr-3 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-600">
+                        <button @click="openWin = !openWin" type="button" class="-mr-3 h-12 w-12 inline-flex items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-900">
                             <span class="sr-only">Open sidebar</span>
                             <!-- Heroicon name: outline/menu -->
                             <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
@@ -276,16 +276,6 @@
             </div>
             <div class="flex-1 relative z-0 flex overflow-hidden">
                 <main class="flex-1 relative z-0 overflow-y-auto focus:outline-none xl:order-last">
-                    <!-- Breadcrumb -->
-                    <nav class="flex items-start px-4 py-3 sm:px-6 lg:px-8 xl:hidden" aria-label="Breadcrumb">
-                        <a href="#" class="inline-flex items-center space-x-3 text-sm font-medium text-gray-900">
-                            <!-- Heroicon name: solid/chevron-left -->
-                            <svg class="-ml-2 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-                            </svg>
-                            <span>Directory</span>
-                        </a>
-                    </nav>
 
                     <article>
                         <!-- Profile header -->
@@ -340,11 +330,6 @@
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">LastName</dt>
                                         <dd class="mb-8 mt-1 text-sm text-gray-900">{{$lastname}}</dd>
-                                    </div>
-
-                                    <div class="sm:col-span-1">
-                                        <dt class="text-sm font-medium text-gray-500">Email</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$email}}</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
