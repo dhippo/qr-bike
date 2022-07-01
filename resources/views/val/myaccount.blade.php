@@ -51,7 +51,15 @@
                     From: "translate-x-0"
                     To: "-translate-x-full"
                 -->
-                <div class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
+                <div  x-data="{ openWin: false }"  x-transition:enter="transition ease-linear duration-300"
+                      x-transition:enter-start="-translate-x-full opacity-0"
+                      x-transition:enter-end="translate-x-0 opacity-100"
+
+                      x-transition:leave="transition ease-in duration-300"
+                      x-transition:leave-start="translate-x-0 opacity-100"
+                      x-transition:leave-end="-translate-x-full opacity-0"
+
+                      x-show="openWin" class="relative flex-1 flex flex-col max-w-xs w-full bg-white focus:outline-none">
                     <!--
                       Close button, show/hide based on off-canvas menu state.
 
@@ -62,7 +70,7 @@
                         From: "opacity-100"
                         To: "opacity-0"
                     -->
-                    <div class="absolute top-0 right-0 -mr-12 pt-2">
+                    <div @click="openWin = !openWin" class="absolute top-0 right-0 -mr-12 pt-2">
                         <button type="button" class="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                             <span class="sr-only">Close sidebar</span>
                             <!-- Heroicon name: outline/x -->
@@ -72,7 +80,7 @@
                         </button>
                     </div>
 
-                    <div class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
+                    <div  class="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
                         <div class="flex-shrink-0 flex items-center px-4">
                             <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-pink-500-mark-gray-900-text.svg" alt="Workflow">
                         </div>
