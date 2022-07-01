@@ -53,8 +53,7 @@ class User extends Authenticatable
         /* Contacts */
 
         'nameContact',
-        'phonecontact',
-
+        'phoneContact',
         'nameDoctor',
         'phoneDoctor',
 

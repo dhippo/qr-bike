@@ -31,7 +31,7 @@ Route::get('/welcome', function () {
 });
 
 Route::get('/wel', function () {
-    return view('master');
+    return view('steph.form');
 });
 
 Route::get('/login', [\App\Http\Controllers\RegisterController::class,'index']);

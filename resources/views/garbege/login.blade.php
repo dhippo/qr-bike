@@ -89,12 +89,4 @@
 
 @section('content')
 
-@push('moncss')
-    <style>
-        // Your custom css...
-
-
-
-    </style>
-@endpush
-
+<!--  <link href="{{ /*asset('css/base.css') */}}" rel="stylesheet">-->
