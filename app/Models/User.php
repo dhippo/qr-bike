@@ -37,4 +37,9 @@ class User extends Model implements Authenticatable
 
     public $timestamps = false;
 
+    public function qrcodes()
+    {
+        return $this->hasMany(Qrcode::class);
+    }
+
 };
