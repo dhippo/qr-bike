@@ -22,7 +22,7 @@ class SignupController extends Controller
         $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
         $randomImg = $collection->random();
 
-        return view('auth.suscribe', [
+        return view('val.signup', [
             'randomImg' => $randomImg,
 
         ]);
@@ -38,7 +38,6 @@ class SignupController extends Controller
 
         request()->validate([
             'email' => ['required', 'email'],
-            'password' => ['required','confirmed'],
         ]);
 
 
@@ -52,7 +51,7 @@ class SignupController extends Controller
             }else{
                 $message = 'Check your inbox and validate your account';
 
-                return redirect()->route('suscribe')->with('message', $message);
+                return redirect()->route('signup')->with('message', $message);
 
  //
             }
@@ -60,8 +59,6 @@ class SignupController extends Controller
         }else{
             $user = User::create([
                 'email'=>request('email'),
-                'password'=>request('password'),
-                'password_confirmation'=>request('password_confirmation'),
                 'token'=>Str::uuid(),
             ]);
 
@@ -70,7 +67,7 @@ class SignupController extends Controller
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
             $message = ' and validate your account';
 
-            return redirect(route('suscribe', ['message' => $message]));
+            return redirect(route('signup'));
         }
     }
 }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HealthinfoController;
+use App\Http\Controllers\MyqrcodesController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
@@ -42,14 +43,9 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
+Route::get('/myQrCode', [MyqrcodesController::class, 'show']);
 
-Route::get('/suscribe', [SignupController::class, 'formulaire'])->name('suscribe');
 
-Route::post('/suscribe', [SignupController::class, 'traitement']);
-
-Route::get('/login', [SigninController::class, 'formulaire'])->name('login');;
-
-Route::post('/login', [SigninController::class, 'traitement']);
 
 
 
