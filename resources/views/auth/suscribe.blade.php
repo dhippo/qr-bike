@@ -1,14 +1,17 @@
 @extends('layouts.master')
 
 @section('content')
-    @if($errorcheck)
+
+@if(isset($message))
 
     <div class="ml-3">
         <p class="text-sm text-red-700">
-            erreur:  {{$errorcheck->first('errorcheck')}}
+            erreur:  {{'message'}}
         </p>
     </div>
-    @endif
+@endif
+
+
 
     <div class="min-h-full flex">
         <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">

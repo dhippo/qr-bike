@@ -15,12 +15,16 @@ use Illuminate\Support\Str;
 
 class SignupController extends Controller
 {
+
+
     public function formulaire()
     {
         $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
         $randomImg = $collection->random();
+
         return view('auth.suscribe', [
             'randomImg' => $randomImg,
+
         ]);
     }
 
@@ -37,19 +41,20 @@ class SignupController extends Controller
             'password' => ['required','confirmed'],
         ]);
 
+
         $email = request('email');
 
         $user = User::where('email', $email)->first();
         if($user){
-            //si active_token = 0 : check your email
             if($user->active_token) {
                 $message = 'You already have an account';
                 return redirect(route('login', ['message' => $message]));
             }else{
                 $message = 'Check your inbox and validate your account';
 
-                return redirect(route('suscribe', ['errorcheck' => $message]));
- //               return Redirect::back()->withErrors($checkinbox);
+                return redirect()->route('suscribe')->with('message', $message);
+
+ //
             }
 
         }else{
@@ -63,6 +68,7 @@ class SignupController extends Controller
 
 //            $message = 'Regardez votre messagerie';
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
+            $message = ' and validate your account';
 
             return redirect(route('suscribe', ['message' => $message]));
         }
