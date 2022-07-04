@@ -2,6 +2,8 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Qrcode;
+use App\Models\User;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
@@ -21,18 +23,63 @@ class MyTest extends Command
      */
     protected $description = 'Un test perso';
 
+    public function handle()
+    {
+        $this->test002();
+    }
+
+    public function test002()
+    {
+
+        $user = User::first();
+        $this->info($user->email);
+        foreach ($user->qrcodes as $qrcode){
+            $this->info($qrcode->token);
+        }
+
+        //$qrcode = Qrcode::first();
+        //$this->info($qrcode->token);
+        //$this->info($qrcode->user->email);
+
+    }
+
     /**
      * Execute the console command.
      *
      * @return int
      */
-    public function handle()
+    public function test001()
     {
-        $token = Str::uuid();
-        $this->info($token);
+        // @todo delete
 
-        $token = Str::random(32);
-        $this->info($token);
+
+        $user = new User();
+        $user->email = "test22@test.com";
+        $user->password = "kllhjkhl";
+        $user->lastname = "Martin";
+        $user->firstname = "Jacques";
+        $user->infos = "-";
+        $user->token = Str::uuid();
+        $user->save();
+
+        $this->info($user->email);
+
+
+        $infos = [
+            'race' => 'Berger',
+            'couleur' => 'Blanc',
+            'taille' => 123
+        ];
+
+        $qrcode = new Qrcode();
+        $qrcode->user_id = $user->id;
+        $qrcode->token = Str::uuid();
+        $qrcode->infos = $infos;
+        $qrcode->save();
+
+        $this->info($qrcode->token);
+        $this->info($qrcode->infos['race']);
+        //$this->info($qrcode->infos);
 
         return 0;
     }
