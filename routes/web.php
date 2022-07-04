@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\HealthinfoController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SignupController;
+use App\Http\Controllers\SigninController;
+use App\Http\Controllers\PublicController;
+use App\Http\Controllers\MyaccountController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +19,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function (){
+    return view ('welcome');
 });
 
-Route::get('/hello', function () {
-    return view('hello');
-});
+
+Route::get('/signup', [SignupController::class, 'formulaire']);
+
+Route::post('/signup', [SignupController::class, 'traitement']);
+
+Route::get('/signin', [SigninController::class, 'formulaire']);
+
+Route::post('/signin', [SigninController::class, 'traitement']);
+
+Route::get('/myaccount', [MyaccountController::class, 'traitement']);
+
+Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
+
+Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
+
+Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
+
+Route::get('/public/{token}', [PublicController::class, 'showInfo']);
+
+
+
+
+
+
