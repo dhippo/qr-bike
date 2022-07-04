@@ -302,7 +302,7 @@
 
                         <!-- Tabs -->
                         <div class="mt-6 sm:mt-2 2xl:mt-5">
-                            <div class="border-b border-gray-200">
+                            <div style="width: 65vw; margin-left: 8vw" class="border-b border-gray-200">
                                 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                                     <nav class="-mb-px flex space-x-8" aria-label="Tabs">
                                         <!-- Current: "border-pink-500 text-gray-900", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
@@ -318,7 +318,7 @@
                         </div>
 
                         <!-- Description list -->
-                        <div class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex">
+                        <div style="width: 65vw; margin-left: 10vw" class="mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex">
                             <dl style="width: 55px; min-width: 55px" class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
 
                                 <div>
