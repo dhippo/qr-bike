@@ -20,7 +20,7 @@ use App\Http\Controllers\MyaccountController;
 */
 
 Route::get('/', function (){
-    return view ('welcome');
+    return view ('getstarted');
 });
 
 
