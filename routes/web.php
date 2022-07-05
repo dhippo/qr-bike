@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HealthinfoController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
@@ -45,8 +46,9 @@ Route::get('/testo', function () {
     return view('val.testotest');
 });
 
+Route::get('/welcome', [WelcomeController::class, 'formulaire']);
 
-
+Route::post('/welcome', [WelcomeController::class, 'traitement']);
 
 
 
