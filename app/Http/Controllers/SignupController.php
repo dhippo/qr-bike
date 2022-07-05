@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ActivateAccount;
 use App\Models\User;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
@@ -34,6 +35,7 @@ class SignupController extends Controller
 
             return view('val.signin', [
                 'message' => $messageMailExist,
+                'randomImg' => 'firefighter.jpg',
             ]);
         }
         else{ // CREATION NEW USER WITHOUT PASSWORD
@@ -48,13 +50,14 @@ class SignupController extends Controller
             $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
             $randomImg = $collection->random();
 
-            Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
+            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount());
 
             // @todo "Renvoyer un message pour check inbox"
             $messageCheckInbox = 'check your inbox';
 
             return view('val.signin', [
                 'message' => $messageCheckInbox,
+                'randomImg' => 'firefighter.jpg',
             ]);
         }
 
