@@ -20,13 +20,11 @@ class SignupController extends Controller
     {
         request()->validate([
             'email' => ['required','Email', 'max:50'],
-            //'password' => ['required','confirmed', 'min:8', 'max:12'],
         ]);
 
         $uniquetoken = Str::uuid();
         $user = User::create([
             'email'=>request('email'),
-            //'password'=>bcrypt($uniquetoken),
             'token'=>$uniquetoken,
             'infos'=> [
                 'key' => 'value'
