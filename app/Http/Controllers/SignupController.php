@@ -58,12 +58,18 @@ class SignupController extends Controller
         }else{ // CREATE AN ACCOUNT BECAUSE EMAIL NOT FOUND ON DB
             $tmptoken = Str::uuid();
             $user = User::create([
+//                'email'=>request('email'),
+//                'token'=> $tmptoken,
+//                'password'=>$tmptoken,
+//                'infos'=> [
+//                    'key'=>'value',
+//                ],
                 'email'=>request('email'),
-                'token'=> $tmptoken,
-                'password'=>$tmptoken,
+                'password'=>bcrypt(request('password')),
+                'token'=>Str::uuid(),
                 'infos'=> [
-                    'key'=>'value',
-                ],
+                    'key' => 'value'
+                ]
             ]);
 
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
