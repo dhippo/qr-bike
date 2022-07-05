@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class SignupController extends Controller
@@ -21,21 +22,43 @@ class SignupController extends Controller
         request()->validate([
             'email' => ['required','Email', 'max:50'],
         ]);
+        $email = request('email');
 
-        $uniquetoken = Str::uuid();
-        $user = User::create([
-            'email'=>request('email'),
-            'token'=>$uniquetoken,
-            'infos'=> [
-                'key' => 'value'
-            ]
-        ]);
 
-        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-        $randomImg = $collection->random();
-        return view('val.signin', [
-            'randomImg' => $randomImg,
-        ]);
+
+        $userExist = User::where('email', $email)->first();
+        if($userExist) {
+
+            // @todo "Renvoyer un message d'erreur"
+            $messageMailExist = 'message d erreur';
+
+            return view('val.signin', [
+                'message' => $messageMailExist,
+            ]);
+        }
+        else{ // CREATION NEW USER WITHOUT PASSWORD
+            $uniquetoken = Str::uuid();
+            $user = User::create([
+                'email'=>$email,
+                'token'=>$uniquetoken,
+                'infos'=> [
+                    'key' => 'value'
+                ]
+            ]);
+            $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+            $randomImg = $collection->random();
+
+            Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
+
+            // @todo "Renvoyer un message pour check inbox"
+            $messageCheckInbox = 'check your inbox';
+
+            return view('val.signin', [
+                'message' => $messageCheckInbox,
+            ]);
+        }
+
+
 
     }
 }
