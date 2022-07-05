@@ -41,6 +41,10 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
+Route::get('/testo', function () {
+    return view('val.testotest');
+});
+
 
 
 

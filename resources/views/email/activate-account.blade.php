@@ -1,12 +1,15 @@
 @component('mail::message')
-# Introduction
+# WELCOME TO OUR WEBSITE
 
-The body of your message.
+Thank you for your interest in our website.
 
+## Click below to start creating your first QR CODE
+
+{{-- EXAMPLE OF AN URL url("/posts/{$post->id}");   --}}
 @component('mail::button', ['url' => ''])
-Button Text
+Validate my account
 @endcomponent
 
 Thanks,<br>
-{{ config('app.name') }}
+{{-- config('app.name') --}}
 @endcomponent
