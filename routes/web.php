@@ -19,7 +19,7 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-Route::get('/e', function () {
+Route::get('/tmp', function () {
     return view('steph.tmp');
 });
 

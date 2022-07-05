@@ -26,7 +26,6 @@ class SignupController extends Controller
         $user = User::create([
             'email'=>request('email'),
             'password'=>bcrypt(request('password')),
-            'password_confirmation'=>bcrypt(request('password_confirmation')),
             'token'=>Str::uuid(),
             'infos'=> [
                 'key' => 'value'
