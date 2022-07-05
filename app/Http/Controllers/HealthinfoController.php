@@ -11,8 +11,6 @@ class HealthinfoController extends Controller
         return view('val.edit-healthinfo');
     }
 
-
-
     public function traitement() {
 
 

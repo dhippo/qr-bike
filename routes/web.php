@@ -6,7 +6,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MyaccountController;
-
+use App\Http\Controllers\InfosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,35 +18,18 @@ use App\Http\Controllers\MyaccountController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('layouts.home');
+
+//steph
+Route::get('/test', [InfosController::class, 'db']);
+
+
+Route::post('/test', [InfosController::class, 'db+']);
+
+
+Route::get('/test', function () {  //route pour tester 'formulaire'
+    return view('welcome');
 });
-
-Route::get('/a', function () {
-    return view('steph.tmp');
-});
-
-Route::get('/welcome', function () {
-    return view('steph.LaravelWelcome');
-});
-
-Route::get('/wel', function () {
-    return view('master');
-});
-
-Route::get('/login', [\App\Http\Controllers\RegisterController::class,'index']);
-Route::post('/login', [\App\Http\Controllers\RegisterController::class,'store'])->name('register');
-
-
-
-Route::get('/about', function () {
-    return view('steph.informationAbout');
-});
-
-Route::get('/bouton', function () {
-    return view('steph.testBouton');
-});
-
+//endsteph
 
 Route::get('/signup', [SignupController::class, 'formulaire']);
 
@@ -65,6 +48,7 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
+
 
 
 
