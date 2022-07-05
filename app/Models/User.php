@@ -15,40 +15,26 @@ class User extends Model implements Authenticatable
 
     protected $fillable = [
 
-        /* 1 */
-
         'email',
         'password',
         'token',
-        'active_token',
-
-        /* Profil */
-
-        'sex',
+        'utilisateur_id',
         'firstname',
-        'infos',
         'lastname',
-        'phone',
-        'country',
-        'city',
+        'phoneContact',
+        'nameContact',
         'photo',
-
-        /* Health infos */
-
         'age',
         'size',
         'weight',
         'blood',
         'other',
-
-        /* Contacts */
-
-        'nameContact',
-        'phoneContact',
         'nameDoctor',
         'phoneDoctor',
-
-
+        'sex',
+        'city',
+        'country',
+        'active_token',
                 ];
 
 
@@ -58,8 +44,9 @@ class User extends Model implements Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-      // 'password2',
-       // 'remember_token',
+       //'password',
+       // 'active_token',
+       // 'token',
     ];
 
     /**
@@ -68,8 +55,6 @@ class User extends Model implements Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-
-        /* 1 */
 
        // 'email_verified_at' => 'datetime',
 
