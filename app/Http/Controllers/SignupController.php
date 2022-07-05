@@ -44,28 +44,24 @@ class SignupController extends Controller
         $email = request('email');
 
         $user = User::where('email', $email)->first();
-        if($user){
+        // $user variable take the value of the first user find on db
+
+        if($user){ // THE EMAIL EXISTS
             if($user->active_token) {
                 $message = 'You already have an account';
                 return redirect(route('login', ['message' => $message]));
             }else{
                 $message = 'Check your inbox and validate your account';
-
                 return redirect()->route('signup')->with('message', $message);
-
- //
             }
 
-        }else{
+        }else{ // CREATE AN ACCOUNT BECAUSE EMAIL NOT FOUND ON DB
             $user = User::create([
                 'email'=>request('email'),
                 'token'=>Str::uuid(),
             ]);
 
-
-//            $message = 'Regardez votre messagerie';
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
-            $message = ' and validate your account';
 
             return redirect(route('signup'));
         }
