@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FirstconnexionController;
 use App\Http\Controllers\HealthinfoController;
 use App\Http\Controllers\MyqrcodesController;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,8 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
 Route::get('/myQrCode', [MyqrcodesController::class, 'show']);
+
+Route::get('/FirstConnexion', [FirstconnexionController::class, 'formulaire']);
 
 
 

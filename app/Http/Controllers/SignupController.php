@@ -40,6 +40,9 @@ class SignupController extends Controller
             'email' => ['required', 'email'],
         ]);
 
+        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+        $randomImg = $collection->random();
+
 
         $email = request('email');
 
@@ -47,11 +50,17 @@ class SignupController extends Controller
         if($user){
             if($user->active_token) {
                 $message = 'You already have an account';
-                return redirect(route('login', ['message' => $message]));
+                return view('val.signin', [
+                    'message' => $message,
+                    'randomImg' => $randomImg,
+                ]);
             }else{
                 $message = 'Check your inbox and validate your account';
 
-                return redirect()->route('signup')->with('message', $message);
+                return view('val.signin', [
+                    'message' => $message,
+                    'randomImg' => $randomImg,
+                ]);
 
  //
             }
@@ -62,12 +71,13 @@ class SignupController extends Controller
                 'token'=>Str::uuid(),
             ]);
 
-
-//            $message = 'Regardez votre messagerie';
             Mail::to('durandhippolyte@gmail.com')->send(new CheckEmail());
-            $message = ' and validate your account';
+            $message = 'Check your inbox and validate your account';
 
-            return redirect(route('signup'));
+            return view('val.signin', [
+                'message' => $message,
+                'randomImg' => $randomImg,
+            ]);
         }
     }
 }
