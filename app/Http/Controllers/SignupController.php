@@ -28,6 +28,9 @@ class SignupController extends Controller
             'password'=>bcrypt(request('password')),
             'password_confirmation'=>bcrypt(request('password_confirmation')),
             'token'=>Str::uuid(),
+            'infos'=> [
+                'key' => 'value'
+            ]
         ]);
 
         $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
