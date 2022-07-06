@@ -19,7 +19,7 @@ class WelcomeController extends Controller
 
         if(auth()->guest()) {
             return redirect('/signin')->withErrors([
-                'password' => 'Vous devez vous connecter',
+                'password' => 'You must login to access this page',
             ]);
         };
 
@@ -28,19 +28,15 @@ class WelcomeController extends Controller
         ]);
 
         auth()->user()->update([
-            'firstname'=>request('firstname'),
-            'lastname'=>request('lastname'),
-            'age'=>request('age'),
-            'nameContact'=>request('nameContact'),
-            'phoneContact'=>request('phoneContact'),
-            'blood'=>request('blood'),
-            'size'=>request('size'),
-            'weight'=>request('weight'),
-            'doctor'=>request('doctor'),
-            'other'=>request('other'),
-            'photo'=>request('photo'),
+            'fullname'=>request('fullname'),
+            'password'=> request('password')
+                //request('lastname'),
         ]);
 
         return redirect('/myaccount');
+    }
+
+    private function bycrpt(string $string)
+    {
     }
 }
