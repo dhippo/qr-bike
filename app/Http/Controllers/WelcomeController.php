@@ -8,6 +8,11 @@ class WelcomeController extends Controller
 {
     public function formulaire()
     {
+        if(auth()->guest()) {
+            return redirect('/signup')->withErrors([
+                'password' => 'Create an account with your email',
+            ]);
+        };
         return view('auth.welcome');
     }
 

@@ -7,7 +7,7 @@ Thank you for your interest in our website.
 
 {{-- EXAMPLE OF AN URL url("/posts/{$post->id}");   --}}
 @component('mail::button', ['url' => '/auth/welcome'])
-Validate my account
+Activation
 @endcomponent
 
 Thanks,<br>
