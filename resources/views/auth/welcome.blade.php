@@ -6,8 +6,7 @@
         <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div  class="mx-auto w-full max-w-sm lg:w-96">
                 <div class="sm:mx-auto sm:w-full sm:max-w-md">
-                    <img class="mb-4 mx-auto h-32 w-auto" src="{{URL::asset('/images/logo2.png')}}" alt="Workflow">
-                    <h2 class="text-center text-2xl font-extrabold text-gray-900">Sign up with your :</h2>
+                    <h2 class="text-center text-2xl font-extrabold text-gray-900">Insert your name and create a password to activate your account :</h2>
                 </div>
 
 
@@ -21,7 +20,7 @@
 
 
 
-                        <label for="fullname" class="block text-sm font-medium text-gray-700"> Full Name (First name, Last name </label>
+                        <label for="fullname" class="block text-sm font-medium text-gray-700"> Full Name (ex: John Do) </label>
                         <div class="mt-1">
                             <input id="fullname" name="fullname" type="text" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
@@ -31,6 +30,15 @@
                             <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
                             <div class="mt-1">
                                 <input id="password" name="password" type="password" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="password-confirmation" class="block text-sm font-medium text-gray-700"> Password confirmation</label>
+                            <p class="text-xl text-gray-500">(just to avoid a typing error)</p>
+
+                            <div class="mt-1">
+                                <input id="password-confirmation" name="password-confirmation" type="password-confirmation" autocomplete="current-password" required class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                             </div>
                         </div>
 
@@ -55,10 +63,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="hidden lg:block relative w-0 flex-1">
-        <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/'.$randomImg.'')}}" alt="">
-    </div>
     </div>
 
 @endsection
