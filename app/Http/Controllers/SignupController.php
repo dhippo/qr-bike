@@ -28,12 +28,11 @@ class SignupController extends Controller
         $userExist = User::where('email', $email)->first();
         if($userExist) {
 
-            // @todo "Renvoyer un message d'erreur"
-            $messageMailExist = 'message d erreur';
             return redirect(route('signin'))->withErrors([
-                'email' => 'Your account already exists !',
+                'checkInBox' => 'Your account already exists !',
             ]);
         }
+
         else{ // CREATION NEW USER WITHOUT PASSWORD
             $uniqueToken = Str::uuid();
             $user = User::create([
@@ -46,16 +45,13 @@ class SignupController extends Controller
             $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
             $randomImg = $collection->random();
 
-            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount($user));
+            Mail::to('jacinto.valentino27@gmail.com')->send(new ActivateAccount($user));
 
-            // @todo "Renvoyer un message pour check inbox"
-            $messageCheckInbox = 'check your inbox';
 
             return view('val.signup', [
-                'message' => $messageCheckInbox,
-                'randomImg' => 'firefighter.jpg',
+                'randomImg' => $randomImg,
             ])->withErrors([
-                'email' => 'Check your mailbox to activate your account',
+                'checkInBox' => 'Check your mailbox to activate your account',
             ]);
         }
 
