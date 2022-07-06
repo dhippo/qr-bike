@@ -5,8 +5,8 @@ Thank you for your interest in our website.
 
 ## Click below to start creating your first QR CODE
 
-{{-- EXAMPLE OF AN URL url("/posts/{$post->id}");   --}}
-@component('mail::button', ['url' => 'localhost/welcome'])
+
+@component('mail::button', ['url' => route('welcome', ['token' =>  $token])])
 Activation
 @endcomponent
 

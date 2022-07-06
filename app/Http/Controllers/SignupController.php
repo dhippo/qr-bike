@@ -25,41 +25,37 @@ class SignupController extends Controller
         ]);
         $email = request('email');
 
-
-
         $userExist = User::where('email', $email)->first();
         if($userExist) {
 
             // @todo "Renvoyer un message d'erreur"
             $messageMailExist = 'message d erreur';
-
-            return view('val.signin', [
-                'message' => $messageMailExist,
-                'randomImg' => 'firefighter.jpg',
+            return redirect(route('signin'))->withErrors([
+                'email' => 'Your account already exists !',
             ]);
         }
         else{ // CREATION NEW USER WITHOUT PASSWORD
-            $uniquetoken = Str::uuid();
+            $uniqueToken = Str::uuid();
             $user = User::create([
-                'email'=>$email,
-                'token'=>$uniquetoken,
-                'infos'=> [
+                'email' => $email,
+                'token' => $uniqueToken,
+                'infos' => [
                     'key' => 'value'
                 ]
             ]);
             $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
             $randomImg = $collection->random();
 
-            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount());
+            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount($user));
 
             // @todo "Renvoyer un message pour check inbox"
             $messageCheckInbox = 'check your inbox';
 
-            return view('val.signin', [
+            return view('val.signup', [
                 'message' => $messageCheckInbox,
                 'randomImg' => 'firefighter.jpg',
             ])->withErrors([
-                'password' => 'Check your mailbox to activate your account',
+                'email' => 'Check your mailbox to activate your account',
             ]);
         }
 

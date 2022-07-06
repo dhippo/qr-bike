@@ -2,47 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class WelcomeController extends Controller
 {
-    public function formulaire()
+    public function formulaire($token)
     {
-       // todo 'blinder la vue et faire passer des données dans le mail'
-
-        return view('auth.welcome');
+        $userExist = User::where('token', $token)->first();
+        if($userExist) {
+            return view('auth.welcome', ['token'=>$token]);
+        }else{
+            return redirect(route('signin'))->withErrors([
+                'email' => 'You must check your inbox !',
+            ]);
+        }
     }
 
 
-
-    public function traitement() {
-
-        auth()->user()->update([
-            'active_token'=>1,
+    public function traitement(Request $request) {
+        $validated = $request->validate([
+            'password'                  => 'required|confirmed',
+            'password_confirmation'     => 'required',
+            'fullname'  => 'required',
         ]);
 
-//        if(auth()->guest()) {
-//            return redirect('/signin')->withErrors([
-//                'password' => 'You must login to access this page',
-//            ]);
-//        };
+        $user = User::where('token', $request->input('token'))->first();
+        if($user) {
+            $user->active_token = true;
+            $user->fullname = $request->input('fullname');
+            $user->password = bcrypt($request->input('password'));
+            $user->save();
 
-        $password = request('password');
-
-        auth()->user()->update([
-            'fullname'=>request('fullname'),
-            'password'=> $this->bycrpt($password),
-                //request('lastname'),
-        ]);
-
-//        if(is_null(auth()->user()->password)){
-//            return redirect('/welcome')->withErrors([
-//                'password' => 'You must create a password to continue ',
-//            ]);
-//        };
+            Auth::login($user);
+            return redirect(route('myaccount'));
 
 
-        return redirect('/val/myaccount');
+        }else{
+            return redirect(route('signup'))->withErrors([
+                'email' => 'Please enter a valid email !',
+            ]);
+        }
+
+
+
+
+        return redirect('/myaccount');
     }
 
 }

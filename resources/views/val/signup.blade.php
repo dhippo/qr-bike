@@ -13,7 +13,7 @@
 
 
                     <div class="mt-6">
-                        <form class="space-y-6" action="/signup" method="post">
+                        <form class="space-y-6" action="{{ route('signup-post') }}" method="post">
                             {{ csrf_field() }}
 
                             <div>
