@@ -42,7 +42,7 @@ class WelcomeController extends Controller
 //        };
 
 
-        return redirect('/myaccount');
+        return redirect('/val/myaccount');
     }
 
 }

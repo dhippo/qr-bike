@@ -18,6 +18,30 @@
 
 
 
+{{--                            <div class="grid gap-6 mb-6 lg:grid-cols-2">--}}
+{{--                                <div>--}}
+{{--                                    <label for="fullname" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">First name</label>--}}
+{{--                                    <input type="text" id="fullname" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="John Travolta">--}}
+{{--                                </div>--}}
+{{--                                <div>--}}
+{{--                                    <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Phone number</label>--}}
+{{--                                    <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>--}}
+{{--                                </div>--}}
+
+{{--                            </div>--}}
+
+{{--                        <div class="mb-6">--}}
+{{--                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Password</label>--}}
+{{--                            <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required>--}}
+{{--                        </div>--}}
+{{--                        <div class="mb-6">--}}
+{{--                            <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Confirm password</label>--}}
+{{--                            <input type="password" id="confirm_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="•••••••••" required>--}}
+{{--                        </div>--}}
+
+
+
+
 
 
                         <label for="fullname" class="block text-sm font-medium text-gray-700"> Full Name (ex: John Do) </label>
