@@ -27,25 +27,22 @@ class WelcomeController extends Controller
 //            ]);
 //        };
 
-
+        $password = request('password');
 
         auth()->user()->update([
             'fullname'=>request('fullname'),
-            'password'=> request('password')
+            'password'=> $this->bycrpt($password),
                 //request('lastname'),
         ]);
 
-        if(is_null(auth()->user()->password)){
-            return redirect('/welcome')->withErrors([
-                'password' => 'You must create a password to continue ',
-            ]);
-        };
+//        if(is_null(auth()->user()->password)){
+//            return redirect('/welcome')->withErrors([
+//                'password' => 'You must create a password to continue ',
+//            ]);
+//        };
 
 
-        return view('val.myaccount');
+        return redirect('/myaccount');
     }
 
-    private function bycrpt(string $string)
-    {
-    }
 }

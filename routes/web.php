@@ -34,6 +34,9 @@ Route::post('/signin', [SigninController::class, 'traitement']);
 
 Route::get('/myaccount', [MyaccountController::class, 'formulaire']);
 
+Route::post('/myaccount', [MyaccountController::class, 'traitement']);
+
+
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
 
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
