@@ -9,24 +9,30 @@ return new class extends Migration
     /**
      * Run the migrations.
      *
+     * @param $table
      * @return void
      */
     public function up()
     {
-        $table->dropColumn('firstname');
-        $table->dropColumn('lastname');
-        $table->string('fullname')->after('active_token')->nullable();
-    }
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('firstname');
+            $table->dropColumn('lastname');
+            $table->string('fullname')->after('active_token')->nullable();
+        });
+           }
 
     /**
      * Reverse the migrations.
      *
+     * @param $table
      * @return void
      */
-    public function down()
+    public function down($table)
     {
-        $table->string('firstname')->nullable();
-        $table->string('lastname')->nullable();
-        $table->dropColumn('fullname');
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->dropColumn('fullname');
+        });
     }
 };
