@@ -27,15 +27,19 @@ class WelcomeController extends Controller
             ]);
         };
 
-        request()->validate([
-            'password' => ['required', 'max:25', 'alpha'],
-        ]);
+
 
         auth()->user()->update([
             'fullname'=>request('fullname'),
             'password'=> request('password')
                 //request('lastname'),
         ]);
+
+        if(is_null(auth()->user()->password)){
+            return redirect('/welcome')->withErrors([
+                'password' => 'You must create a password to continue ',
+            ]);
+        };
 
         return redirect('/myaccount');
     }
