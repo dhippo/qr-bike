@@ -16,11 +16,25 @@
 
     <style>
 
+
+
         .container-gif{
             height: 100%;
             background: url("https://tenor.com/46S5.gif") center;
         }
 
+        .containeur-flex{
+
+            display: inline;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        form{
+            display: inline;
+
+        }
     </style>
 
 @endpush

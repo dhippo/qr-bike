@@ -2,8 +2,8 @@
 
 @section('content')
 
-    <div class="min-h-full flex">
-        <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="min-h-full ">
+        <div class="h-screen -1  flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div  class="mx-auto w-full max-w-sm lg:w-96">
                 <div class="sm:mx-auto sm:w-full sm:max-w-md">
                     <img class="mb-4 mx-auto h-32 w-auto" src="{{URL::asset('/images/logo2.png')}}" alt="Workflow">
@@ -150,8 +150,6 @@
             </div>
         </div>
         <div class="hidden lg:block relative w-0 flex-1">
-            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/'.$randomImg.'')}}" alt="">
-        </div>
     </div>
 
 @endsection

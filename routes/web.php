@@ -19,8 +19,8 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-Route::get('/v1', function () {
-    return view('V1');
+Route::get('/tmp', function () {
+    return view('steph.template');
 });
 
 Route::get('/v2', function () {
