@@ -324,27 +324,27 @@
                                 <div>
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">FirstName</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$firstname}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">prenom</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">LastName</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$lastname}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">nom</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Country</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$country}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">pays</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">City</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$city}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">ville</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Phone</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$phone}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">phone</dd>
                                     </div>
 
                                 </div>
@@ -354,33 +354,33 @@
                                 <div>
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">BloodGroup</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$blood}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">blood</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Sex</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$sex}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">sex</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Age</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$age}}yo</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">age</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Size</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$size}}cm</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">123cm</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Weight</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$weight}}kg</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">90}kg</dd>
                                     </div>
 
                                     <div class="sm:col-span-2">
                                         <dt class="text-sm font-medium text-gray-500">About</dt>
                                         <dd class="mt-1 max-w-prose text-sm text-gray-900 space-y-5">
-                                            <p style="width: 200px; flex-wrap: wrap">{{$other}}</p>
+                                            <p style="width: 200px; flex-wrap: wrap">autres infos</p>
                                         </dd>
                                     </div>
 
@@ -392,22 +392,22 @@
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Name Contact</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$nameContact}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">Name</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Phone Contact</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$phoneContact}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">phoneC</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Name Doctor</dt>
-                                        <dd class="mb-8 mt-1 text-sm text-gray-900">{{$nameDoctor}}</dd>
+                                        <dd class="mb-8 mt-1 text-sm text-gray-900">nameDoctor</dd>
                                     </div>
 
                                     <div class="sm:col-span-1">
                                         <dt class="text-sm font-medium text-gray-500">Phone Doctor</dt>
-                                        <dd class="mt-1 text-sm text-gray-900">{{$phoneDoctor}}</dd>
+                                        <dd class="mt-1 text-sm text-gray-900">phone</dd>
                                     </div>
                                 </div>
                             </dl>
