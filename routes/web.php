@@ -32,7 +32,7 @@ Route::get('/signin', [SigninController::class, 'formulaire']);
 
 Route::post('/signin', [SigninController::class, 'traitement']);
 
-Route::get('/myaccount', [MyaccountController::class, 'traitement']);
+Route::get('/myaccount', [MyaccountController::class, 'formulaire']);
 
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
 

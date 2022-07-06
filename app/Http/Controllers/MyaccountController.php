@@ -8,6 +8,13 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class MyaccountController extends Controller
 {
+    public function formulaire()
+    {
+        // todo 'blinder la vue et faire passer des données dans le mail'
+
+        return view('auth.welcome');
+    }
+
     public function traitement()
     {
 
