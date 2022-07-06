@@ -19,9 +19,14 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-Route::get('/tmp', function () {
-    return view('steph.tmp');
+Route::get('/v1', function () {
+    return view('V1');
 });
+
+Route::get('/v2', function () {
+    return view('V2');
+});
+
 
 Route::get('/signup', [SignupController::class, 'formulaire']);
 
