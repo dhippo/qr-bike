@@ -27,7 +27,7 @@ return new class extends Migration
      * @param $table
      * @return void
      */
-    public function down($table)
+    public function down()
     {
         Schema::table('users', function (Blueprint $table) {
             $table->string('firstname')->nullable();
