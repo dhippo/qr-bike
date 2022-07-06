@@ -21,11 +21,11 @@ class WelcomeController extends Controller
             'active_token'=>1,
         ]);
 
-        if(auth()->guest()) {
-            return redirect('/signin')->withErrors([
-                'password' => 'You must login to access this page',
-            ]);
-        };
+//        if(auth()->guest()) {
+//            return redirect('/signin')->withErrors([
+//                'password' => 'You must login to access this page',
+//            ]);
+//        };
 
 
 
@@ -41,7 +41,8 @@ class WelcomeController extends Controller
             ]);
         };
 
-        return redirect('/myaccount');
+
+        return view('val.myaccount');
     }
 
     private function bycrpt(string $string)
