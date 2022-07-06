@@ -58,6 +58,8 @@ class SignupController extends Controller
             return view('val.signin', [
                 'message' => $messageCheckInbox,
                 'randomImg' => 'firefighter.jpg',
+            ])->withErrors([
+                'password' => 'Check your mailbox to activate your account',
             ]);
         }
 

@@ -15,7 +15,9 @@ class WelcomeController extends Controller
 
     public function traitement() {
 
-
+        auth()->user()->update([
+            'active_token'=>1,
+        ]);
 
         if(auth()->guest()) {
             return redirect('/signin')->withErrors([
