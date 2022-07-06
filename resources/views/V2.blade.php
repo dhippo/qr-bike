@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.menu')
 
 @section('content')
     <!-- This example requires Tailwind CSS v2.0+ -->
