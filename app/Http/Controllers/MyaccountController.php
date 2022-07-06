@@ -8,17 +8,32 @@ use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class MyaccountController extends Controller
 {
+    public function formulaire()
+    {
+        // todo 'blinder la vue et faire passer des données dans le mail'
+
+        return view('val.myaccount');
+
+    }
+
     public function traitement()
     {
 
         if(auth()->guest()) {
-            return redirect('/signin')->withErrors([
-                'password' => 'Vous devez vous connecté',
+            return redirect('/val/signin')->withErrors([
+                'password' => 'You must be logged in',
             ]);
         };
 
-        if(is_null(auth()->user()->blood)){
-            return redirect('/edit-healthinfo');
+        if(is_null(auth()->user()->active_token)){
+            return redirect('/val/signnin')->withErrors([
+                'password' => 'You must check your inbox to activate your account ',
+            ]);
+        };
+        if(is_null(auth()->user()->password)){
+            return redirect('/welcome')->withErrors([
+                'password' => 'You must create a password to continue ',
+            ]);
         };
 
         $token = auth()->user()->token;
