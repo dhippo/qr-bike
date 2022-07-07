@@ -14,7 +14,7 @@ use Illuminate\Routing\Route;
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <title>THE QR PROJECT</title>
+    <title>myqr</title>
 
 </head>
 <body>
