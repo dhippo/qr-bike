@@ -37,19 +37,19 @@ Route::get('/tmp', function () {
     return view('steph.tmp');
 });
 
-Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
+Route::get('/', function () {
+    return view('steph.tmp');
+});
 
+Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
 
 Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
-
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
 
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
-
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
-
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
@@ -59,7 +59,6 @@ Route::get('/testo', function () {
 });
 
 Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
-
 Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
