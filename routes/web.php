@@ -20,7 +20,7 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-// Authenticate routes
+// *USER AUTHENTICATED* routes
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
     Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
@@ -29,42 +29,46 @@ Route::middleware(['auth', 'auth.session'])->group(function () {
 
 });
 
-
-
-
-// Free routes
-Route::get('/tmp', function () {
-    return view('steph.tmp');
-});
-
-Route::get('/home', function () {
-    return view('layouts.home');
-});
-
+// AUTH ROUTES
 Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
-
 Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
 
 Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
-
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
+Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
+Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
+
+
+// Account routes
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
-
-Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
-
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
+
+
+// homepages routes
+Route::get('/', function () {
+    return view('homepages.home');
+});
+Route::get('/home', function () {
+    return view('homepages.home');
+});
+Route::get('/services', function () {
+    return view('homepages.services');
+});
+Route::get('/aboutus', function () {
+    return view('homepages.aboutus');
+});
+
+
+// TESTS
 
 Route::get('/testo', function () {
     return view('val.testotest');
 });
 
-Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
-
-Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
 
