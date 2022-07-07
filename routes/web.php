@@ -25,6 +25,13 @@ Route::get('/', function (){
     return view ('welcome');
 });
 
+Route::get('/v2', function (){
+    return view ('layouts.menu');
+});
+
+
+
+
 
 Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 
