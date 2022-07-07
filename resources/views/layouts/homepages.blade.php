@@ -16,6 +16,8 @@
 </head>
 <body>
 
+{{--FAIRE LE HEADER--}}
+
 @yield('content')
 
 
