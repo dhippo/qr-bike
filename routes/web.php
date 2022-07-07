@@ -61,6 +61,9 @@ Route::get('/services', function () {
 Route::get('/aboutus', function () {
     return view('homepages.aboutus');
 });
+Route::get('/aboutus', function () {
+    return view('homepages.aboutus');
+});
 
 
 // TESTS
