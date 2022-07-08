@@ -45,8 +45,12 @@ class SignupController extends Controller
             $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
             $randomImg = $collection->random();
 
-            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount($user));
-
+            if(app()->environment('local')){
+                $destination = config('mail.destination_local');
+            }else{
+                $destination = $email;
+            }
+            Mail::to($destination)->send(new ActivateAccount($user));
 
             return view('val.signup', [
                 'randomImg' => $randomImg,
