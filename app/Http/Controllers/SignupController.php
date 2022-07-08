@@ -32,8 +32,8 @@ class SignupController extends Controller
                 'checkInBox' => 'Your account already exists !',
             ]);
         }
-
-        else{ // CREATION NEW USER WITHOUT PASSWORD
+        else      // CREATION NEW USER WITHOUT PASSWORD
+            {
             $uniqueToken = Str::uuid();
             $user = User::create([
                 'email' => $email,

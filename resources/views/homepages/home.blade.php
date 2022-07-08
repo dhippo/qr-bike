@@ -32,7 +32,7 @@
 
     <!-- Features -->
     <div class="py-12">
-        <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 ">
+        <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 ">
 
             <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 flex flex-col md:flex-row" >
                 <div class="mx-8  ">
@@ -77,62 +77,7 @@
         </div>
     </div>
 
-    <!-- Stats -->
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8" style="justify-content: space-around">
-            <h3 class="text-lg leading-6 font-medium text-gray-900">Today</h3>
-            <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
-                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-                    <dt class="text-sm font-medium text-gray-500 truncate">Total Subscribers</dt>
-                    <dd class="mt-1 text-3xl font-semibold text-gray-900">71,897</dd>
-                </div>
 
-                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-                    <dt class="text-sm font-medium text-gray-500 truncate">QR generated</dt>
-                    <dd class="mt-1 text-3xl font-semibold text-gray-900">58</dd>
-                </div>
-
-                <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
-                    <dt class="text-sm font-medium text-gray-500 truncate">useful qr</dt>
-                    <dd class="mt-1 text-3xl font-semibold text-gray-900">1000000</dd>
-                </div>
-            </dl>
-    </div>
-
-    <!-- How it works -->
-    <section class=" text-white sectionSize">
-        <div>
-            <h2 class="secondaryTitle bg-underline2 bg-100%">How it works</h2>
-        </div>
-        <div class="flex flex-col md:flex-row">
-            <div class="flex-1 mx-8 flex flex-col items-center my-4">
-                <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-                    1
-                </div>
-                <h3 class="font-montserrat font-medium text-xl mb-2"> Security </h3>
-                <p class="text-center font-montserrat">
-                    Your safety is our priority.
-                </p>
-            </div>
-            <div class="flex-1 mx-8 flex flex-col items-center my-4">
-                <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-                    2
-                </div>
-                <h3 class="font-montserrat font-medium text-xl mb-2"> </h3>
-                <p class="text-center font-montserrat">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div class="flex-1 mx-8 flex flex-col items-center my-4">
-                <div class="border-2 rounded-full bg-secondary text-black h-12 w-12 flex justify-center items-center mb-3">
-                    3
-                </div>
-                <h3 class="font-montserrat font-medium text-xl mb-2">Rave</h3>
-                <p class="text-center font-montserrat">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-        </div>
-    </section>
 
     <!-- get suscribe -->
     <div class="">
@@ -145,148 +90,27 @@
         </div>
     </div>
 
-    <!-- Pricing
-    <section class="sectionSize bg-secondary py-0">
-        <div>
-            <h2 class="secondaryTitle bg-underline4 mb-0 bg-100%">Pricing</h2>
-        </div>
-        <div class="flex w-full flex-col md:flex-row">
-
-            <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Good
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $25
-                    <span class="font-normal text-base"> / month</span>
-                </div>
-
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
-                </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
-                </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
-                </div>
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
+    <!-- Stats -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8" style="justify-content: space-around">
+        <h3 class="text-lg leading-6 font-medium text-gray-900">Today</h3>
+        <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-3">
+            <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-sm font-medium text-gray-500 truncate">Total Subscribers</dt>
+                <dd class="mt-1 text-3xl font-semibold text-gray-900">71,897</dd>
             </div>
 
-            <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-12'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    Sticker
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    1€
-                    <span class="font-normal text-base"> / piece </span>
-                </div>
-
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
+            <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-sm font-medium text-gray-500 truncate">QR generated</dt>
+                <dd class="mt-1 text-3xl font-semibold text-gray-900">58</dd>
             </div>
 
-            <div class='flex-1 flex flex-col mx-6 shadow-2xl relative bg-secondary rounded-2xl py-5 px-8 my-8 md:top-24'>
-                <h3 class="font-pt-serif font-normal text-2xl mb-4">
-                    The Ugly
-                </h3>
-                <div class="font-montserrat font-bold text-2xl mb-4">
-                    $50
-                    <span class="font-normal text-base"> / month</span>
-                </div>
-
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #1</p>
-                </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #2</p>
-                </div>
-                <div class="flex">
-                    <img src='dist/assets/logos/CheckedBox.svg' alt="" class="mr-1" />
-                    <p>Benefit #3</p>
-                </div>
-
-                <button class=" border-2 border-solid border-black rounded-xl text-lg py-3 mt-4">
-                    Choose plan
-                </button>
+            <div class="px-4 py-5 bg-white shadow rounded-lg overflow-hidden sm:p-6">
+                <dt class="text-sm font-medium text-gray-500 truncate">useful qr</dt>
+                <dd class="mt-1 text-3xl font-semibold text-gray-900">1000000</dd>
             </div>
+        </dl>
+    </div>
 
-        </div>
-    </section>-->
-
-
-
-    <!--
-    <section class="sectionSize bg-secondary">
-        <div>
-            <h2 class="secondaryTitle bg-underline3 bg-100%">Features</h2>
-        </div>
-        <div class="md:grid md:grid-cols-2 md:grid-rows-2">
-
-            <div class="flex items-start font-montserrat my-6 mr-10">
-                <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
-                <div>
-                    <h3 class="font-semibold text-2xl">Feature #1</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-                        culpa consequuntur saepe quibusdam labore, est ex ducimus
-                        tempore, quos illum officiis, pariatur ea placeat.
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex items-start font-montserrat my-6 mr-10">
-                <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
-                <div>
-                    <h3 class="font-semibold text-2xl">Feature #2</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-                        culpa consequuntur saepe quibusdam labore, est ex ducimus
-                        tempore, quos illum officiis, pariatur ea placeat.
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex items-start font-montserrat my-6 mr-10">
-                <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
-                <div>
-                    <h3 class="font-semibold text-2xl">Feature #3</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-                        culpa consequuntur saepe quibusdam labore, est ex ducimus
-                        tempore, quos illum officiis, pariatur ea placeat.
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex items-start font-montserrat my-6 mr-10">
-                <img src='dist/assets/logos/Heart.svg' alt='' class="h-7 mr-4" />
-                <div>
-                    <h3 class="font-semibold text-2xl">Feature #4</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                        Quisquam voluptate praesentium tenetur earum repellendus! Dicta
-                        culpa consequuntur saepe quibusdam labore, est ex ducimus
-                        tempore, quos illum officiis, pariatur ea placeat.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </section> -->
 
     <!-- FAQ  -->
     <section class="sectionSize items-start pt-8 md:pt-36  text-white">

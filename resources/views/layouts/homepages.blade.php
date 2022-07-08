@@ -11,65 +11,58 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
 
-    <title>myqr</title>
+    <title>THE QR PROJECT</title>
 
 </head>
 <body>
 
 <!--====== HEADER PART  ======-->
 
-    <nav class="fixed flex justify-between py-6 w-full lg:px-48 md:px-12 px-4 content-center z-10"
-         style="background-color: rgba(23,67,99,255)">
-        <div class="flex items-center">
-        </div>
-        <ul class="font-montserrat items-center hidden md:flex">
-            <li class="mx-3 ">
-                <a class="growing-underline" href="#">
-                    Home
-                </a>
-            </li>
-            <li class="growing-underline mx-3">
-                <a href="#">Services</a>
-            </li>
-            <li class="growing-underline mx-3">
-                <a href="#">About us</a>
-            </li>
-        </ul>
-        <div class="font-montserrat hidden md:block">
-            <button class="mr-6"><a href="#">Login</a></button>
-            <button class="py-2 px-4 text-white bg-black rounded-3xl">
-                <a href="#">Get started</a>
-            </button>
-        </div>
-        <div id="showMenu" class="md:hidden">
+<header style="width: 100vw; position: fixed; background-color: rgba(23,67,99,255); border-radius: 15px">
+    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
+        <div class="w-full py-6 flex items-center justify-between border-b border-indigo-500 lg:border-none">
+            <div class="flex items-center">
 
+                {{--  LOGO  --}}
+                <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"><img style="height: 3em;" src="{{URL::asset('/images/My_QR_Logo.png')}}" class="py-0 my-0"></a>
+
+
+                <div class="hidden space-x-8 lg:block"
+                     style="margin-left: 5em">
+
+                    <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"> Home </a>
+
+                    <a href="{{ route('services') }}" class="text-base font-medium text-white hover:text-indigo-50"> Services </a>
+
+                    <a href="{{ route('aboutus') }}" class="text-base font-medium text-white hover:text-indigo-50"> About us </a>
+
+                    <a href="#" class="text-base font-medium text-white hover:text-indigo-50"> Shop </a>
+                </div>
+            </div>
+            <div class="ml-10 space-x-4">
+                <a href="{{ route('signin') }}" class="inline-block bg-indigo-500 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Sign in</a>
+                <a href="{{ route('signup') }}" class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium hover:bg-indigo-50" style="color:rgba(23,67,99,255)">Get started</a>
+            </div>
+        </div>
+        <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
+
+            <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"> Home </a>
+
+            <a href="{{ Route('services') }}" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> Services </a>
+
+            <a href="{{ route('aboutus') }}" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> About us </a>
+
+            <a href="https://www.facebook.com/valentino.jacinto" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> Shop </a>
         </div>
     </nav>
-    <div id='mobileNav' class="hidden px-4 py-6 fixed top-0 left-0 h-full w-full bg-secondary z-20 animate-fade-in-down">
-        <div id="hideMenu" class="flex justify-end">
-            <img src='dist/assets/logos/Cross.svg' alt="" class="h-16 w-16" />
-        </div>
-        <ul class="font-montserrat flex flex-col mx-8 my-24 items-center text-3xl">
-            <li class="mx-3 ">
-                <a class="growing-underline" href="#">
-                    Home
-                </a>
-            </li>
-            <li class="growing-underline mx-3">
-                <a href="#">Services</a>
-            </li>
-            <li class="growing-underline mx-3">
-                <a href="#">About us</a>
-            </li>
-        </ul>
-    </div>
+</header>
 
 <!--====== END OF HEADER ======-->
 
 @yield('content')
 
+<!--======  FOOTER PART  ======-->
 
-<!-- Footer -->
 <footer class="bg-white">
     <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
         <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
@@ -123,8 +116,13 @@
                </svg>
              </a>. --->
         </div>
-        <p class="mt-8 text-center text-base text-gray-400">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+        <p class="mt-8 text-center text-base text-gray-400">&copy; 2020 Tera7, Inc. All rights reserved.</p>
     </div>
 </footer>
+
+<!--====== END OF FOOTER ======-->
+
+
+
 </body>
 </html>
