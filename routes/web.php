@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\DisconnectController;
 use App\Http\Controllers\HealthinfoController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -21,31 +20,12 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-
-// *USER AUTHENTICATED* ROUTES
+// *USER AUTHENTICATED* routes
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
     Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
 
-    Route::get('/myqr', function () {
-        return view('account.myqr');})->name('myqr');
-
-    Route::get('/createqr', function () {
-        return view('account.createqr');})->name('createqr');
-
-    Route::get('/shop', function () {
-        return view('account.shop');})->name('shop');
-
-    Route::get('/help', function () {
-        return view('account.help');})->name('help');
-
-    Route::get('/settings', function () {
-        return view('account.settings');})->name('settings');
-
-    Route::get('/disconnect', [DisconnectController::class, 'youhavetogo'])->name('disconnect');
-
-    Route::get('/templates', function () {
-        return view('account.templates');})->name('templates');
+    Route::post('/myaccount', [MyaccountController::class, 'traitement'])->name('myaccount-post');
 
 });
 
@@ -54,36 +34,41 @@ Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
 
 Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
-Route::get('/login', [SigninController::class, 'pleaselogin'])->name('login');
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
 Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
 Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
+
+// Account routes
+Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
+Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
+
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
 
-// HOMEPAGES ROUTES
-
+// homepages routes
 Route::get('/', function () {
-    return view('homepages.home');})->name('home');
-
+    return view('homepages.home');
+})->name('home');
+Route::get('/home', function () {
+    return view('homepages.home');
+})->name('home-2');
 Route::get('/services', function () {
-    return view('homepages.services');})->name('services');
-
+    return view('homepages.services');
+})->name('services');
 Route::get('/aboutus', function () {
-    return view('homepages.aboutus');})->name('aboutus');
-
-Route::get('/contact', function () {
-    return view('homepages.contact');})->name('contact');
+    return view('homepages.aboutus');
+})->name('aboutus');
 
 
 
+// TESTS
 
-
-
-
+Route::get('/testo', function () {
+    return view('val.testotest');
+});
 
 
 
