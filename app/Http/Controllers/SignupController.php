@@ -11,10 +11,11 @@ class SignupController extends Controller
 {
     public function formulaire()
     {
-//        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-//        $randomImg = $collection->random();
-
-        return view('auth.signup');
+        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+        $randomImg = $collection->random();
+        return view('val.signup', [
+            'randomImg' => $randomImg,
+        ]);
     }
 
     public function traitement()
@@ -31,8 +32,8 @@ class SignupController extends Controller
                 'checkInBox' => 'Your account already exists !',
             ]);
         }
-        else      // CREATION NEW USER WITHOUT PASSWORD
-            {
+
+        else{ // CREATION NEW USER WITHOUT PASSWORD
             $uniqueToken = Str::uuid();
             $user = User::create([
                 'email' => $email,
@@ -41,6 +42,8 @@ class SignupController extends Controller
                     'key' => 'value'
                 ]
             ]);
+            $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+            $randomImg = $collection->random();
 
             if(app()->environment('local')){
                 $destination = config('mail.destination_local');
@@ -49,7 +52,9 @@ class SignupController extends Controller
             }
             Mail::to($destination)->send(new ActivateAccount($user));
 
-            return redirect(route('signup'))->withErrors([
+            return view('val.signup', [
+                'randomImg' => $randomImg,
+            ])->withErrors([
                 'checkInBox' => 'Check your mailbox to activate your account',
             ]);
         }
