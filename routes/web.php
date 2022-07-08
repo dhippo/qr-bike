@@ -69,6 +69,9 @@ Route::get('/aboutus', function () {
 Route::get('/testo', function () {
     return view('val.testotest');
 });
+Route::get('/t', function () {
+    return view('test-view');
+});
 
 
 
