@@ -1,12 +1,12 @@
-@extends('layouts.master')
+@extends('layouts.homepages')
 
 @section('content')
 
-    <div class="min-h-full flex ">
+    <div class="min-h-full flex justify-center">
 
-        <div class="hidden lg:block relative w-0 flex-1">
+{{--        <div class="hidden lg:block relative w-0 flex-1">
             <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/'.$randomImg.'')}}" alt="">
-        </div>
+        </div>--}}
 
         <div class=" h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
 
@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="mt-8">
-                    <div>
+                    {{--<div>
                         <div>
                             <p class="text-sm font-medium text-gray-700">Sign in with</p>
 
@@ -59,7 +59,7 @@
                                 <span class="px-2 bg-white text-gray-500"> Or continue with </span>
                             </div>
                         </div>
-                    </div>
+                    </div>--}}
 
                     @if($errors->has('checkInBox'))
                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
@@ -136,16 +136,16 @@
 
                             </div>
 
-                            <div class="flex">
-                                <button type="submit" class="w-full mr-auto  justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
+                            <div class="flex" style="background-image: linear-gradient(to right, #174363, #406683, #678ba4, #8fb1c6, #bad9ea); border-radius: 10px">
+                                <button type="submit" class="w-full mr-auto  justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
 
                             </div>
                             <div class="flex">
 
-                                <a  href="/signup" style="line-height: 23px" class="flex">
+                                <a  href="{{route('signup')}}" class="flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                                         <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-                                    </svg>Sign up</a>
+                                    </svg>Or create an account</a>
                             </div>
 
                         </form>
