@@ -24,7 +24,6 @@
             <div class="flex items-center">
 
 
-                <a href="{{route('home')}}" class="text-base font-medium text-white hover:text-indigo-50"> LOGO-QR </a>
                 <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"><img style="height: 3em;" src="{{URL::asset('/images/My_QR_Logo.png')}}" class="py-0 my-0"></a>
 
 
