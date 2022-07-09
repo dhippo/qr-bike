@@ -18,43 +18,80 @@
 
 <!--====== HEADER PART  ======-->
 
-<header class="bg-hippo-800">
-    <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-        <div class="w-full py-6 flex items-center border-b border-b-white justify-between lg:border-none">
-            <div class="flex items-center">
+<div id="HEADER" class="relative bg-night-500 shadow-lg" x-data="{ open: false }" >
+    <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
+            <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
+                <a href="{{route('home')}}" class="-py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                </a>
+            </div>
+            <div class="-mr-2 -my-2 md:hidden">
+                <!-- open button h-28  style="height: 7rem"-->
+                <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
 
-                {{-- LOGO --}}
-                <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"><img style="height: 3em;" src="{{URL::asset('/images/My_QR_Logo.png')}}" class="py-0 my-0"></a>
+                <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline"> Services </a>
 
-                <div class="hidden space-x-8 lg:block"
-                     style="margin-left: 5em">
+                <a href="{{route('aboutus')}}" class="text-base font-medium text-night-50 hover:underline"> About </a>
 
-                    <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"> Home </a>
-
-                    <a href="{{ route('services') }}" class="text-base font-medium text-white hover:text-indigo-50"> Services </a>
-
-                    <a href="{{ route('aboutus') }}" class="text-base font-medium text-white hover:text-indigo-50"> About us </a>
-
-                    <a href="#" class="text-base font-medium text-white hover:text-indigo-50"> Shop </a>
+                <a href="#" class="text-base font-medium text-night-50 hover:underline"> Shop </a>
+            </nav>
+            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
+                <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
+            </div>
+        </div>
+    </div>
+    <!-- mobile view --><div x-show="open" class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden border-sky">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"><!-- x-data="{ open: false }"> -->
+            <div class="px-5 pt-4 flex items-center justify-between">
+                <div>
+                    <!-- empty div to center the logo -->
+                </div>
+                <div class="bg-night-700 rounded-full -my-3">
+                    <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                </div>
+                <div class="-mr-2" >
+                    <!-- close button -->
+                    <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="ml-10 space-x-4">
-                <a href="{{ route('signin') }}" class="inline-block bg-blue-600 py-2 px-4 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-75">Sign in</a>
-                <a href="{{ route('signup') }}" class="inline-block bg-white py-2 px-4 border border-transparent rounded-md text-base font-medium hover:bg-indigo-50" style="color:rgba(23,67,99,255)">Get started</a>
+            <div class="pt-5 pb-6" >
+                <div class="px-2 space-y-1">
+
+                    <!-- REAL ONES -->
+                    <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
+
+                    <a href="{{route('services')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
+
+                    <a href="{{route('aboutus')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
+
+                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
+                </div>
+                <div class="mt-6 px-5">
+                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-night-500 text-white font-medium hover:bg-night-700">Sign up</a>
+                </div>
+                <div class="mt-6 px-5">
+                    <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                </div>
             </div>
         </div>
-        <div class="py-4 flex flex-wrap justify-center space-x-6 lg:hidden">
-
-            <a href="{{ route('home') }}" class="text-base font-medium text-white hover:text-indigo-50"> Home </a>
-
-            <a href="{{ route('services') }}" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> Services </a>
-
-            <a href="{{ route('aboutus') }}" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> About us </a>
-
-            <a href="#" style="margin-left: 1em" class="text-base font-medium text-white hover:text-indigo-50"> Shop </a>
-        </div>
-    </nav>
-</header>
+    </div>
+</div>
 
 <!--====== END OF HEADER ======-->
 

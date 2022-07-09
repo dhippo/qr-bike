@@ -47,7 +47,7 @@
                     <a href="#" class="text-base font-medium text-night-50 hover:underline"> Shop </a>
                 </nav>
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="{{route('login')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
+                    <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
                     <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
                 </div>
             </div>
