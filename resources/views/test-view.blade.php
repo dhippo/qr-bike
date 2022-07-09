@@ -19,17 +19,16 @@
 <body class="h-full">
 <div class="min-h-full flex flex-col">
 
-    <div class="relative bg-white" x-data="{ open: false }" >
+    <div id="HEADER" class="relative bg-night-500 shadow-lg" x-data="{ open: false }" >
         <!-- closed menu --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-                <div class="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="#">
-                        <span class="sr-only">Workflow</span>
-                        <img class="h-8 w-auto sm:h-10" src="{{URL::asset('/images/MYQR_logo.png')}} alt="">
+            <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
+                    <a href="{{route('home')}}" class="-py-7 -my-7">
+                        <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
                     </a>
                 </div>
                 <div class="-mr-2 -my-2 md:hidden">
-                    <!-- open button -->
+                    <!-- open button h-28  style="height: 7rem"-->
                     <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                         <span class="sr-only">Open menu</span>
                         <!-- Heroicon name: outline/menu -->
@@ -39,17 +38,17 @@
                     </button>
                 </div>
                 <nav class="hidden md:flex space-x-10">
-                    <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-gray-900"> Home </a>
+                    <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
 
-                    <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-gray-900"> Services </a>
+                    <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline"> Services </a>
 
-                    <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-gray-900"> About us </a>
+                    <a href="{{route('aboutus')}}" class="text-base font-medium text-night-50 hover:underline"> About </a>
 
-                    <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900"> Shop </a>
+                    <a href="#" class="text-base font-medium text-night-50 hover:underline"> Shop </a>
                 </nav>
                 <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"> Sign in </a>
-                    <a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"> Sign up </a>
+                    <a href="{{route('login')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
+                    <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
                 </div>
             </div>
         </div>
@@ -57,7 +56,10 @@
             <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"><!-- x-data="{ open: false }"> -->
                 <div class="px-5 pt-4 flex items-center justify-between">
                     <div>
-                        <img class="h-8 w-auto" src="{{URL::asset('/images/MYQR_logo.png')}} alt="">
+
+                    </div>
+                    <div class="bg-night-700 rounded-full">
+                        <img class="h-24 w-auto pt-1 pl-3" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
                     </div>
                     <div class="-mr-2" >
                         <!-- close button -->
@@ -71,19 +73,21 @@
                 </div>
                 <div class="pt-5 pb-6" >
                     <div class="px-2 space-y-1">
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Product</a>
 
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Features</a>
+                        <!-- REAL ONES -->
+                        <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
 
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Marketplace</a>
+                        <a href="{{route('services')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
 
-                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Company</a>
+                        <a href="{{route('aboutus')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
+
+                        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
                     </div>
                     <div class="mt-6 px-5">
-                        <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700">Sign up</a>
+                        <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-night-500 text-white font-medium hover:bg-night-700">Sign up</a>
                     </div>
                     <div class="mt-6 px-5">
-                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="#" class="text-gray-900 hover:underline">Sign in</a></p>
+                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
                     </div>
                 </div>
             </div>
