@@ -14,7 +14,7 @@
 
 
     <title>THE QR PROJECT</title>
-
+{{--    <!-- src="{{URL::asset('/images/MYQR_logo.png')}} -->--}}
 </head>
 <body class="h-full">
 <div class="min-h-full flex flex-col">
@@ -25,7 +25,7 @@
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#">
                         <span class="sr-only">Workflow</span>
-                        <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                        <img class="h-8 w-auto sm:h-10" src="{{URL::asset('/images/MYQR_logo.png')}} alt="">
                     </a>
                 </div>
                 <div class="-mr-2 -my-2 md:hidden">
@@ -57,7 +57,7 @@
             <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"><!-- x-data="{ open: false }"> -->
                 <div class="px-5 pt-4 flex items-center justify-between">
                     <div>
-                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                        <img class="h-8 w-auto" src="{{URL::asset('/images/MYQR_logo.png')}} alt="">
                     </div>
                     <div class="-mr-2" >
                         <!-- close button -->
