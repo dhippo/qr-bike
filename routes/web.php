@@ -37,6 +37,10 @@ Route::get('/tmp', function () {
     return view('steph.tmp');
 });
 
+Route::get('/home', function () {
+    return view('layouts.home');
+});
+
 Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 
 Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
