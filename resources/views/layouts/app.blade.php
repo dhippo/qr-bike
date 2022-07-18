@@ -80,6 +80,12 @@
                              src="https://tailwindui.com/img/logos/workflow-logo-pink-500-mark-gray-900-text.svg"
                              alt="Workflow">
                     </div>
+
+
+
+                    --------------
+
+
                     <nav aria-label="Sidebar" class="mt-5">
                         <div class="px-2 space-y-1">
                             <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
@@ -404,7 +410,7 @@
             </a>
         </div>
         <div class="mt-8 md:mt-0 md:order-1">
-            <p class="text-center text-base text-gray-400">&copy; 2020 Workflow, Inc. All rights reserved.</p>
+            <p class="text-center text-base text-gray-400">&copy; 2023 Tetra7 (Every day in the future), Inc. All rights reserved.</p>
         </div>
     </div>
 </footer>
