@@ -20,7 +20,7 @@
                 - sur la page seectionner
 
     faire un controller qui vas lier les deux, avec des variable
-    renovoie de la meme chose pour eviter la difference entre les deuc menus
+    renvoie de la meme chose pour eviter la difference entre les deux menus
 
 --->
 
