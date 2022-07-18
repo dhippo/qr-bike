@@ -75,7 +75,7 @@ Route::get('/app/createqr', function () {
     return view('account.createqr');})->name('createqr');
 
 Route::get('/app/shop', function () {
-    return view('account.shop');})->name('our_shop');
+    return view('account.shop');})->name('shop');
 
 Route::get('/app/templates', function () {
     return view('account.templates');})->name('templates');
