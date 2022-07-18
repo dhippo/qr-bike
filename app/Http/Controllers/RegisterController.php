@@ -11,6 +11,8 @@ class RegisterController extends Controller
 {
     public function index()
     {
+        // @todo to delete this controller if not used
+        die('RegisterController : test');
         return view('login');
     }
 
