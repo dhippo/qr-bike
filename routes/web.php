@@ -71,11 +71,24 @@ Route::get('/app/', function () {
 Route::get('/app/myqr', function () {
     return view('account.myqr');})->name('myqr');
 
-Route::get('/app/our_shop', function () {
-    return view('account.our_shop');})->name('our_shop');
+Route::get('/app/createqr', function () {
+    return view('account.createqr');})->name('createqr');
+
+Route::get('/app/shop', function () {
+    return view('account.shop');})->name('our_shop');
 
 Route::get('/app/templates', function () {
     return view('account.templates');})->name('templates');
+
+Route::get('/app/settings', function () {
+    return view('account.settings');})->name('settings');
+
+Route::get('/app/help', function () {
+    return view('account.helpaccount');})->name('helpaccount');
+
+Route::get('/app/disconnect', function () {
+    return view('home');})->name('disconnect');
+
 
 
 
@@ -88,6 +101,9 @@ Route::get('/testo', function () {
 });
 Route::get('/t', function () {
     return view('test-view');
+});
+Route::get('/myaccounttmp', function () {
+    return view('account.myaccounttmp');
 });
 
 

@@ -2,13 +2,6 @@
 
 @section('content')
 
-    <a href="{{ $link }}"
-       class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
-        <!-- svg -->
-        {{ $herocoin }}
-
-        {{ $text }}
-    </a>
 
     <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
     <a href="#"
