@@ -11,11 +11,10 @@ class SignupController extends Controller
 {
     public function formulaire()
     {
-        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-        $randomImg = $collection->random();
-        return view('val.signup', [
-            'randomImg' => $randomImg,
-        ]);
+//        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
+//        $randomImg = $collection->random();
+
+        return view('auth.signup');
     }
 
     public function traitement()
@@ -42,8 +41,6 @@ class SignupController extends Controller
                     'key' => 'value'
                 ]
             ]);
-            $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-            $randomImg = $collection->random();
 
             if(app()->environment('local')){
                 $destination = config('mail.destination_local');
@@ -52,9 +49,7 @@ class SignupController extends Controller
             }
             Mail::to($destination)->send(new ActivateAccount($user));
 
-            return view('val.signup', [
-                'randomImg' => $randomImg,
-            ])->withErrors([
+            return redirect(route('signup'))->withErrors([
                 'checkInBox' => 'Check your mailbox to activate your account',
             ]);
         }
