@@ -36,8 +36,8 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
+            <nav class="hidden md:flex space-x-10" x-data="{ under: false }">
+                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> <div x-show=" under" @click="u"> Home </div> <div x-show=" under" @click="u"> HomeU </div> </a>
 
                 <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline"> Services </a>
 
@@ -57,7 +57,7 @@
                 <div>
                     <!-- empty div to center the logo -->
                 </div>
-                <div class="bg-night-700 rounded-full -my-3">
+                <div class=" rounded-full -my-3">
                     <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
                 </div>
                 <div class="-mr-2" >
@@ -74,7 +74,7 @@
                 <div class="px-2 space-y-1">
 
                     <!-- REAL ONES -->
-                    <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
+                    <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">$home</a>
 
                     <a href="{{route('services')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
 

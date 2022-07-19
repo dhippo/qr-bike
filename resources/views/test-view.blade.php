@@ -96,15 +96,33 @@
 
 
     <!-- MAIN  -->
-    <main class="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8">
-        <div class="flex-shrink-0 my-auto py-16 sm:py-32">
-            <p class="text-sm font-semibold text-indigo-600 uppercase tracking-wide">404 error</p>
-            <h1 class="mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">Page not found</h1>
-            <p class="mt-2 text-base text-gray-500">Sorry, we couldn’t find the page you’re looking for.</p>
-            <div class="mt-6">
-                <a href="#" class="text-base font-medium text-indigo-600 hover:text-indigo-500">Go back home<span aria-hidden="true"> &rarr;</span></a>
-            </div>
+    <main class="flex-grow mx-auto max-w-7xl w-full flex flex-col px-4 sm:px-6 lg:px-8" x-data="{ underline: 1; test : false }">
+
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 underline-offset-4" x-show="underline : 2">Home</a>
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50" x-show="underline : 1" @click="underline = 2">Home</a>
+
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
+
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About us</a>
+<br><br>
+
+        <div x-data="{ tab: 'normal' }">
+
+
+
+<br><br>
+            <div x-show="tab === 'Homesouligne'"><a href="#" class="underline-offset-4"><u> Home Underline </u></a></div>
+            <div x-show="tab === 'normal' "><a href="#" @click="tab = 'Homesouligne'"> Home NOT Underline </a></div>
+
+            <div x-show="tab === 'Servicesouligne'"><a href="#" class="underline-offset-4"><u> Services Underline </u></a></div>
+            <div x-show="tab === 'normal'"><a href="#" @click="tab = 'Servicesouligne'"> Services NOT Underline </a></div>
+
+            <div x-show="tab === 'Aboutsouligne'"><a href="#" class="underline-offset-4"><u> About Underline </u></a></div>
+            <div x-show="tab === 'normal'"><a href="#" @click="tab = 'Homesouligne'"> About NOT Underline </a></div>
         </div>
+
+
+
     </main>
 
 {{--   FOOTER HERE   --}}

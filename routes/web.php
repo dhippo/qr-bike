@@ -48,17 +48,20 @@ Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
 
-// homepages routes
+// homepages view's routes
 
 Route::get('/', function () {
     return view('homepages.home');
 })->name('home');
-                                                    Route::get('/home', function () {
-                                                        return view('homepages.home');
-                                                    })->name('home-2');
+
+Route::get('/home', function () {
+    return view('homepages.home');
+})->name('home-2');
+
 Route::get('/services', function () {
     return view('homepages.services');
 })->name('services');
+
 Route::get('/aboutus', function () {
     return view('homepages.aboutus');
 })->name('aboutus');
