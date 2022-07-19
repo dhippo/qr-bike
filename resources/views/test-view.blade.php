@@ -121,6 +121,13 @@
             <div x-show="tab === 'normal'"><a href="#" @click="tab = 'Homesouligne'"> About NOT Underline </a></div>
         </div>
 
+        <br><br>
+        <br><br>
+        <br><br>
+
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 focus:underline hover:bg-gray-50">Services</a>
+
+        <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 focus:underline hover:bg-gray-50">About us</a>
 
 
     </main>
