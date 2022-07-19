@@ -13,6 +13,7 @@
                     <div class="mt-6">
                         <form class="space-y-6" action="{{ route('welcome-post') }}" method="post">
                             {{ csrf_field() }}
+
                             <x-form.input :errors="$errors" label="First name" name="firstname" type="text" value="{{old('firstname')}}" />
                             <x-form.input :errors="$errors" label="Last name" name="lastname" type="text" value="{{old('lastname')}}" />
                             <x-form.input :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" />
