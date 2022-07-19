@@ -56,18 +56,6 @@ module.exports = {
         "800": "#081926",
         "900": "#050E15"
       },
-      "kit-red": {
-        "light": "#FEB1A5",
-        "dark": "#A73137",
-      },
-      "kit-blue": {
-        "light": "#BAD9EA",
-        "dark": "#174363",
-      },
-      "kit-yellow": {
-        "light": "#FFF5E8",
-        "dark": "#F9BF6E",
-      },
 
       transparent: 'transparent',
       current: 'currentColor',
