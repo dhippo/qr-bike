@@ -17,7 +17,7 @@
                                 </svg>
                             </a>
                             <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
-                                <span class="block">A better way to</span>
+                                <span class="block">Store your data in a single application and manage your QR</span>
                                 <span class="pb-3 block bg-clip-text text-transparent bg-gradient-to-r from-magenta-200 to-cyan-400 sm:pb-5">ship web apps</span>
                             </h1>
                             <p class="text-base text-gray-300 sm:text-xl lg:text-lg xl:text-xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.</p>

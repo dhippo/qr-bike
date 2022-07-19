@@ -11,7 +11,8 @@ class PublicController extends Controller
     {
         $user = User::where('token', $token)->first();
 
-        return view("val.public", [
+
+        return view("public", [
             'token' => $token,
             'user' => $user,
         ]);

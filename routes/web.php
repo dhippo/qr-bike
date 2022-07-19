@@ -20,12 +20,23 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-// *USER AUTHENTICATED* routes
+
+// *USER AUTHENTICATED* ROUTES
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
-    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
+//    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
 
-    Route::post('/myaccount', [MyaccountController::class, 'traitement'])->name('myaccount-post');
+    Route::get('/myaccount', function () {
+        return view('account.myaccount');})->name('myaccount');
+
+    Route::get('/myqr', function () {
+        return view('account.myqr');})->name('myqr');
+
+    Route::get('/shop', function () {
+        return view('account.shop');})->name('shop');
+
+    Route::get('/templates', function () {
+        return view('account.templates');})->name('templates');
 
 });
 
@@ -40,55 +51,29 @@ Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('
 Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
-
-// Account routes
-Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
-Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
-
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
 
-// homepages routes
+// HOMEPAGES ROUTES
 
 Route::get('/', function () {
-    return view('homepages.home');
-})->name('home');
-                                                    Route::get('/home', function () {
-                                                        return view('homepages.home');
-                                                    })->name('home-2');
+    return view('homepages.home');})->name('home');
+
 Route::get('/services', function () {
-    return view('homepages.services');
-})->name('services');
+    return view('homepages.services');})->name('services');
+
 Route::get('/aboutus', function () {
-    return view('homepages.aboutus');
-})->name('aboutus');
+    return view('homepages.aboutus');})->name('aboutus');
 
-// app routes
-
-Route::get('/app/', function () {
-    return view('account.myaccounttmp');})->name('myaccounttmp');
-
-Route::get('/app/myqr', function () {
-    return view('account.myqr');})->name('myqr');
-
-Route::get('/app/our_shop', function () {
-    return view('account.our_shop');})->name('our_shop');
-
-Route::get('/app/templates', function () {
-    return view('account.templates');})->name('templates');
+Route::get('/contact', function () {
+    return view('homepages.contact');})->name('contact');
 
 
 
 
 
-// TESTS
 
-Route::get('/testo', function () {
-    return view('val.testotest');
-});
-Route::get('/t', function () {
-    return view('test-view');
-});
+
 
 
 
