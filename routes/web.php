@@ -20,40 +20,6 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-
-// *USER AUTHENTICATED* ROUTES
-Route::middleware(['auth', 'auth.session'])->group(function () {
-
-//    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
-
-    Route::get('/myaccount', function () {
-        return view('account.myaccount');})->name('myaccount');
-
-    Route::get('/myqr', function () {
-        return view('account.myqr');})->name('myqr');
-
-    Route::get('/shop', function () {
-        return view('account.shop');})->name('shop');
-
-    Route::get('/templates', function () {
-        return view('account.templates');})->name('templates');
-
-});
-
-// AUTH ROUTES
-Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
-Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
-
-Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
-Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
-
-Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
-Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
-
-
-Route::get('/public/{token}', [PublicController::class, 'showInfo']);
-
-
 // HOMEPAGES ROUTES
 
 Route::get('/', function () {
@@ -69,9 +35,52 @@ Route::get('/contact', function () {
     return view('homepages.contact');})->name('contact');
 
 
+// AUTH ROUTES
+
+Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
+Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
+
+Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
+Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
+
+Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
+Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
+Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
+
+// *USER AUTHENTICATED* ROUTES
+
+    Route::middleware(['auth', 'auth.session'])->group(function() {
+
+//Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
+
+Route::get('/myaccount', function () {
+    return view('account.myaccount');})->name('myaccount');
+
+Route::get('/myqr', function () {
+    return view('account.myqr');})->name('myqr');
+
+Route::get('/templates', function () {
+    return view('account.templates');})->name('templates');
+
+Route::get('/createqr', function () {
+    return view('account.createqr');})->name('createqr');
+
+Route::get('/shop', function () {
+    return view('account.shop');})->name('shop');
+
+Route::get('/help', function () {
+    return view('account.help');})->name('help');
+
+Route::get('/settings', function () {
+    return view('account.settings');})->name('settings');
+
+});
+
+Route::get('/', function () {
+    return view('account.myaccount');})->name('disconnect');
 
 
 
