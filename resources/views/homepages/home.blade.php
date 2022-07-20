@@ -7,7 +7,7 @@
     <section  class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
         <div class="md:flex-1 md:mr-10">
             <h1 class="font-pt-serif text-5xl font-bold mb-7">
-                Create simple QR in a fev minutes.
+                Create simple QR in a few minutes.
                 <span class="bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
               cool website
             </span>
@@ -163,5 +163,8 @@
 
 
 </div>
+<x-header.logo src="{{URL::asset('/images/MYQR_logoblue.png')}}">
+
+</x-header.logo>
 
 @endsection

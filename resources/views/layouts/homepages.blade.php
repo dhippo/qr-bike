@@ -19,23 +19,32 @@
 <!--====== HEADER PART  ======-->
 
 <div id="HEADER" class="relative bg-bluecolor-400 shadow-lg" x-data="{ open: false }" >
-    <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- computer view -->
+    <div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
-            <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="-py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+
+            <!-- LOGO MYQR white -->
+            <x-header.logo src="{{URL::asset('/images/MYQR_logo.png')}}">
+
+            </x-header.logo>
+<!--            <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
+                <a href="" class="-py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="" alt="no logo">
                 </a>
-            </div>
+            </div>-->
+
+            <!-- MENU ICON DISPLAY ONLY ON MOBILE SCREEN -->
             <div class="-mr-2 -my-2 md:hidden">
-                <!-- open button h-28  style="height: 7rem"-->
                 <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                     <span class="sr-only">Open menu</span>
-                    <!-- Heroicon name: outline/menu -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
             </div>
+
+
             <nav class="hidden md:flex space-x-10">
                 <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
 
@@ -51,17 +60,27 @@
             </div>
         </div>
     </div>
-    <!-- mobile view --><div x-show="open" class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden border-sky">
-        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden"><!-- x-data="{ open: false }"> -->
+
+    <!-- mobile view -->
+    <div x-show="open" class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden border-sky">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
                     <!-- empty div to center the logo -->
                 </div>
-                <div class="rounded-full -my-3">
-                    <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logoblue.png')}}" alt="no logo">
-                </div>
+
+                <!-- LOGO MYQR logoblue -->
+                <x-header.logo src="{{URL::asset('/images/MYQR_logoblue.png')}}">
+
+                </x-header.logo>
+<!--                <div class="rounded-full -my-3">
+                    <a href="" class="-py-7 -my-7">
+                        <img class="h-28 w-auto my-0 pt-1" src="" alt="no logo">
+                    </a>
+                </div>-->
+
+                <!-- CLOSE MENU ICON DISPLAY ONLY ON MOBILE SCREEN -->
                 <div class="-mr-2" >
-                    <!-- close button -->
                     <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
@@ -69,11 +88,13 @@
                         </svg>
                     </button>
                 </div>
+
             </div>
+
             <div class="pt-5 pb-6" >
                 <div class="px-2 space-y-1">
 
-                    <!-- REAL ONES -->
+                    <!-- LINK ON MOBILE MENU -->
                     <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
 
                     <a href="{{route('services')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
@@ -86,11 +107,13 @@
                     <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-bluecolor-400 text-white font-medium hover:bg-night-700">Sign up</a>
                 </div>
                 <div class="mt-6 px-5">
-                    <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                    <p class="text-center text-base font-medium text-gray-500">Existing user? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
                 </div>
             </div>
+
         </div>
     </div>
+
 </div>
 
 <!--====== END OF HEADER ======-->
