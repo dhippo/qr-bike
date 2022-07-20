@@ -12,7 +12,7 @@ class MyaccountController extends Controller
     {
         // todo 'blinder la vue et faire passer des données dans le mail'
 
-        return redirect(route('myaccount'));
+        return view('account.myaccount');
 
     }
 
@@ -49,7 +49,7 @@ class MyaccountController extends Controller
 
         $qrcode = QrCode::size(200)->generate("http://127.0.0.1/public/$token");
 
-        return view("auth.myaccount", compact('qrcode'), [
+        return view("account.myaccount", compact('qrcode'), [
             'email' => $email,
             'lastname' => $lastname,
             'firstname' => $firstname,

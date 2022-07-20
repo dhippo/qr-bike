@@ -12,9 +12,9 @@ class WelcomeController extends Controller
     {
         $userExist = User::where('token', $token)->first();
         if($userExist) {
-            return redirect(route('welcome'), ['token'=>$token]);
+            return view(('auth.welcome'), ['token'=>$token]);
         }else{
-            return redirect(route('signin'))->withErrors([
+            return view('auth.signin')->withErrors([
                 'email' => 'You must check your inbox !',
             ]);
         }
