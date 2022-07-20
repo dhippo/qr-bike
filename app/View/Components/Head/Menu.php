@@ -20,12 +20,14 @@ class Menu extends Component
 
     public $selectSetting;
 
+    public $modif;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($selectAccount, $selectQR, $selectTemplates, $selectNew, $selectShop, $selectHelp, $selectSetting)
+    public function __construct($selectAccount, $selectQR, $selectTemplates, $selectNew, $selectShop, $selectHelp, $selectSetting, $modif)
     {
         $this->selectAccount = $selectAccount;
         $this->selectQR = $selectQR;
@@ -34,6 +36,7 @@ class Menu extends Component
         $this->selectShop = $selectShop;
         $this->selectHelp = $selectHelp;
         $this->selectSetting = $selectSetting;
+        $this->modif = $modif;
     }
 
     /**

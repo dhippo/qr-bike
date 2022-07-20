@@ -314,7 +314,7 @@
                     <article>
                         <!--====== EDITABLE AREA   ======-->
 
-                        @yield('article')
+                        {{ $modif }}
 
                         <!--====== END OF EDITABLE AREA ======-->
                     </article>
