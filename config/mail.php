@@ -2,6 +2,7 @@
 
 return [
 
+    'destination_local' => env('MAIL_DESTINATION_LOCAL', 'test@test.com'),
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
