@@ -37,7 +37,7 @@
                 </button>
             </div>
             <nav class="hidden md:flex space-x-10" x-data="{ under: false }">
-                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline focus:underline"> <div x-show=" under" @click="u"> Home </div> <div x-show=" under" @click="u"> HomeU </div> </a>
+                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline focus:underline"> Home  </a>
 
                 <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline focus:underline"> Services </a>
 
