@@ -37,12 +37,12 @@ Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
 Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
+
 Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
-
-
 
 // Account routes
 Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
+
 Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
@@ -53,12 +53,15 @@ Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 Route::get('/', function () {
     return view('homepages.home');
 })->name('home');
-                                                    Route::get('/home', function () {
-                                                        return view('homepages.home');
-                                                    })->name('home-2');
+
+Route::get('/home', function () {
+    return view('homepages.home');
+})->name('home-2');
+
 Route::get('/services', function () {
     return view('homepages.services');
 })->name('services');
+
 Route::get('/aboutus', function () {
     return view('homepages.aboutus');
 })->name('aboutus');
@@ -66,32 +69,27 @@ Route::get('/aboutus', function () {
 // app routes
 
 Route::get('/app/', function () {
-    return view('account.myaccounttmp');})->name('myaccounttmp');
+    return view('account.pages.myaccountpage');})->name('myaccounttmp');
 
 Route::get('/app/myqr', function () {
-    return view('account.myqr');})->name('myqr');
+    return view('account.pages.myqrpage');})->name('myqr');
 
 Route::get('/app/createqr', function () {
-    return view('account.createqr');})->name('createqr');
+    return view('account.pages.createqrpage');})->name('createqr');
 
 Route::get('/app/shop', function () {
-    return view('account.shop');})->name('shop');
+    return view('account.pages.shoppage');})->name('shop');
 
 Route::get('/app/templates', function () {
-    return view('account.templates');})->name('templates');
+    return view('account.pages.templatespage');})->name('templates');
 
 Route::get('/app/settings', function () {
-    return view('account.settings');})->name('settings');
+    return view('account.pages.settingspage');})->name('settings');
 
 Route::get('/app/help', function () {
-    return view('account.helpaccount');})->name('helpaccount');
+    return view('account.pages.helpaccountpage');})->name('helpaccount');
 
-Route::get('/app/disconnect', function () {
-    return view('home');})->name('disconnect');
-
-
-
-
+Route::get('/app/disconnect', [DisconnectController::class, 'disconnect'])->name('disconnect');
 
 
 // TESTS
@@ -102,8 +100,9 @@ Route::get('/testo', function () {
 Route::get('/t', function () {
     return view('test-view');
 });
-Route::get('/myaccounttmp', function () {
-    return view('account.myaccounttmp');
+
+Route::get('/zz', function () {
+    return view('account.pages.myaccountpage');
 });
 
 

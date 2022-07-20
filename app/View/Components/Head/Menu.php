@@ -1,20 +1,16 @@
 <?php
 
-namespace App\View\Components;
+namespace App\View\Components\Head;
 
 use Illuminate\View\Component;
 
-
-class MenuConponent extends Component
+class Menu extends Component
 {
     public $selectAccount;
 
     public $selectQR;
 
-    public $selectTemplates = <<<'EOF'
-text
-EOF;
-
+    public $selectTemplates;
 
     public $selectNew;
 
@@ -47,6 +43,6 @@ EOF;
      */
     public function render()
     {
-        return view('components.menu-conponent');
+        return view('components.app.menu');
     }
 }
