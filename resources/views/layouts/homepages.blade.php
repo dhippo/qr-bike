@@ -18,7 +18,7 @@
 
 <!--====== HEADER PART  ======-->
 
-<div id="HEADER" class="relative bg-night-500 shadow-lg" x-data="{ open: false }" >
+<div id="HEADER" class="relative bg-bluecolor-400 shadow-lg" x-data="{ open: false }" >
     <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
@@ -47,7 +47,7 @@
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
                 <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
-                <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
+                <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-cielcolor-600 hover:underline hover:bg-cielcolor-800"> Get started </a>
             </div>
         </div>
     </div>
@@ -57,8 +57,8 @@
                 <div>
                     <!-- empty div to center the logo -->
                 </div>
-                <div class="bg-night-700 rounded-full -my-3">
-                    <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                <div class="rounded-full -my-3">
+                    <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logoblue.png')}}" alt="no logo">
                 </div>
                 <div class="-mr-2" >
                     <!-- close button -->
@@ -83,7 +83,7 @@
                     <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
                 </div>
                 <div class="mt-6 px-5">
-                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-night-500 text-white font-medium hover:bg-night-700">Sign up</a>
+                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-bluecolor-400 text-white font-medium hover:bg-night-700">Sign up</a>
                 </div>
                 <div class="mt-6 px-5">
                     <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
