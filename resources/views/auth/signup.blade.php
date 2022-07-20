@@ -98,8 +98,8 @@
                                     </div>
 
                                     <div class="flex">
-                                        <button style="background-color: rgba(23,67,99,255)" type="submit"
-                                                class="rounded-full h-14 absolute bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                        <button style="background-color: rgba(23,67,99,255); border-radius: 50px" type="submit"
+                                                class=" h-14 absolute bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                                             Sign up
                                         </button>
                                     </div>
