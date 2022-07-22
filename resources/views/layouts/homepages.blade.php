@@ -15,15 +15,15 @@
 
 </head>
 <body>
-
+<div id="bodydiv" class="h-screen w-screen bg-yellow-500">
 <!--====== HEADER PART  ======-->
 
-<div id="HEADER" class="relative bg-night-500 shadow-lg" x-data="{ open: false }" >
+<div id="HEADER" class="relative  shadow-lg" x-data="{ open: false }" >
     <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
                 <a href="{{route('home')}}" class="-py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
                 </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden">
@@ -159,6 +159,6 @@
 <!--====== END OF FOOTER ======-->
 
 
-
+</div>  <!-- close 'bodydiv' -->
 </body>
 </html>
