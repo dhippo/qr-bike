@@ -6,6 +6,21 @@
 
         <!--====== LEFT BODY  ======-->
         <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+
+            <!--====== SMALL SCREEN BODY  ======-->
+            <div class="xl:hidden">
+            <form class="space-y-6" action="{{ route('signup-post') }}" method="post">
+                <h1 class="text-kit-blue-dark font-semibold text-6xl"> Store your data in a single application and manage your QR</h1>
+                <br>
+                <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
+                       type="text" autocomplete="current-email"
+                       class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm">
+            </form>
+            </div>
+
+
+
+            <!--====== BIG SCREEN BODY  ======-->
             <div class="mx-auto w-full hidden xl:block">
 
                 <div class="mt-8" >

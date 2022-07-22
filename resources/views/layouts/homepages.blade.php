@@ -73,7 +73,7 @@ use Illuminate\Routing\Route;
         <!--====== BLUE HEADER  ======-->
             <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="-py-7 -my-7">
+                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
                     <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
                 </a>
             </div>
