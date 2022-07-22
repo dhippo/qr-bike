@@ -10,6 +10,7 @@
             <!--====== SMALL SCREEN BODY  ======-->
             <div class="xl:hidden">
             <form class="-mt-52" action="{{ route('signup-post') }}" method="post">
+                {{ csrf_field() }}
                 <h1 class="mt-4 text-4xl tracking-tight font-bold text-kit-blue-dark sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
                     Take control of your data.</h1>
                 <h1 class="mt-4 text-4xl tracking-tight font-bold text-kit-blue-dark sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
