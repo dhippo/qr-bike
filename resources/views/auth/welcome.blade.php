@@ -139,6 +139,7 @@
                                             </div>
                                         @endif
                                     </div>
+                                    <x-form.input :errors="$errors" :class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none  focus:ring-red-700 focus:border-red-700 sm:text-sm" label="Password Confirmation" color="focus:ring-red-700 focus:border-red-700" name="password_confirmation" type="password"  value="{{old('password_confirmation')}}" />
                                 </div>
 
                                 <div class="flex">
