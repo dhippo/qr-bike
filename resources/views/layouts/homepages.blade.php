@@ -15,7 +15,7 @@
 
 </head>
 <body>
-<div id="bodydiv" class="h-screen w-screen bg-yellow-500">
+<div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
 <!--====== HEADER PART  ======-->
 
 <div id="HEADER" class="relative  shadow-lg" x-data="{ open: false }" >

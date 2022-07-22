@@ -9,7 +9,7 @@ class SigninController extends Controller
 {
     public function formulaire()
     {
-        return redirect(route('signin'));
+        return view('auth.signin');
     }
 
     public function traitement()
