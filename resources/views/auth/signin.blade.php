@@ -89,7 +89,7 @@
                             <div class="flex">
                                 <button style="background-color: rgba(249,191,110,255); border-radius: 50px" type="submit"
                                         class="rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-l font-medium text-white bg-indigo-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
-                                    Sign up
+                                    Sign in
                                 </button>
                             </div>
                         </form>
