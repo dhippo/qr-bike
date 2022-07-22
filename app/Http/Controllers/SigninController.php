@@ -9,11 +9,7 @@ class SigninController extends Controller
 {
     public function formulaire()
     {
-        $collection = collect(['firefighter.jpg','bike3.jpg','bikebg1.jpg','military.jpg','emergency.jpg','car.jpg']);
-        $randomImg = $collection->random();
-        return view('val.signin', [
-            'randomImg' => $randomImg,
-        ]);
+        return view('auth.signin');
     }
 
     public function traitement()
@@ -29,7 +25,7 @@ class SigninController extends Controller
         ]);
 
         if($res) {
-            return redirect('/myaccount');
+            return redirect(route('myaccount'));
         }
 
         return back()->withInput()->withErrors([

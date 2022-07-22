@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\HealthinfoController;
-use App\Http\Controllers\MyqrcodesController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
@@ -20,30 +20,55 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
-Route::get('/', function (){
-    return view ('welcome');
+
+// *USER AUTHENTICATED* ROUTES
+Route::middleware(['auth', 'auth.session'])->group(function () {
+
+//    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
+
+    Route::get('/myaccount', function () {
+        return view('account.myaccount');})->name('myaccount');
+
+    Route::get('/myqr', function () {
+        return view('account.myqr');})->name('myqr');
+
+    Route::get('/shop', function () {
+        return view('account.shop');})->name('shop');
+
+    Route::get('/templates', function () {
+        return view('account.templates');})->name('templates');
+
 });
 
-
+// AUTH ROUTES
 Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
+Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
 
-Route::post('/signup', [SignupController::class, 'traitement']);
+Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
+Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
-Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');;
+Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
+Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
-Route::post('/signin', [SigninController::class, 'traitement']);
-
-Route::get('/myaccount', [MyaccountController::class, 'traitement']);
-
-Route::get('/edit-healthinfo', [HealthinfoController::class, 'formulaire']);
-
-Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
-
-Route::post('/edit-healthinfo', [HealthinfoController::class, 'traitement']);
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 
-Route::get('/myQrCode', [MyqrcodesController::class, 'show']);
+
+// HOMEPAGES ROUTES
+
+Route::get('/', function () {
+    return view('homepages.home');})->name('home');
+
+Route::get('/services', function () {
+    return view('homepages.services');})->name('services');
+
+Route::get('/aboutus', function () {
+    return view('homepages.aboutus');})->name('aboutus');
+
+Route::get('/contact', function () {
+    return view('homepages.contact');})->name('contact');
+
+
 
 
 
