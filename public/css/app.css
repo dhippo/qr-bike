@@ -871,9 +871,6 @@ select {
 .-mr-2 {
   margin-right: -0.5rem;
 }
-.ml-8 {
-  margin-left: 2rem;
-}
 .block {
   display: block;
 }
@@ -1129,11 +1126,6 @@ select {
   margin-right: calc(5rem * var(--tw-space-x-reverse));
   margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
 }
-.space-x-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
-  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1269,10 +1261,6 @@ select {
 .bg-night-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 79 100 / var(--tw-bg-opacity));
-}
-.bg-night-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(160 187 207 / var(--tw-bg-opacity));
 }
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
@@ -1544,10 +1532,6 @@ select {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.text-night-50 {
-  --tw-text-opacity: 1;
-  color: rgb(231 238 243 / var(--tw-text-opacity));
-}
 .text-opacity-50 {
   --tw-text-opacity: 0.5;
 }
@@ -1702,11 +1686,6 @@ input{
 .hover\:bg-night-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(31 48 61 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-night-300:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(113 153 183 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-900:hover {

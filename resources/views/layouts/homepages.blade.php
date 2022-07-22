@@ -23,9 +23,10 @@
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
                 <a href="{{route('home')}}" class="-py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
                 </a>
             </div>
+
             <div class="-mr-2 -my-2 md:hidden">
                 <!-- open button h-28  style="height: 7rem"-->
                 <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -36,18 +37,20 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
 
-                <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline"> Services </a>
+            <nav class="hidden md:flex space-x-20">
 
-                <a href="{{route('aboutus')}}" class="text-base font-medium text-night-50 hover:underline"> About </a>
+                <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Home </a>
 
-                <a href="#" class="text-base font-medium text-night-50 hover:underline"> Shop </a>
+                <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Services </a>
+
+                <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> About </a>
+
+                <a href="#" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Shop </a>
             </nav>
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
-                <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
+                <a href="{{route('signin')}}" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-500"> Sign in </a>
+                <a href="{{route('signup')}}" class="ml-4 px-4 py-2 whitespace-nowrap text-base font-medium text-gray-500 hover:text-yellow-500"> Get started </a>
             </div>
         </div>
     </div>
