@@ -21,7 +21,7 @@ use Illuminate\Routing\Route;
 <div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
 <!--====== HEADER PART  ======-->
 
-<div id="HEADER" class="relative  shadow-lg" x-data="{ open: false }" >
+<div id="HEADER" class="relative" x-data="{ open: false }" >
     <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
 
@@ -61,7 +61,7 @@ use Illuminate\Routing\Route;
                 <a href="{{route('signup')}}" class="ml-4 px-4 py-2 whitespace-nowrap text-base font-medium text-gray-500 hover:text-yellow-500"> Get started </a>
             </div>
 
-                <!--====== BLUE HEADER  ======-->
+            <!--====== BLUE HEADER  ======-->
             @else
             <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
