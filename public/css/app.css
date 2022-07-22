@@ -928,6 +928,9 @@ select {
 .h-28 {
   height: 7rem;
 }
+.h-14 {
+  height: 3.5rem;
+}
 .min-h-full {
   min-height: 100%;
 }
@@ -1254,6 +1257,10 @@ select {
 .bg-night-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(51 79 100 / var(--tw-bg-opacity));
+}
+.bg-indigo-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
@@ -1685,6 +1692,11 @@ input{
   background-color: rgb(31 48 61 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-yellow-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
@@ -1719,6 +1731,11 @@ input{
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
+.focus\:border-yellow-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -1747,6 +1764,11 @@ input{
 .focus\:ring-indigo-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-yellow-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(234 179 8 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {
