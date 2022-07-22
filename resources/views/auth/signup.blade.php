@@ -11,7 +11,7 @@
                         <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
                     </a>
                 </div>
-                <nav style="width: 55vw" class="hidden md:flex space-x-10">
+                <nav style="width: 55vw" class="hidden md:flex space-x-0">
 
 
                     <a style="margin-left: 140px" href="#" class="ml-28 text-base font-medium text-gray-500 hover:text-bluecolor-600"> Home </a>
