@@ -124,9 +124,9 @@ use Illuminate\Routing\Route;
                 </div>
                 <div class="rounded-full -my-3">
                     @if ( Request::routeIs('signin') || Request::routeIs('login') )
-                        <img class="h-28 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                        <img class="h-28 w-auto -my-7 pl-3" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
                     @else
-                        <img class="h-28 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                        <img class="h-28 w-auto -my-7 pl-3" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
                     @endif
                 </div>
                 <div class="-mr-2" >
@@ -140,7 +140,7 @@ use Illuminate\Routing\Route;
                 </div>
             </div>
             <div class="pt-5 pb-6" >
-                <div class="px-2 space-y-1">
+                <div class="px-2 ">
 
                     <!-- REAL ONES -->
                     <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
