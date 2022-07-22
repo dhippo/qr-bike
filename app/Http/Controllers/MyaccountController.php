@@ -12,7 +12,7 @@ class MyaccountController extends Controller
     {
         // todo 'blinder la vue et faire passer des données dans le mail'
 
-        return redirect(route('myaccount'));
+        return view('account.myaccount');
 
     }
 
