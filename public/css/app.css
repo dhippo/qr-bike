@@ -1268,6 +1268,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(23 67 99 / var(--tw-bg-opacity));
 }
+.bg-kit-yellow-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 191 110 / var(--tw-bg-opacity));
+}
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
@@ -1711,6 +1715,11 @@ input{
 .hover\:bg-kit-blue-light:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(186 217 234 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-kit-yellow-light:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 245 232 / var(--tw-bg-opacity));
 }
 
 .hover\:text-gray-700:hover {

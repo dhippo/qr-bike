@@ -37,7 +37,10 @@ use Illuminate\Routing\Route;
         <!--====== YELLOW HEADER  ======-->
             <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="-py-7 -my-7">
+                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                </a>
+                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
                     <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
                 </a>
             </div>
@@ -55,7 +58,7 @@ use Illuminate\Routing\Route;
             <!--====== NAV PAGE TITLES PART  ======-->
             <nav class="hidden md:flex space-x-20">
 
-                <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> HomeBIG </a>
+                <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Home </a>
 
                 <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Services </a>
 
@@ -91,7 +94,7 @@ use Illuminate\Routing\Route;
             <!--====== NAV PAGE TITLES PART  ======-->
             <nav class="hidden md:flex space-x-20">
 
-                <a href="{{route('home')}}" class="border-1-kit-blue-dark text-base font-medium text-gray-500 hover:text-kit-blue-dark"> HomeBIG </a>
+                <a href="{{route('home')}}" class="border-1-kit-blue-dark text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Home </a>
 
                 <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Services </a>
 
@@ -117,7 +120,11 @@ use Illuminate\Routing\Route;
                     <!-- empty div to center the logo -->
                 </div>
                 <div class="rounded-full -my-3">
-                    <img class="h-28 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                    @if ( Request::routeIs('signin') || Request::routeIs('login') )
+                        <img class="h-28 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                    @else
+                        <img class="h-28 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                    @endif
                 </div>
                 <div class="-mr-2" >
                     <!-- close button -->
@@ -141,12 +148,23 @@ use Illuminate\Routing\Route;
 
                     <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
                 </div>
-                <div class="mt-6 px-5">
-                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-blue-dark text-white font-medium hover:bg-kit-blue-light">Sign up</a>
-                </div>
-                <div class="mt-6 px-5">
-                    <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
-                </div>
+                @if ( Request::routeIs('signin') || Request::routeIs('login') )
+                    <div class="mt-6 px-5">
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-yellow-dark text-white font-medium hover:bg-kit-yellow-light">Sign up</a>
+                    </div>
+                    <div class="mt-6 px-5">
+                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                    </div>
+                @else
+                    <div class="mt-6 px-5">
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-blue-dark text-white font-medium hover:bg-kit-blue-light">Sign up</a>
+                    </div>
+                    <div class="mt-6 px-5">
+                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                    </div>
+                @endif
+
+
             </div>
         </div>
     </div>
