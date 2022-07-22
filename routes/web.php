@@ -26,14 +26,23 @@ Route::middleware(['auth', 'auth.session'])->group(function () {
 
     Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
 
-/*    Route::get('/myaccount', function () {
-        return view('account.myaccount');})->name('myaccount')*/;
-
     Route::get('/myqr', function () {
         return view('account.myqr');})->name('myqr');
 
+    Route::get('/createqr', function () {
+        return view('account.createqr');})->name('createqr');
+
     Route::get('/shop', function () {
         return view('account.shop');})->name('shop');
+
+    Route::get('/help', function () {
+        return view('account.help');})->name('help');
+
+    Route::get('/settings', function () {
+        return view('account.settings');})->name('settings');
+
+    Route::get('/disconnect', function () {
+        return view('account.disconnect');})->name('disconnect');
 
     Route::get('/templates', function () {
         return view('account.templates');})->name('templates');
