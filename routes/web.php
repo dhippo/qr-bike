@@ -24,10 +24,10 @@ use App\Http\Controllers\MyaccountController;
 // *USER AUTHENTICATED* ROUTES
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
-//    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
+    Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
 
-    Route::get('/myaccount', function () {
-        return view('account.myaccount');})->name('myaccount');
+/*    Route::get('/myaccount', function () {
+        return view('account.myaccount');})->name('myaccount')*/;
 
     Route::get('/myqr', function () {
         return view('account.myqr');})->name('myqr');
