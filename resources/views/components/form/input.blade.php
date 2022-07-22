@@ -1,8 +1,8 @@
 <div>
-    <label for="{{ $name }}" class="block text-sm font-medium text-gray-700 "> {{ $label }} </label>
+    <label for="{{ $name }}" class="ml-4 block text-sm font-medium text-gray-700 "> {{ $label }} </label>
     <div class="mt-1">
-        <input id="{{ $name }}" name="{{ $name }}" value="{{ $value }}" type="{{ $type }}"
-               class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <input style="width: 25vw" id="{{ $name }}" name="{{ $name }}" value="{{ $value }}" type="{{ $type }}"
+               class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-{{ $color }} focus:border-{{ $color }} sm:text-sm">
         @if($errors->has($name))
             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                 <div class="flex">

@@ -48,7 +48,7 @@
                                 <div>
                                     <label for="lastname" class="ml-5 block text-sm font-medium text-gray-700 "> Last Name </label>
                                     <div class="mt-1">
-                                        <input id="lastname" name="lastname" value="{{ old('lastname') }}" type="text" autocomplete="lastname" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
+                                        <input style="width: 25vw" id="lastname" name="lastname" value="{{ old('lastname') }}" type="text" autocomplete="lastname" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
                                         @if($errors->has('lastname'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -72,7 +72,7 @@
                                 <div>
                                     <label for="firstname" class="ml-5 block text-sm font-medium text-gray-700 "> First Name </label>
                                     <div class="mt-1">
-                                        <input id="firstname" name="firstname" value="{{ old('firstname') }}" type="text" autocomplete="firstname" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none  focus:ring-red-700 focus:border-red-700 sm:text-sm">
+                                        <input style="width: 25vw" id="firstname" name="firstname" value="{{ old('firstname') }}" type="text" autocomplete="firstname" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none  focus:ring-red-700 focus:border-red-700 sm:text-sm">
                                         @if($errors->has('firstname'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -96,7 +96,7 @@
                                 <div>
                                     <label for="password" class="ml-5 block text-sm font-medium text-gray-700"> Password </label>
                                     <div class="mt-1">
-                                        <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
+                                        <input style="width: 25vw" id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
                                         @if($errors->has('password'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -120,7 +120,7 @@
                                 <div>
                                     <label for="password_confirmation" class="ml-5 block text-sm font-medium text-gray-700 "> Password Confirmation </label>
                                     <div class="mt-1">
-                                        <input id="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}" type="text" autocomplete="password_confirmation" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
+                                        <input style="width: 25vw" id="password_confirmation" name="password_confirmation" value="{{ old('password_confirmation') }}" type="text" autocomplete="password_confirmation" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-red-700 focus:border-red-700 sm:text-sm">
                                         @if($errors->has('password_confirmation'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -142,7 +142,7 @@
                                 </div>
 
                                 <div class="flex">
-                                    <button style="background-color: rgba(167,49,55,255); border-radius: 50px" type="submit"
+                                    <button style="background-color: rgba(167,49,55,255); border-radius: 50px;width: 25vw" type="submit"
                                             class="rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-l font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                                         Sign up
                                     </button>

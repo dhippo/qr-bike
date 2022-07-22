@@ -62,13 +62,13 @@
 
 
                         <div class="mt-6">
-                            <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px"class="space-y-6" action="/signin" method="post">
+                            <form style="margin-top:-180px; margin-left: -120px; margin-right: 50px"class="space-y-6" action="/signin" method="post">
                                 {{ csrf_field() }}
 
                                 <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
+                                    <label for="email" class="ml-4 block text-sm font-medium text-gray-700 "> Email address </label>
                                     <div class="mt-1">
-                                        <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
+                                        <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
                                         @if($errors->has('email'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -90,9 +90,9 @@
                                 </div>
 
                                 <div>
-                                    <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
+                                    <label for="password" class="ml-4 block text-sm font-medium text-gray-700"> Password </label>
                                     <div class="mt-1">
-                                        <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
+                                        <input style="width: 25vw" id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
                                         @if($errors->has('password'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
@@ -113,7 +113,7 @@
                                     </div>
                                 </div>
                                 <div class="flex">
-                                    <button style="background-color: rgba(249,191,110,255); border-radius: 50px" type="submit"
+                                    <button style="background-color: rgba(249,191,110,255); border-radius: 50px; width: 25vw" type="submit"
                                             class="rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-l font-medium text-white bg-indigo-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
                                         Sign up
                                     </button>
