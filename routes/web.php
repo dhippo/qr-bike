@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DisconnectController;
 use App\Http\Controllers\HealthinfoController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -41,8 +42,7 @@ Route::middleware(['auth', 'auth.session'])->group(function () {
     Route::get('/settings', function () {
         return view('account.settings');})->name('settings');
 
-    Route::get('/disconnect', function () {
-        return view('account.disconnect');})->name('disconnect');
+    Route::get('/disconnect', [DisconnectController::class, 'youhavetogo'])->name('disconnect');
 
     Route::get('/templates', function () {
         return view('account.templates');})->name('templates');
