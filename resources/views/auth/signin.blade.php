@@ -2,21 +2,19 @@
 
 @section('content')
 
-    <div class="min-h-full flex justify-center">
+    <div class="min-h-full flex ">
 
-{{--        <div class="hidden lg:block relative w-0 flex-1">
-            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/'.$randomImg.'')}}" alt="">
-        </div>--}}
+        <div style="z-index: 2" class="hidden lg:block relative w-0 flex-1">
+            <img style="width: 750px; height: 750px; margin-left: 140px; margin-top: 20px" class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/qrjaune.png')}}"
+                 alt="">
+        </div>
 
         <div class=" h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
 
             <div class=" mx-auto w-full max-w-sm lg:w-96">
-                <div class="sm:mx-auto sm:w-full sm:max-w-md">
-                    <img class="mx-auto mb-4 h-32 w-auto" src="{{URL::asset('/images/qrjaune.png')}}" alt="Workflow">
-                    <h2 class="text-center text-2xl font-extrabold text-gray-900">Sign in with your :</h2>
-                </div>
 
                 <div class="mt-8">
+
 
                     @if($errors->has('checkInBox'))
                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
@@ -38,13 +36,13 @@
 
 
                     <div class="mt-6">
-                        <form class="space-y-6" action="/signin" method="post">
+                        <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px"class="space-y-6" action="/signin" method="post">
                             {{ csrf_field() }}
 
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
                                 <div class="mt-1">
-                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
                                     @if($errors->has('email'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -68,7 +66,7 @@
                             <div>
                                 <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
                                 <div class="mt-1">
-                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-yellow-500 focus:border-yellow-500 sm:text-sm">
                                     @if($errors->has('password'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -88,30 +86,18 @@
                                     @endif
                                 </div>
                             </div>
-
-                            <div class="flex items-center justify-between">
-
-                            </div>
-
-                            <div class="flex" style="background-image: linear-gradient(to right, #174363, #406683, #678ba4, #8fb1c6, #bad9ea); border-radius: 10px">
-                                <button type="submit" class="w-full mr-auto  justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white hover:opacity-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Sign in</button>
-
-                            </div>
                             <div class="flex">
-
-                                <a  href="{{route('signup')}}" class="flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M11 17l-5-5m0 0l5-5m-5 5h12" />
-                                    </svg>Or create an account</a>
+                                <button style="background-color: rgba(249,191,110,255); border-radius: 50px" type="submit"
+                                        class="rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-l font-medium text-white bg-indigo-600 hover:bg-yellow-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+                                    Sign up
+                                </button>
                             </div>
-
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection
 
 
