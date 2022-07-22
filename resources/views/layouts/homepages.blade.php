@@ -23,7 +23,7 @@
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
                 <a href="{{route('home')}}" class="-py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
                 </a>
             </div>
             <div class="-mr-2 -my-2 md:hidden">
