@@ -2,6 +2,6 @@
 
 @section('content')
 
-HELP PAGE
+
 
 @endsection
