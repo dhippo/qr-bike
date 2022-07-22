@@ -6,16 +6,12 @@
 
         <!--====== LEFT BODY  ======-->
         <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-            <div class="mx-auto w-full">
-
-
-
-
+            <div class="mx-auto w-full hidden xl:block">
 
                 <div class="mt-8" >
 
                     <div class="mt-6">
-                        <form style="margin-top: -80px" class="space-y-6" action="{{ route('signup-post') }}" method="post">
+                        <form style="margin-top: -80px" class="space-y-6 hidden xl:block" action="{{ route('signup-post') }}" method="post">
                             {{ csrf_field() }}
                             <h1 style="width: 35vw; color: rgba(23,67,99,255)" class="text-white font-semibold ml-20 text-6xl"> Store your data in a single application and manage your QR</h1>
                             <div style="width: 34vw" class="flex relative ml-20">
@@ -23,10 +19,11 @@
                                 <div>
                                     {{--                                   <label for="email" class=" ml-6 block text-sm font-medium text-gray-700"> Email </label>--}}
                                     <div class="mt-1">
-                                        <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
-                                               type="text" autocomplete="current-email"
-                                               class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm">
-                                        @if($errors->has('email'))
+                                    <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
+                                           type="text" autocomplete="current-email"
+                                           class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm">
+
+                                    @if($errors->has('email'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                                 <div class="flex">
                                                     <div class="flex-shrink-0">
@@ -77,27 +74,15 @@
                                     </button>
                                 </div>
                             </div>
-
-                            {{--<div class="flex">
-                                <a href="/signin" class="flex"
-                                   style="line-height: 23px; position: relative; left: 81% ">
-                                    Sign in
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round"
-                                              d="M13 7l5 5m0 0l-5 5m5-5H6"/>
-                                    </svg>
-                                </a>
-
-                            </div>--}}
                         </form>
+
                     </div>
                 </div>
             </div>
         </div>
 
         <!--====== RIGHT BODY (IMAGE ONLY)  ======-->
-        <div class="relative w-0 flex-1">
+        <div class="relative w-0 flex-1 hidden xl:block">
             <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
                  alt="myqrlogo">
         </div>
