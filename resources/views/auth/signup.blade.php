@@ -10,7 +10,9 @@
             <!--====== SMALL SCREEN BODY  ======-->
             <div class="xl:hidden">
             <form class="space-y-6" action="{{ route('signup-post') }}" method="post">
-                <h1 class="text-kit-blue-dark font-semibold text-6xl"> Store your data in a single application and manage your QR</h1>
+                <p class="mt-1 text-4xl font-bold text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Take control of your data.</p>
+                <p class="mt-1 text-4xl font-bold text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Manage your QR.</p>
+
                 <br>
                 <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
                        type="text" autocomplete="current-email"
@@ -97,10 +99,16 @@
         </div>
 
         <!--====== RIGHT BODY (IMAGE ONLY)  ======-->
+
+        <div class="absolute">
+            <img class="absolute" src="{{URL::asset('/images/artqr.png')}}"
+                 alt="myqrlogo">
+        </div>
         <div class="relative w-0 flex-1 hidden xl:block">
             <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
                  alt="myqrlogo">
         </div>
+
 
     </div>
 
