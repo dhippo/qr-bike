@@ -9,14 +9,19 @@
 
             <!--====== SMALL SCREEN BODY  ======-->
             <div class="xl:hidden">
-            <form class="space-y-6" action="{{ route('signup-post') }}" method="post">
-                <p class="mt-1 text-4xl font-bold text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Take control of your data.</p>
-                <p class="mt-1 text-4xl font-bold text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Manage your QR.</p>
+            <form class="-mt-52" action="{{ route('signup-post') }}" method="post">
+                <p class="mt-1 text-4xl text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Take control of your data.</p>
+                <p class="mt-1 text-4xl text-kit-blue-dark sm:text-5xl sm:tracking-tight lg:text-6xl">Manage your QR.</p>
 
                 <br>
-                <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
+                <label for="email" class="block text-sm font-medium text-gray-700 mt-16"> Email address </label>
+                <input id="email" name="email" value="{{ old('email') }}"
                        type="text" autocomplete="current-email"
-                       class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm">
+                       class="appearance-none block w-full border border-kit-blue-dark rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark w-9/12">
+                <button
+                        class="bg-kit-blue-dark rounded-full text-white w-full h-12 justify-center border border-transparent mt-2 shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark w-9/12">
+                    <a href="{{route('signup')}}" class="h-18">Sign up</a>
+                </button>
             </form>
             </div>
 
