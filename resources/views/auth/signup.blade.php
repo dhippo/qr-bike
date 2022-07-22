@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="min-h-full w-screen flex bg-kit-blue-light">
+    <div class="min-h-full w-screen flex bg-kit-blue-light shadow-lg">
 
-
+        <!--====== LEFT BODY  ======-->
         <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div class="mx-auto w-full">
 
@@ -17,7 +17,7 @@
                     <div class="mt-6">
                         <form style="margin-top: -80px" class="space-y-6" action="{{ route('signup-post') }}" method="post">
                             {{ csrf_field() }}
-                            <h1 style="width: 35vw; color: rgba(23,67,99,255)" class="text-white font-semibold ml-20 text-6xl"> Salut les amis c'est davidla fargepokem on et missjirachi</h1>
+                            <h1 style="width: 35vw; color: rgba(23,67,99,255)" class="text-white font-semibold ml-20 text-6xl"> Store your data in a single application and manage your QR</h1>
                             <div style="width: 34vw" class="flex relative ml-20">
 
                                 <div>
@@ -95,10 +95,13 @@
                 </div>
             </div>
         </div>
-        <div style="z-index: -3" class="hidden lg:block relative w-0 flex-1">
+
+        <!--====== RIGHT BODY (IMAGE ONLY)  ======-->
+        <div class="relative w-0 flex-1">
             <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
-                 alt="">
+                 alt="myqrlogo">
         </div>
+
     </div>
 
 @endsection
