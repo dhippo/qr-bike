@@ -45,6 +45,7 @@ Route::get('/signup', [SignupController::class, 'formulaire'])->name('signup');
 Route::post('/signup', [SignupController::class, 'traitement'])->name('signup-post');
 
 Route::get('/signin', [SigninController::class, 'formulaire'])->name('signin');
+Route::get('/login', [SigninController::class, 'pleaselogin'])->name('login');
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
 Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
