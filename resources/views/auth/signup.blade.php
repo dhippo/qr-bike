@@ -66,7 +66,7 @@
                                     <div class="mt-1">
                                     <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
                                            type="text" autocomplete="current-email"
-                                           class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-900 focus:border-indigo-900 sm:text-sm">
+                                           class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark sm:text-sm">
 
                                     @if($errors->has('email'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
@@ -112,7 +112,7 @@
 
                                 <div class="flex">
                                     <button type="submit"
-                                            class="bg-kit-blue-dark h-14 absolute bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                            class="bg-kit-blue-dark h-14 absolute bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-kit-blue-dark hover:bg-kit-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark">
                                         Sign up
                                     </button>
                                 </div>
