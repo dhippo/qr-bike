@@ -67,6 +67,7 @@ module.exports = {
       "kit-yellow": {
         "light": "#FFF5E8",
         "dark": "#F9BF6E",
+        "gold": "#EAB308", //equivalent to yellow-500 tailwind color
       },
 
       transparent: 'transparent',
