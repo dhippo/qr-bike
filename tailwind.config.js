@@ -56,9 +56,15 @@ module.exports = {
         "800": "#081926",
         "900": "#050E15"
       },
-      "kit-red": {
-        "light": "#FEB1A5",
-        "dark": "#A73137",
+      "kit-green": {
+        "light": "#d9eaba",
+        "mid": "#828C6F",
+        "dark": "#47641d",
+      },
+      "kit-pink": {
+        "light": "#eabad9",
+        "mid": "#745D6C",
+        "dark": "#67204f",
       },
       "kit-blue": {
         "light": "#BAD9EA",
