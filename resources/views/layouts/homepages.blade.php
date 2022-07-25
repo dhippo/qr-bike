@@ -64,7 +64,7 @@ use Illuminate\Routing\Route;
 
                 <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> About </a>
 
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Shop </a>
+                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Contact </a>
             </nav>
             <!--====== SIGN IN / UP PART  ======-->
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -103,7 +103,7 @@ use Illuminate\Routing\Route;
 
                 <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> About </a>
 
-                <a href="#" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Shop </a>
+                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Contact </a>
             </nav>
             <!--====== SIGN IN / UP PART  ======-->
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
@@ -149,7 +149,7 @@ use Illuminate\Routing\Route;
 
                     <a href="{{route('aboutus')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
 
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
+                    <a href="{{route('contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Contact</a>
                 </div>
                 @if ( Request::routeIs('signin') || Request::routeIs('login') )
                     <div class="mt-6 px-5">
