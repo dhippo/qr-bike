@@ -22,3 +22,11 @@
         @endif
     </div>
 </div>
+
+<!--
+
+<x-form.input :errors="$errors" label="First name" name="firstname" type="text" value="" />
+<x-form.input :errors="$errors" label="Last name" name="lastname" type="text" value="" />
+<x-form.input :errors="$errors" label="Password" name="password" type="password" value="old('password')" />
+
+-->

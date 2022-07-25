@@ -33,53 +33,12 @@ use Illuminate\Routing\Route;
     <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0.5">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
 
-        @if ( Request::routeIs('signin') || Request::routeIs('login') )
-        <!--====== YELLOW HEADER  ======-->
             <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
-                </a>
-                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
-                </a>
-            </div>
-            <!--====== MOBILE BUTTON PART  ======-->
-            <div class="-mr-2 -my-2 md:hidden">
-                <!-- open button h-28  style="height: 7rem"-->
-                <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
-                    <span class="sr-only">Open menu</span>
-                    <!-- Heroicon name: outline/menu -->
-                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </button>
-            </div>
-            <!--====== NAV PAGE TITLES PART  ======-->
-            <nav class="hidden md:flex space-x-20">
-
-                <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Home </a>
-
-                <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Services </a>
-
-                <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> About </a>
-
-                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Contact </a>
-            </nav>
-            <!--====== SIGN IN / UP PART  ======-->
-            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="{{route('signin')}}" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-500"> Sign in </a>
-                <a href="{{route('signup')}}" class="ml-4 px-4 py-2 whitespace-nowrap text-base font-medium text-gray-500 hover:text-yellow-500"> Get started </a>
-            </div>
-
-        @else
-        <!--====== BLUE HEADER  ======-->
-            <!--====== LOGO PART  ======-->
-            <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7">
+                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7"><!--====== LOGO ON MOBILE  ======-->
                     <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
                 </a>
-                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
+                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7"><!--====== LOGO ON BIG SCREEN  ======-->
                     <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
                 </a>
             </div>
@@ -97,20 +56,73 @@ use Illuminate\Routing\Route;
             <!--====== NAV PAGE TITLES PART  ======-->
             <nav class="hidden md:flex space-x-20">
 
-                <a href="{{route('home')}}" class="border-1-kit-blue-dark text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Home </a>
+                <x-navlink href="{{route('home')}}" name="home" color="bg-kit-blue-dark" value="Home" />
 
-                <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Services </a>
+                <x-navlink href="{{route('services')}}" name="services" color="bg-kit-blue-dark" value="Services" />
 
-                <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> About </a>
+                <x-navlink href="{{route('aboutus')}}" name="aboutus" color="bg-kit-blue-dark" value="About" />
 
-                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Contact </a>
+                <x-navlink href="{{route('contact')}}" name="contact" color="bg-kit-blue-dark" value="Contact" />
+
             </nav>
-            <!--====== SIGN IN / UP PART  ======-->
+            <!--====== BUTTON SIGN IN / UP PART  ======-->
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-bluecolor-600"> Sign in </a>
-                <a href="{{route('signup')}}" class="bg-kit-blue-dark ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white"> Get started </a>
+                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium
+                        {{  ( Request::routeIs('signin') || Request::routeIs('login') ) ?
+                                'px-4 py-2
+                                border
+                                border-transparent
+                                rounded-md
+                                shadow-sm
+                                text-white
+                                bg-kit-yellow-gold
+                                focus:ring-2
+                                focus:ring-offset-2
+                                focus:ring-kit-yellow-gold'
+                            :
+                                'text-gray-500
+                                rounded-md
+                                hover:text-white
+                                hover:bg-kit-yellow-gold
+                                hover:focus:ring-2
+                                hover:focus:ring-offset-2
+                                hover:focus:ring-kit-yellow-gold
+                                hover:px-4 py-2
+                                hover:border
+                                hover:border-transparent
+                                hover:shadow-sm
+                                duration-500
+                                '
+                        }}">Sign in
+                </a>
+
+                <a href="{{route('signup')}}" class=" whitespace-nowrap text-base font-medium px-4 py-2
+                        {{   Request::routeIs('signup') ?
+                                'ml-8
+                                bg-kit-blue-dark
+                                border
+                                border-transparent
+                                rounded-md
+                                shadow-sm
+                                text-white
+                                '
+                            :
+                                'ml-4
+                                text-gray-500
+                                rounded-md
+                                hover:ml-8
+                                hover:bg-kit-blue-dark
+                                hover:border
+                                hover:border-transparent
+                                hover:shadow-sm
+                                hover:text-white
+                                duration-500'
+                            }} focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark">Get started
+                </a>
+
             </div>
-            @endif
+
+
 
 
 
