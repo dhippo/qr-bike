@@ -1,3 +1,6 @@
+<?php
+use Illuminate\Routing\Route;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +19,32 @@
 </head>
 <body>
 
+@if ( Request::routeIs('signin') || Request::routeIs('login') )
+<div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
+@else
+<div id="bodydiv" class="h-screen w-screen bg-kit-blue-light">
+@endif
+
+
+
 <!--====== HEADER PART  ======-->
 
-<div id="HEADER" class="relative bg-night-500 shadow-lg" x-data="{ open: false }" >
-    <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div id="HEADER" class="relative" x-data="{ open: false }" >
+    <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0.5">
         <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
+
+        @if ( Request::routeIs('signin') || Request::routeIs('login') )
+        <!--====== YELLOW HEADER  ======-->
+            <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
-                <a href="{{route('home')}}" class="-py-7 -my-7">
-                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                </a>
+                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
                 </a>
             </div>
+            <!--====== MOBILE BUTTON PART  ======-->
             <div class="-mr-2 -my-2 md:hidden">
                 <!-- open button h-28  style="height: 7rem"-->
                 <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
@@ -36,19 +55,65 @@
                     </svg>
                 </button>
             </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="{{route('home')}}" class="text-base font-medium text-night-50 hover:underline"> Home </a>
+            <!--====== NAV PAGE TITLES PART  ======-->
+            <nav class="hidden md:flex space-x-20">
 
-                <a href="{{route('services')}}" class="text-base font-medium text-night-50 hover:underline"> Services </a>
+                <a href="{{route('home')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Home </a>
 
-                <a href="{{route('aboutus')}}" class="text-base font-medium text-night-50 hover:underline"> About </a>
+                <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Services </a>
 
-                <a href="#" class="text-base font-medium text-night-50 hover:underline"> Shop </a>
+                <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> About </a>
+
+                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-yellow-500"> Contact </a>
             </nav>
+            <!--====== SIGN IN / UP PART  ======-->
             <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-white hover:underline"> Sign in </a>
-                <a href="{{route('signup')}}" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-lg text-base font-medium text-white bg-night-200 hover:underline hover:bg-night-300"> Get started </a>
+                <a href="{{route('signin')}}" class="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-500 hover:bg-yellow-500"> Sign in </a>
+                <a href="{{route('signup')}}" class="ml-4 px-4 py-2 whitespace-nowrap text-base font-medium text-gray-500 hover:text-yellow-500"> Get started </a>
             </div>
+
+        @else
+        <!--====== BLUE HEADER  ======-->
+            <!--====== LOGO PART  ======-->
+            <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
+                <a href="{{route('home')}}" class="md:hidden -py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                </a>
+                <a href="{{route('home')}}" class="hidden lg:block -py-7 -my-7">
+                    <img class="h-28 w-auto pt-1" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                </a>
+            </div>
+            <!--====== MOBILE BUTTON PART  ======-->
+            <div class="-mr-2 -my-2 md:hidden">
+                <!-- open button h-28  style="height: 7rem"-->
+                <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                    <span class="sr-only">Open menu</span>
+                    <!-- Heroicon name: outline/menu -->
+                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <!--====== NAV PAGE TITLES PART  ======-->
+            <nav class="hidden md:flex space-x-20">
+
+                <a href="{{route('home')}}" class="border-1-kit-blue-dark text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Home </a>
+
+                <a href="{{route('services')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Services </a>
+
+                <a href="{{route('aboutus')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> About </a>
+
+                <a href="{{route('contact')}}" class="text-base font-medium text-gray-500 hover:text-kit-blue-dark"> Contact </a>
+            </nav>
+            <!--====== SIGN IN / UP PART  ======-->
+            <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                <a href="{{route('signin')}}" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-bluecolor-600"> Sign in </a>
+                <a href="{{route('signup')}}" class="bg-kit-blue-dark ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white"> Get started </a>
+            </div>
+            @endif
+
+
+
         </div>
     </div>
     <!-- mobile view --><div x-show="open" class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden border-sky">
@@ -57,8 +122,12 @@
                 <div>
                     <!-- empty div to center the logo -->
                 </div>
-                <div class="bg-night-700 rounded-full -my-3">
-                    <img class="h-24 w-auto my-0 pt-1 pl-3" src="{{URL::asset('/images/MYQR_logo.png')}}" alt="no logo">
+                <div class="rounded-full -my-3">
+                    @if ( Request::routeIs('signin') || Request::routeIs('login') )
+                        <img class="h-28 w-auto -my-7 pl-3" src="{{URL::asset('/images/logojaune.png')}}" alt="no logo">
+                    @else
+                        <img class="h-28 w-auto -my-7 pl-3" src="{{URL::asset('/images/logonightblue.png')}}" alt="no logo">
+                    @endif
                 </div>
                 <div class="-mr-2" >
                     <!-- close button -->
@@ -71,7 +140,7 @@
                 </div>
             </div>
             <div class="pt-5 pb-6" >
-                <div class="px-2 space-y-1">
+                <div class="px-2 ">
 
                     <!-- REAL ONES -->
                     <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
@@ -80,14 +149,25 @@
 
                     <a href="{{route('aboutus')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
 
-                    <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Shop</a>
+                    <a href="{{route('contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Contact</a>
                 </div>
-                <div class="mt-6 px-5">
-                    <a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-night-500 text-white font-medium hover:bg-night-700">Sign up</a>
-                </div>
-                <div class="mt-6 px-5">
-                    <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
-                </div>
+                @if ( Request::routeIs('signin') || Request::routeIs('login') )
+                    <div class="mt-6 px-5">
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-yellow-dark text-white font-medium hover:bg-kit-yellow-light">Sign up</a>
+                    </div>
+                    <div class="mt-6 px-5">
+                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                    </div>
+                @else
+                    <div class="mt-6 px-5">
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-blue-dark text-white font-medium hover:bg-kit-blue-light">Sign up</a>
+                    </div>
+                    <div class="mt-6 px-5">
+                        <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
+                    </div>
+                @endif
+
+
             </div>
         </div>
     </div>
@@ -145,12 +225,7 @@
                 </svg>
             </a>
 
-            <!--- <a href="#" class="text-gray-400 hover:text-gray-500">
-               <span class="sr-only">test</span>
-               <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                 <path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd" />
-               </svg>
-             </a>. --->
+
         </div>
         <p class="mt-8 text-center text-base text-gray-400">&copy; 2020 Tera7, Inc. All rights reserved.</p>
     </div>
@@ -159,6 +234,6 @@
 <!--====== END OF FOOTER ======-->
 
 
-
+</div>  <!-- close 'bodydiv' -->
 </body>
 </html>
