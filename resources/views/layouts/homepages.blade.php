@@ -19,7 +19,7 @@ use Illuminate\Routing\Route;
 </head>
 <body>
 
-@if ( Request::routeIs('signin') || Request::routeIs('login') )
+@if ( Request::routeIs('signin') || Request::routeIs('login') || Request::routeIs('services') || Request::routeIs('contact') )
 <div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
 @else
 <div id="bodydiv" class="h-screen w-screen bg-kit-blue-light">
@@ -58,11 +58,11 @@ use Illuminate\Routing\Route;
 
                 <x-navlink href="{{route('home')}}" name="home" color="bg-kit-blue-dark" value="Home" />
 
-                <x-navlink href="{{route('services')}}" name="services" color="bg-kit-blue-dark" value="Services" />
+                <x-navlink href="{{route('services')}}" name="services" color="bg-kit-yellow-gold" value="Services" />
 
                 <x-navlink href="{{route('aboutus')}}" name="aboutus" color="bg-kit-blue-dark" value="About" />
 
-                <x-navlink href="{{route('contact')}}" name="contact" color="bg-kit-blue-dark" value="Contact" />
+                <x-navlink href="{{route('contact')}}" name="contact" color="bg-kit-yellow-gold" value="Contact" />
 
             </nav>
             <!--====== BUTTON SIGN IN / UP PART  ======-->

@@ -7,7 +7,7 @@
         {{$color}}
         ring-2
         ring-offset-2
-        ring-kit-blue-dark
+        ring-kit-yellow-gold
     ">
         @else
             <a href="{{$href}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md
@@ -17,7 +17,7 @@
         hover:{{$color}}
         focus:ring-2
         focus:ring-offset-2
-        focus:ring-kit-blue-dark
+        focus:ring-{{$color}}
     ">
 
         @endif
