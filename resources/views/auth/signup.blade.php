@@ -127,11 +127,11 @@
         <!--====== RIGHT BODY (IMAGE ONLY)  ======-->
 
         <div class="absolute">
-            <img class="absolute" src="{{URL::asset('/images/artqr.png')}}"
+            <img class="absolute" src="{{URL::asset('/images/blueqrcode.jpeg')}}"
                  alt="myqrlogo">
         </div>
         <div class="relative w-0 flex-1 hidden xl:block">
-            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
+            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/blueqrcode.jpeg')}}"
                  alt="myqrlogo">
         </div>
 

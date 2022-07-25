@@ -7,13 +7,9 @@ use Illuminate\View\Component;
 class Input extends Component
 {
     public $type = "text";
-
     public $label;
-
     public $name = "test";
-
     public $value;
-
     public $errors;
 
 
