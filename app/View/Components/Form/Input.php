@@ -16,19 +16,22 @@ class Input extends Component
 
     public $errors;
 
+    public $color;
+
 
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($type, $label, $name, $value, $errors )
+    public function __construct($type, $label, $name, $value, $errors, $color )
     {
         $this->type = $type;
         $this->label = $label;
         $this->name = $name;
         $this->value = $value;
         $this->errors = $errors;
+        $this->color = $color;
     }
 
     /**
