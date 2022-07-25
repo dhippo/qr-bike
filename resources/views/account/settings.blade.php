@@ -2,6 +2,6 @@
 
 @section('content')
 
-SHOP PAGE OR REDIRECTION
+    SETTINGS PAGE
 
 @endsection

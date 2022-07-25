@@ -12,6 +12,11 @@ class SigninController extends Controller
         return view('auth.signin');
     }
 
+    public function pleaselogin()
+    {
+        return view('auth.signin');
+    }
+
     public function traitement()
     {
         request()->validate([
