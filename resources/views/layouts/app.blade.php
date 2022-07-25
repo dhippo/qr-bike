@@ -393,7 +393,7 @@
             </a>
 
         </div>
-        <p class="mt-8 text-center text-base text-gray-400">&copy; 2023 Tetra7 (Every day in the future), Inc. All rights reserved.</p>
+        <p class="mt-8 text-center text-base text-gray-400">&copy; 2023 Tetra7 (Every day one step closer to the future), Inc. All rights reserved.</p>
     </div>
 </footer>
 
