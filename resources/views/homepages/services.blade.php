@@ -3,11 +3,11 @@
 @section('content')
 
     <!-- This example Tailwind  for services page -->
-    <div class="bg-white">
+    <div class="bg-brandcolor-second200">
         <div aria-hidden="true" class="relative">
             <img src="https://tailwindui.com/img/ecommerce-images/product-feature-02-full-width.jpg" alt=""
                  class="w-full h-96 object-center object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-white"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-brandcolor-second200"></div>
         </div>
 
         <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">

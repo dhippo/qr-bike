@@ -107,7 +107,7 @@ use Illuminate\Routing\Route;
                                 ring-2
                                 ring-offset-2
                                 ring-brandcolor-fifth500
-                                duration-500'
+                                '
                             :
                                 'text-gray-500
                                 rounded-md
@@ -120,7 +120,7 @@ use Illuminate\Routing\Route;
                                 hover:border
                                 hover:border-transparent
                                 hover:shadow-sm
-                                duration-500
+
                                 '
                         }}">Sign in
                                                         </a>
