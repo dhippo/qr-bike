@@ -58,4 +58,6 @@
         </div>
     </div>
 
+    <x-logout :
+
 @endsection
