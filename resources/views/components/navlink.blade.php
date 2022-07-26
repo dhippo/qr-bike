@@ -1,29 +1,23 @@
 <div>
-
     @if (Request::routeIs($name))
-    <a href="{{$href}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md
-        shadow-sm
-        text-white
-        {{$color}}
-        ring-2
-        ring-offset-2
-        ring-kit-yellow-gold
-    ">
-        @else
-            <a href="{{$href}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md
-        text-gray-500
-        hover:shadow-sm
-        hover:text-white
-        hover:{{$color}}
-        focus:ring-2
-        focus:ring-offset-2
-        focus:ring-{{$color}}
-    ">
-
-        @endif
-
-
-        {{$value}}
-
+    <a href="{{$href}}"
+        class="text-base font-medium py-2 px-4 border border-transparent rounded-md text-white {{$color}}"
+        style="background-color: {{$hovercolor}};box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px {{ $hovercolor  }}, 0 0 #0000;">
+        {{ $value }}
     </a>
+    @else
+        <a href="{{$href}}" id="{{$name}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md text-gray-500 hover:text-white duration-500">
+            {{ $value }}
+        </a>
+                <style>
+                    #{{$name}}:hover {
+                        background-color: {{ $hovercolor  }};
+                        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px {{ $hovercolor  }}, 0 0 #0000;
+                    }
+                    #{{$name}}:focus {
+                         background-color: {{ $hovercolor  }};
+                         box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px {{ $hovercolor  }}, 0 0 #0000;
+                     }
+                </style>
+    @endif
 </div>

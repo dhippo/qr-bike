@@ -19,10 +19,16 @@ use Illuminate\Routing\Route;
 </head>
 <body>
 
-@if ( Request::routeIs('signin') || Request::routeIs('login') || Request::routeIs('services') || Request::routeIs('contact') )
-<div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
-@else
-<div id="bodydiv" class="h-screen w-screen bg-kit-blue-light">
+@if ( Request::routeIs('signin') || Request::routeIs('login'))
+<div id="bodydiv" class="h-screen w-screen bg-brandcolor-fifth200">
+@elseif ( Request::routeIs('home') || Request::routeIs('signup'))
+<div id="bodydiv" class="h-screen w-screen bg-brandcolor-first200">
+@elseif ( Request::routeIs('services'))
+<div id="bodydiv" class="h-screen w-screen bg-brandcolor-second200">
+@elseif ( Request::routeIs('aboutus'))
+<div id="bodydiv" class="h-screen w-screen bg-brandcolor-third200">
+@elseif ( Request::routeIs('contact'))
+<div id="bodydiv" class="h-screen w-screen bg-brandcolor-fourth200">
 @endif
 
 
@@ -30,8 +36,8 @@ use Illuminate\Routing\Route;
 <!--====== HEADER PART  ======-->
 
 <div id="HEADER" class="relative" x-data="{ open: false }" >
-    <!-- computer view --><div x-show=" ! open" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0.5">
-        <div class="flex justify-between items-center border-gray-100 py-3 md:justify-start md:space-x-10">
+    <!-- computer view --><div  class="w-full mx-auto px-4 sm:px-6 lg:px-8 pt-0.5">
+        <div class="flex w-full	justify-between items-center border-gray-100 py-3 md:justify-around md:space-x-10">
 
             <!--====== LOGO PART  ======-->
             <div class="flex justify-start lg:w-0 lg:flex-1 m-0 py-0">
@@ -45,7 +51,7 @@ use Illuminate\Routing\Route;
             <!--====== MOBILE BUTTON PART  ======-->
             <div class="-mr-2 -my-2 md:hidden">
                 <!-- open button h-28  style="height: 7rem"-->
-                <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandcolor-first700" aria-expanded="false">
                     <span class="sr-only">Open menu</span>
                     <!-- Heroicon name: outline/menu -->
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
@@ -56,13 +62,13 @@ use Illuminate\Routing\Route;
             <!--====== NAV PAGE TITLES PART  ======-->
             <nav class="hidden md:flex space-x-20">
 
-                <x-navlink href="{{route('home')}}" name="home" color="bg-kit-blue-dark" value="Home" />
+                <x-navlink href="{{ route('home') }}" name="home" color="bg-brandcolor-first700" value="Home" hovercolor="#174363" />
 
-                <x-navlink href="{{route('services')}}" name="services" color="bg-kit-yellow-gold" value="Services" />
+                <x-navlink href="{{ route('services') }}" name="services" color="bg-brandcolor-second500" value="Services" hovercolor="#1A80D9" />
 
-                <x-navlink href="{{route('aboutus')}}" name="aboutus" color="bg-kit-blue-dark" value="About" />
+                <x-navlink href="{{ route('aboutus') }}" name="aboutus" color="bg-brandcolor-third500" value="About" hovercolor="#1AB6D9" />
 
-                <x-navlink href="{{route('contact')}}" name="contact" color="bg-kit-yellow-gold" value="Contact" />
+                <x-navlink href="{{ route('contact') }}" name="contact" color="bg-brandcolor-fourth500" value="Contact" hovercolor="#50BFA0"/>
 
             </nav>
             <!--====== BUTTON SIGN IN / UP PART  ======-->
@@ -75,18 +81,19 @@ use Illuminate\Routing\Route;
                                 rounded-md
                                 shadow-sm
                                 text-white
-                                bg-kit-yellow-gold
-                                focus:ring-2
-                                focus:ring-offset-2
-                                focus:ring-kit-yellow-gold'
+                                bg-brandcolor-fifth500
+                                ring-2
+                                ring-offset-2
+                                ring-brandcolor-fifth500
+                                duration-500'
                             :
                                 'text-gray-500
                                 rounded-md
                                 hover:text-white
-                                hover:bg-kit-yellow-gold
-                                hover:focus:ring-2
-                                hover:focus:ring-offset-2
-                                hover:focus:ring-kit-yellow-gold
+                                hover:bg-brandcolor-fifth500
+                                hover:ring-2
+                                hover:ring-offset-2
+                                hover:ring-brandcolor-fifth500
                                 hover:px-4 py-2
                                 hover:border
                                 hover:border-transparent
@@ -99,7 +106,7 @@ use Illuminate\Routing\Route;
                 <a href="{{route('signup')}}" class=" whitespace-nowrap text-base font-medium px-4 py-2
                         {{   Request::routeIs('signup') ?
                                 'ml-8
-                                bg-kit-blue-dark
+                                bg-brandcolor-first500
                                 border
                                 border-transparent
                                 rounded-md
@@ -111,13 +118,13 @@ use Illuminate\Routing\Route;
                                 text-gray-500
                                 rounded-md
                                 hover:ml-8
-                                hover:bg-kit-blue-dark
+                                hover:bg-brandcolor-first500
                                 hover:border
                                 hover:border-transparent
                                 hover:shadow-sm
                                 hover:text-white
-                                duration-500'
-                            }} focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark">Get started
+                                '
+                            }} focus:ring-2 focus:ring-offset-2 focus:ring-brandcolor-first500">Get started
                 </a>
 
             </div>
@@ -143,7 +150,7 @@ use Illuminate\Routing\Route;
                 </div>
                 <div class="-mr-2" >
                     <!-- close button -->
-                    <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600">
+                    <button @click="open = ! open" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brandcolor-first700">
                         <span class="sr-only">Close menu</span>
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -152,27 +159,35 @@ use Illuminate\Routing\Route;
                 </div>
             </div>
             <div class="pt-5 pb-6" >
-                <div class="px-2 ">
+                <div class="px-2 flex justify-center">
+
+                    <x-navlink href="{{ route('home') }}" name="home" color="bg-brandcolor-first700" value="Home" hovercolor="#174363"/>
+
+                    <x-navlink href="{{ route('services') }}" name="services" color="bg-brandcolor-second500" value="Services" hovercolor="#1A80D9"/>
+
+                    <x-navlink href="{{ route('aboutus') }}" name="aboutus" color="bg-brandcolor-third500" value="About" hovercolor="#1AB6D9"/>
+
+                    <x-navlink href="{{ route('contact') }}" name="contact" color="bg-brandcolor-fourth500" value="Contact" hovercolor="#50BFA0"/>
 
                     <!-- REAL ONES -->
-                    <a href="{{route('home')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
+<!--                    <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Home</a>
 
-                    <a href="{{route('services')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
+                    <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services</a>
 
-                    <a href="{{route('aboutus')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
+                    <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About</a>
 
-                    <a href="{{route('contact')}}" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Contact</a>
+                    <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Contact</a>-->
                 </div>
                 @if ( Request::routeIs('signin') || Request::routeIs('login') )
                     <div class="mt-6 px-5">
-                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-yellow-dark text-white font-medium hover:bg-kit-yellow-light">Sign up</a>
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-brandcolor-fifth-500 text-white font-medium hover:bg-brandcolor-fifth200">Sign up</a>
                     </div>
                     <div class="mt-6 px-5">
                         <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
                     </div>
                 @else
                     <div class="mt-6 px-5">
-                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-kit-blue-dark text-white font-medium hover:bg-kit-blue-light">Sign up</a>
+                        <a href="{{route('signup')}}" class="block text-center w-full py-3 px-4 rounded-md shadow bg-brandcolor-first500 text-white font-medium hover:bg-brandcolor-first200">Sign up</a>
                     </div>
                     <div class="mt-6 px-5">
                         <p class="text-center text-base font-medium text-gray-500">Existing customer? <a href="{{route('signin')}}" class="text-gray-900 hover:underline">Sign in</a></p>
@@ -245,7 +260,7 @@ use Illuminate\Routing\Route;
 
 <!--====== END OF FOOTER ======-->
 
-
+</div>
 </div>  <!-- close 'bodydiv' -->
 </body>
 </html>
