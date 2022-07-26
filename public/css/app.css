@@ -1330,6 +1330,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(23 67 99 / var(--tw-bg-opacity));
 }
+.bg-kit-yellow-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 245 232 / var(--tw-bg-opacity));
+}
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }

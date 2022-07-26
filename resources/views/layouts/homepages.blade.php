@@ -20,7 +20,7 @@ use Illuminate\Routing\Route;
 <body>
 
 @if ( Request::routeIs('signin') || Request::routeIs('login'))
-<div id="bodydiv" class="h-screen w-screen bg-brandcolor-fifth200">
+<div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
 @elseif ( Request::routeIs('home') || Request::routeIs('signup'))
 <div id="bodydiv" class="h-screen w-screen bg-brandcolor-first200">
 @elseif ( Request::routeIs('services'))
