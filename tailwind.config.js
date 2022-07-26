@@ -67,6 +67,55 @@ module.exports = {
       "kit-yellow": {
         "light": "#FFF5E8",
         "dark": "#F9BF6E",
+        "gold":"#eab308",
+      },
+      "kit-hippo-green": {
+        "light": "#d9eaba",
+        "dark": "#436317",
+      },
+      "kit-hippo-pink": {
+        "light": "#eabad9",
+        "dark": "#631743",
+      },
+      "kit-purple": {
+        "light": "#af91c9",
+        "dark": "#7a49a5",
+      },
+
+      "brandcolor": {
+        "first200": "#BAD9EA",
+        "first500": "#174363",
+        "first700": "#174363",
+        // colors de palettes
+        // "first200": "#D4E1FC",
+        // "first500": "#1D64F2",
+        // "first700": "#09399A",
+
+        "second200": "#9FCCF4",
+        "second500": "#1A80D9",
+        "second700": "#104E84",
+
+        "third200": "#9FE4F4",
+        "third500": "#1AB6D9",
+        "third700": "#106F84",
+
+        "fourth200": "#B8E5D8",
+        "fourth500": "#50BFA0",
+        "fourth700": "#2C7762",
+
+        "fifth200": "#FAE7AD",
+        "fifth500": "#F2C12E",
+        "fifth700": "#A37D0A",
+      },
+      "kit-green": {
+        "light": "#d9eaba",
+        "mid": "#828C6F",
+        "dark": "#47641d",
+      },
+      "kit-pink": {
+        "light": "#eabad9",
+        "mid": "#745D6C",
+        "dark": "#67204f",
       },
 
       transparent: 'transparent',
