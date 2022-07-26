@@ -68,6 +68,16 @@ module.exports = {
         "light": "#FFF5E8",
         "dark": "#F9BF6E",
       },
+      "kit-green": {
+        "light": "#d9eaba",
+        "mid": "#828C6F",
+        "dark": "#47641d",
+      },
+      "kit-pink": {
+        "light": "#eabad9",
+        "mid": "#745D6C",
+        "dark": "#67204f",
+      },
 
       transparent: 'transparent',
       current: 'currentColor',
