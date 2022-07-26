@@ -43,6 +43,7 @@ class SignupController extends Controller
             ]);
 
             if(app()->environment('local')){
+
                 $destination = config('mail.destination_local');
             }else{
                 $destination = $email;
