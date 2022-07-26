@@ -233,6 +233,4 @@
 
     </div>
 
-
-
 @endsection
