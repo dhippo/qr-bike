@@ -42,7 +42,7 @@ Route::middleware(['auth', 'auth.session'])->group(function () {
     Route::get('/settings', function () {
         return view('account.settings');})->name('settings');
 
-    Route::get('/disconnect', [DisconnectController::class, 'youhavetogo'])->name('disconnect');
+    Route::get('/disconnect', [SigninController::class, 'youhavetogo'])->name('disconnect');
 
     Route::get('/templates', function () {
         return view('account.templates');})->name('templates');

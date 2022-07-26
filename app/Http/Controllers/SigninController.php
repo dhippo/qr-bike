@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 
 class SigninController extends Controller
@@ -15,6 +16,13 @@ class SigninController extends Controller
     public function pleaselogin()
     {
         return view('auth.signin');
+    }
+
+    public function youhavetogo()
+    {
+        Auth::logout();
+
+        return redirect(route('signin'));
     }
 
     public function traitement()
