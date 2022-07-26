@@ -1286,9 +1286,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-.bg-brandcolor-fifth200 {
+.bg-kit-yellow-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(250 231 173 / var(--tw-bg-opacity));
+  background-color: rgb(255 245 232 / var(--tw-bg-opacity));
 }
 .bg-brandcolor-first200 {
   --tw-bg-opacity: 1;
@@ -1329,10 +1329,6 @@ select {
 .bg-brandcolor-first500 {
   --tw-bg-opacity: 1;
   background-color: rgb(23 67 99 / var(--tw-bg-opacity));
-}
-.bg-kit-yellow-light {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 245 232 / var(--tw-bg-opacity));
 }
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
@@ -1947,9 +1943,9 @@ input{
   --tw-ring-color: rgb(185 28 28 / var(--tw-ring-opacity));
 }
 
-.focus\:ring-indigo-500:focus {
+.focus\:ring-brandcolor-first700:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(23 67 99 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-brandcolor-first500:focus {
@@ -1957,14 +1953,9 @@ input{
   --tw-ring-color: rgb(23 67 99 / var(--tw-ring-opacity));
 }
 
-.focus\:ring-indigo-600:focus {
+.focus\:ring-indigo-500:focus {
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(79 70 229 / var(--tw-ring-opacity));
-}
-
-.focus\:ring-brandcolor-first700:focus {
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(23 67 99 / var(--tw-ring-opacity));
+  --tw-ring-color: rgb(99 102 241 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {
