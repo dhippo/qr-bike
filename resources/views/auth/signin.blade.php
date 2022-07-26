@@ -42,7 +42,7 @@
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
                                 <div class="mt-1">
-                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-dark focus:border-kit-yellow-dark sm:text-sm">
+                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-gold focus:border-kit-yellow-gold sm:text-sm">
                                     @if($errors->has('email'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -66,7 +66,7 @@
                             <div>
                                 <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
                                 <div class="mt-1">
-                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-dark focus:border-kit-yellow-dark sm:text-sm">
+                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-gold focus:border-kit-yellow-gold sm:text-sm">
                                     @if($errors->has('password'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -88,7 +88,7 @@
                             </div>
                             <div class="flex">
                                 <button type="submit"
-                                        class="bg-kit-yellow-dark rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent shadow-sm text-l font-medium text-white hover:bg-kit-yellow-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-dark">
+                                        class="bg-kit-yellow-gold rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 ring">
                                     Sign in
                                 </button>
                             </div>
@@ -103,7 +103,7 @@
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
                                 <div class="mt-1">
-                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-dark focus:border-kit-yellow-dark sm:text-sm">
+                                    <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-gold focus:border-kit-yellow-gold sm:text-sm">
                                     @if($errors->has('email'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -127,7 +127,7 @@
                             <div>
                                 <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
                                 <div class="mt-1">
-                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-dark focus:border-kit-yellow-dark sm:text-sm">
+                                    <input id="password" name="password" value="{{ old('password') }}" type="password" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-gold focus:border-kit-yellow-gold sm:text-sm">
                                     @if($errors->has('password'))
                                         <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                                             <div class="flex">
@@ -149,7 +149,7 @@
                             </div>
                             <div class="flex">
                                 <button type="submit"
-                                        class="bg-kit-yellow-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-dark">
+                                        class="bg-kit-yellow-gold h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
                                     Sign in
                                 </button>
                             </div>
