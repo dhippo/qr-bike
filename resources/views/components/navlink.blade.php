@@ -6,7 +6,7 @@
         {{ $value }}
     </a>
     @else
-        <a href="{{$href}}" id="{{$name}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md text-gray-500 hover:text-white duration-500">
+        <a href="{{$href}}" id="{{$name}}" class="text-base font-medium py-2 px-4 border border-transparent rounded-md hover:text-white duration-500">
             {{ $value }}
         </a>
                 <style>

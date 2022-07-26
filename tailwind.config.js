@@ -69,11 +69,11 @@ module.exports = {
         "dark": "#F9BF6E",
         "gold":"#eab308",
       },
-      "kit-green": {
+      "kit-hippo-green": {
         "light": "#d9eaba",
         "dark": "#436317",
       },
-      "kit-pink": {
+      "kit-hippo-pink": {
         "light": "#eabad9",
         "dark": "#631743",
       },
@@ -106,6 +106,16 @@ module.exports = {
         "fifth200": "#FAE7AD",
         "fifth500": "#F2C12E",
         "fifth700": "#A37D0A",
+      },
+      "kit-green": {
+        "light": "#d9eaba",
+        "mid": "#828C6F",
+        "dark": "#47641d",
+      },
+      "kit-pink": {
+        "light": "#eabad9",
+        "mid": "#745D6C",
+        "dark": "#67204f",
       },
 
       transparent: 'transparent',
