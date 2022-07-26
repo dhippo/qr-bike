@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="h-screen overflow-hidden">
-        <!-- This example requires Tailwind CSS v2.0+ -->
+
         <div class="relative bg-white"style="background-color: rgba(254,177,165,255)">
             <div class="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
