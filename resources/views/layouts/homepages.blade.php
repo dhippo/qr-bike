@@ -37,7 +37,7 @@ use Illuminate\Routing\Route;
 
                                         <!--====== HEADER PART  ======-->
 
-                                        <div id="HEADER" class="relative" x-data="{ open: false }">
+                                        <div style="z-index: 3" id="HEADER" class="relative" x-data="{ open: false }">
                                             <!-- computer view -->
                                             <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 pt-0.5">
                                                 <div class="flex w-full	justify-between items-center border-gray-100 py-3 md:justify-around md:space-x-10">
@@ -104,33 +104,27 @@ use Illuminate\Routing\Route;
                                 shadow-sm
                                 text-white
                                 bg-brandcolor-fifth500
-                                ring-2
-                                ring-offset-2
-                                ring-brandcolor-fifth500
+
                                 '
                             :
                                 'text-gray-500
                                 rounded-md
                                 hover:text-white
                                 hover:bg-brandcolor-fifth500
-                                hover:ring-2
-                                hover:ring-offset-2
-                                hover:ring-brandcolor-fifth500
-                                hover:px-4 py-2
+                                px-4 py-2
                                 hover:border
                                 hover:border-transparent
                                 hover:shadow-sm
-
+                                duration-300
                                 '
                         }}">Sign in
                                                         </a>
 
                                                         <a href="{{route('signup')}}" class=" whitespace-nowrap text-base font-medium px-4 py-2
                         {{   Request::routeIs('signup') ?
-                                'ml-8
+                                'px-4 py-2
+                                ml-4
                                 bg-brandcolor-first500
-                                border
-                                border-transparent
                                 rounded-md
                                 shadow-sm
                                 text-white
@@ -139,14 +133,11 @@ use Illuminate\Routing\Route;
                                 'ml-4
                                 text-gray-500
                                 rounded-md
-                                hover:ml-8
                                 hover:bg-brandcolor-first500
-                                hover:border
-                                hover:border-transparent
-                                hover:shadow-sm
                                 hover:text-white
+                                duration-300
                                 '
-                            }} focus:ring-2 focus:ring-offset-2 focus:ring-brandcolor-first500">Get started
+                            }}">Get started
                                                         </a>
 
                                                     </div>

@@ -5,10 +5,10 @@
     <div class="min-h-full w-screen flex bg-kit-blue-light shadow-lg">
 
         <!--====== LEFT BODY  ======-->
-        <div class="h-screen flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+        <div  class="h-screen flex-1 flex flex-col justify-center py-12  lg:flex-none ">
 
             <!--====== SMALL SCREEN BODY  ======-->
-            <div class="xl:hidden">
+            <div  class="xl:hidden">
             <form class="-mt-52" action="{{ route('signup-post') }}" method="post">
                 {{ csrf_field() }}
                 <h1 class="mt-4 text-4xl tracking-tight font-bold text-kit-blue-dark sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
@@ -20,7 +20,7 @@
                 <label for="email" class="block text-sm font-medium text-gray-700 mt-24"> Email address </label>
                 <input id="email" name="email" value="{{ old('email') }}"
                        type="text" autocomplete="current-email"
-                       class="appearance-none block w-full border border-none rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark w-9/12">
+                       class="mr-4 appearance-none block w-full border border-none rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark w-9/12">
                 @if($errors->has('email'))
                     <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                         <div class="flex">
@@ -51,22 +51,22 @@
 
 
             <!--====== BIG SCREEN BODY  ======-->
-            <div class="mx-auto w-full hidden xl:block">
+            <div style="width: 100%" class="mx-auto w-full hidden xl:block ">
 
                 <div class="mt-8" >
 
-                    <div class="mt-6">
-                        <form style="margin-top: -80px" class="space-y-6 hidden xl:block" action="{{ route('signup-post') }}" method="post">
+                    <div  class="mt-6">
+                        <form style="margin-top: -80px; " class="space-y-6 hidden xl:block" action="{{ route('signup-post') }}" method="post">
                             {{ csrf_field() }}
-                            <h1 style="width: 35vw; color: rgba(23,67,99,255)" class="text-white font-semibold ml-20 text-6xl"> Store your data in a single application and manage your QR</h1>
-                            <div style="width: 34vw" class="flex relative ml-20">
+                            <h1 style="width: 35vw; color: rgba(23,67,99,255); margin-left: 9vw;" class="text-white font-semibold text-6xl"> Store your data in a single application and manage your QR</h1>
+                            <div style="width: 34vw" class="flex relative">
 
-                                <div>
+                                <div style="margin-right: 100px; margin-left:9vw">
                                     {{--                                   <label for="email" class=" ml-6 block text-sm font-medium text-gray-700"> Email </label>--}}
                                     <div class="mt-1">
                                     <input style="width: 25vw" id="email" name="email" value="{{ old('email') }}"
                                            type="text" autocomplete="current-email"
-                                           class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark sm:text-sm">
+                                           class=" h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-blue-dark focus:border-kit-blue-dark sm:text-sm">
 
                                     @if($errors->has('email'))
                                             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
@@ -110,9 +110,9 @@
                                     </div>
                                 </div>
 
-                                <div class="flex">
+                                <div style="margin-left: -90px; z-index: 4; margin-top: 3px; ">
                                     <button type="submit"
-                                            class="bg-kit-blue-dark h-14 absolute bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-kit-blue-dark hover:bg-kit-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark">
+                                            class="bg-kit-blue-dark h-14 bottom-0 right-0 w-36 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-kit-blue-dark hover:bg-kit-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-blue-dark">
                                         Sign up
                                     </button>
                                 </div>
@@ -127,11 +127,11 @@
         <!--====== RIGHT BODY (IMAGE ONLY)  ======-->
 
         <div class="absolute">
-            <img class="absolute" src="{{URL::asset('/images/artqr.png')}}"
+            <img style="margin-top: -200px; margin-right: -300px" class="absolute" src="{{URL::asset('/images/artqr.png')}}"
                  alt="myqrlogo">
         </div>
-        <div class="relative w-0 flex-1 hidden xl:block">
-            <img class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
+        <div style="margin-left: -100px;margin-top: -60px" class="h-screen relative w-0 flex-1 hidden xl:block">
+            <img style="z-index:0; height: 100%; width: 200%" class="absolute inset-0 w-full object-cover h-screen" src="{{URL::asset('/images/artqr.png')}}"
                  alt="myqrlogo">
         </div>
 
