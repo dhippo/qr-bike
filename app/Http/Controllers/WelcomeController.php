@@ -38,16 +38,14 @@ class WelcomeController extends Controller
             $user->save();
 
             Auth::attempt([
-                'email' => $user->email,
+
                 'password' => $request->input('password')
             ]);
             return redirect(route('myaccount'));
 
 
         }else{
-            return redirect(route('signin'))->withErrors([
-                'email' => 'check your inbox !',
-            ]);
+            return redirect(route('signin'));
         }
     }
 

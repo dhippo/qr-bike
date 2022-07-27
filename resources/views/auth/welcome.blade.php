@@ -27,6 +27,8 @@
 
                             <x-form.inputwelcome :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
+                            <x-form.inputwelcome :errors="$errors" label="First Name" name="firstname" type="hidden" value="{{$token}}" color="focus:ring-red-700 focus:border-red-700"/>
+
 
                             <div class="flex focus:ring-red-500">
                                 <button type="submit"
@@ -49,6 +51,8 @@
                             <x-form.inputwelcome :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
                             <x-form.inputwelcome :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
+
+                            <x-form.inputwelcome :errors="$errors" label=" " name="token" type="hidden" value="{{$token}}" color="focus:ring-red-700 focus:border-red-700"/>
 
 
                             <div class="flex">
