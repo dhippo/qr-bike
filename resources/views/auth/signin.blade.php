@@ -20,18 +20,24 @@
                             <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                                <x-inputv2 :errors="$errors" label="Email" name="email" type="email" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
 
-                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
+                                <x-form.input :errors="$errors" label="Email" color="focus:ring-yellow-500 focus:border-yellow-500" name="Email" type="Email"  value="{{old('Email')}}" />
 
 
-                            <div class="flex">
-                                <button type="submit"
-                                        class="bg-kit-yellow-gold rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 ring">
-                                    Sign in
-                                </button>
-                            </div>
-                        </form>
+                                <x-form.input :errors="$errors" label="Password" color="focus:ring-yellow-500 focus:border-yellow-500" name="password" type="password"  value="{{old('password')}}" />
+
+
+
+
+
+
+                                <div style="width: 420px" class="flex">
+                                    <button type="submit"
+                                            class="bg-kit-yellow-gold h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
+                                        Sign in
+                                    </button>
+                                </div>
+                            </form>
                         </div>
 
                         <!--====== BIG SCREEN FORM  ======-->
@@ -39,22 +45,20 @@
                             <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                                <x-inputv2 :errors="$errors" label="Email" name="email" type="email" value="{{old('email')}}" color="kit-yellow-gold"/>
-
-                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
+                                <x-form.input :errors="$errors" label="Email" color="focus:ring-yellow-500 focus:border-yellow-500" name="Email" type="Email"  value="{{old('Email')}}" />
 
 
-                            <div class="flex">
+                                <x-form.input :errors="$errors" label="Password" color="focus:ring-yellow-500 focus:border-yellow-500" name="password" type="password"  value="{{old('password')}}" />
+
+
+                            <div style="width: 420px" class="flex">
                                 <button type="submit"
                                         class="bg-kit-yellow-gold h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
                                     Sign in
                                 </button>
                             </div>
                         </form>
-                        </div>
-
-
-
+                    </div>
                 </div>
             </div>
         </div>

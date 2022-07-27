@@ -21,6 +21,8 @@ use App\Http\Controllers\MyaccountController;
 |
 */
 
+Route::get('/test-livewire', function () {
+    return view('empty');})->name('test.livewire');
 
 // *USER AUTHENTICATED* ROUTES
 Route::middleware(['auth', 'auth.session'])->group(function () {

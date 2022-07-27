@@ -12,6 +12,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <title>THE QR PROJECT</title>
+    @livewireStyles
 
 </head>
 <body>
@@ -19,7 +20,7 @@
 
 @yield('content')
 
-
+@livewireScripts
 
 </body>
 </html>

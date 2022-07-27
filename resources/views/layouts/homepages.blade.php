@@ -91,8 +91,8 @@ use Illuminate\Routing\Route;
                                                                    hovercolor="#1AB6D9"/>
 
                                                         <x-navlink href="{{ route('contact') }}" name="contact"
-                                                                   color="bg-brandcolor-fourth500" value="Contact"
-                                                                   hovercolor="#50BFA0"/>
+                                                                   color="bg-kit-green-dark" value="Contact"
+                                                                   hovercolor="#47641d"/>
 
                                                     </nav>
                                                     <!--====== BUTTON SIGN IN / UP PART  ======-->
