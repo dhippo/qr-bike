@@ -1,7 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
 @section('content')
-
-    CREATE QR PAGE
-
+    <livewire:test-livewire />
 @endsection
