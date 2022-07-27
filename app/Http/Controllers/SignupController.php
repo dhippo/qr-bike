@@ -20,19 +20,18 @@ class SignupController extends Controller
     public function traitement()
     {
         request()->validate([
-            'email' => ['required','Email', 'max:50'],
+            'email' => ['required', 'email', 'max:50'],
         ]);
         $email = request('email');
 
         $userExist = User::where('email', $email)->first();
-        if($userExist) {
+
+        if ($userExist) {
 
             return redirect(route('signin'))->withErrors([
                 'checkInBox' => 'Your account already exists !',
             ]);
-        }
-
-        else{ // CREATION NEW USER WITHOUT PASSWORD
+        } else { // CREATION NEW USER WITHOUT PASSWORD
             $uniqueToken = Str::uuid();
             $user = User::create([
                 'email' => $email,
@@ -42,10 +41,10 @@ class SignupController extends Controller
                 ]
             ]);
 
-            if(app()->environment('local')){
+            if (app()->environment('local')) {
 
                 $destination = config('mail.destination_local');
-            }else{
+            } else {
                 $destination = $email;
             }
             Mail::to($destination)->send(new ActivateAccount($user));
@@ -54,7 +53,6 @@ class SignupController extends Controller
                 'checkInBox' => 'Check your mailbox to activate your account',
             ]);
         }
-
 
 
     }
