@@ -48,7 +48,7 @@ class SignupController extends Controller
             }else{
                 $destination = $email;
             }
-            Mail::to('durandhippolyte@gmail.com')->send(new ActivateAccount($user));
+            Mail::to($destination)->send(new ActivateAccount($user));
 
             return redirect(route('signup'))->withErrors([
                 'checkInBox' => 'Check your mailbox to activate your account',

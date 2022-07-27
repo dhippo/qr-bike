@@ -2,7 +2,7 @@
 
 return [
 
-    'destination_local' => env('MAIL_DESTINATION_LOCAL', 'durandhippolyte@gmail.com'),
+    'destination_local' => env('MAIL_DESTINATION_LOCAL'),
     /*
     |--------------------------------------------------------------------------
     | Default Mailer
