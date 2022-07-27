@@ -11,6 +11,7 @@ use Illuminate\Support\Str;
 class User extends Model implements Authenticatable
 {
     use BasicAuthenticatable;
+
     /*namespace App\Models;use Illuminate\Contracts\Auth\Authenticatable;use Illuminate\Auth\Authenticatable as BasicAuthenticatable;class User extends Model implements Authenticatable{use BasicAuthenticatable;*/
 
     protected $fillable = [
@@ -24,7 +25,7 @@ class User extends Model implements Authenticatable
         'age',
         'sex',
         'active_token',
-                ];
+    ];
 
 
     /**
@@ -33,9 +34,9 @@ class User extends Model implements Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-       //'password',
-       // 'active_token',
-       // 'token',
+        //'password',
+        // 'active_token',
+        // 'token',
     ];
 
     /**
@@ -45,7 +46,7 @@ class User extends Model implements Authenticatable
      */
     protected $casts = [
 
-       // 'email_verified_at' => 'datetime',
+        // 'email_verified_at' => 'datetime',
 
         'infos' => 'array',
     ];
@@ -57,4 +58,6 @@ class User extends Model implements Authenticatable
         return $this->hasMany(Qrcode::class);
     }
 
-};
+}
+
+;

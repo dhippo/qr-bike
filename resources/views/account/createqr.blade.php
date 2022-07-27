@@ -1,4 +1,4 @@
 @extends('layouts.master')
 @section('content')
-    <livewire:test-livewire />
+    <livewire:createqr-livewire />
 @endsection
