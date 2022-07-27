@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\Qrcode;
+use App\Model s\Qrcode;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
@@ -16,7 +16,7 @@ class TestLivewire extends Component
     public function addInput()
     {
         $this->inputs[] = $this->nameInput;
-        $this->nameInput = "";
+
     }
 
     public function save()
@@ -27,22 +27,11 @@ class TestLivewire extends Component
         $count = 0;
 
 
-
-        foreach ($this->inputs as $input){
-
-
-        }
-
         $qrcode = Qrcode::create([
-            'infos' => $input,
+            'infos' => $this->inputs,
             'user_id' => $id,
             'token' => $token,
         ]);
-    }
-
-    public function like()
-    {
-        $this->sum++;
     }
 
     public function render()
