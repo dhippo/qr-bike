@@ -1990,6 +1990,11 @@ input{
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
+.focus\:border-yellow-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(234 179 8 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2033,6 +2038,11 @@ input{
 .focus\:ring-brandcolor-first700:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(23 67 99 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-yellow-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(234 179 8 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {
