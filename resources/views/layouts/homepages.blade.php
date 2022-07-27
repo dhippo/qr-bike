@@ -30,8 +30,11 @@ use Illuminate\Routing\Route;
                         @elseif ( Request::routeIs('aboutus'))
                             <div id="bodydiv" class="h-screen w-screen bg-brandcolor-third200">
                                 @elseif ( Request::routeIs('contact'))
-                                    <div id="bodydiv" class="h-screen w-screen bg-kit-green-light">
-                                        @endif
+                                    <div id="bodydiv" class="h-screen w-screen bg-brandcolor-fourth200">
+                                        @elseif ( Request::routeIs('welcome') || Request::is('/welcome/{token}'))
+                                            <div id="bodydiv" class="h-screen w-screen bg-kit-red-light">
+                                                @endif
+
 
 
 
