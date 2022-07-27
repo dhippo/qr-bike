@@ -31,7 +31,9 @@ use Illuminate\Routing\Route;
                             <div id="bodydiv" class="h-screen w-screen bg-brandcolor-third200">
                                 @elseif ( Request::routeIs('contact'))
                                     <div id="bodydiv" class="h-screen w-screen bg-brandcolor-fourth200">
-                                        @endif
+                                        @elseif ( Request::routeIs('welcome'))
+                                            <div id="bodydiv" class="h-screen w-screen bg-kit-red-light">
+                                              @endif
 
 
 
