@@ -3,37 +3,37 @@
 @section('content')
 
     <!-- This example Tailwind  for services page -->
+
     <div class="bg-white">
         <div aria-hidden="true" class="relative">
-            <img src="https://tailwindui.com/img/ecommerce-images/product-feature-02-full-width.jpg" alt=""
+            <img src="{{ URL::asset('/images/mitya-ivanov-2HWkORIX3II-unsplash.jpg' )}}" alt=""
                  class="w-full h-96 object-center object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-white"></div>
         </div>
 
         <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Technical
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Services
                     Specifications</h2>
-                <p class="mt-4 text-gray-500">Organize is a system to keep your desk tidy and photo-worthy all day long.
+                <p class="mt-4 text-gray-500"> Organize is a system to keep your desk tidy and photo-worthy all day
+                    long.
                     Procrastinate your work while you meticulously arrange items into dedicated trays.</p>
             </div>
 
             <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
                 <div class="border-t border-gray-200 pt-4">
                     <dt class="font-medium text-gray-900">Origin</dt>
-                    <dd class="mt-2 text-sm text-gray-500">Designed by Good Goods, Inc.</dd>
+                    <dd class="mt-2 text-sm text-gray-500">Designed by Laravel.</dd>
                 </div>
 
                 <div class="border-t border-gray-200 pt-4">
                     <dt class="font-medium text-gray-900">Material</dt>
-                    <dd class="mt-2 text-sm text-gray-500">Solid walnut base with rare earth magnets and polycarbonate
-                        add-ons.
-                    </dd>
+                    <dd class="mt-2 text-sm text-gray-500">3 brains, 3 Laptop.</dd>
                 </div>
 
                 <div class="border-t border-gray-200 pt-4">
                     <dt class="font-medium text-gray-900">Dimensions</dt>
-                    <dd class="mt-2 text-sm text-gray-500">15&quot; x 3.75&quot; x .75&quot;</dd>
+                    <dd class="mt-2 text-sm text-gray-500">'to complete.....' find other idie</dd>
                 </div>
 
                 <div class="border-t border-gray-200 pt-4">
