@@ -19,7 +19,7 @@ use Illuminate\Routing\Route;
     <title>THE QR PROJECT</title>
 
 </head>
-<body>
+<body style="width: 100vw; overflow-x: hidden" >
 
 @if ( Request::routeIs('signin') || Request::routeIs('login'))
     <div id="bodydiv" class="h-screen w-screen bg-kit-yellow-light">
