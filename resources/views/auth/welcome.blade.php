@@ -22,7 +22,7 @@
                     <div style=" width: 25vw; margin-left:100px; margin-top: -70px" class="mt-8" >
 
                         <div class="mt-6">
-                            <form  class="space-y-6 mr-56" action="/signin" method="post">
+                            <form  class="space-y-6 mr-56" action="{{ route('welcome-post', ['token'=>$token]) }}" method="post">
                                 {{ csrf_field() }}
 
                                 <div>
@@ -122,6 +122,7 @@
                                 </div>
 
                                 <div class="flex">
+                                    <input type="submit" name="Envoyer">
                                     <button style="background-color: rgba(167,49,55,255); border-radius: 50px;width: 25vw" type="submit"
                                             class="rounded-full h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-l font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                                         Sign up

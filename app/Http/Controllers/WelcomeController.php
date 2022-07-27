@@ -21,33 +21,36 @@ class WelcomeController extends Controller
     }
 
 
-    public function traitement(Request $request) {
-        $validated = $request->validate([
-            'password' => 'min:6|required_with:password_confirmation|same:password_confirmation',
-            'password_confirmation' => 'min:6'
+    public function traitement($token) {
+        request()->validate([
+            'password' => 'min:6',
+            'password_confirmation' => 'required|same:password|min:6'
         ]);
+        $email = request('email');
 
-        $user = User::where('token', $request->input('token'))->first();
+        $user = User::where('token', $token)->first();
+
         if($user) {
-            $user->active_token = true;
-            $user->password = bcrypt($request->input('password'));
+            $active_token = true;
+            $password = bcrypt(request('password'));
 
-            if($request->input('firstname')){$user->firstname = $request->input('firstname');}
-            if($request->input('lastname')){$user->lastname = $request->input('lastname');}
+            if(request('firstname')){$firstname = request('firstname');}
+            if(request('lastname')){$lastname = request('lastname');}
 
             $user->save();
 
             Auth::attempt([
-                'email' => $user->email,
-                'password' => $request->input('password')
+                'email' => $email,
+                'password' => $password,
+                'active_token' => $active_token,
             ]);
+            return view('homepages.home');
             return redirect(route('myaccount'));
 
 
         }else{
-            return redirect(route('signin'))->withErrors([
-                'email' => 'check your inbox !',
-            ]);
+            return view('homepages.aboutus');
+            return redirect(route('signin'));
         }
     }
 
