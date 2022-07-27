@@ -1994,6 +1994,14 @@ input{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.focus\:border:focus {
+  border-width: 1px;
+}
+
+.focus\:border-none:focus {
+  border-style: none;
+}
+
 .focus\:border-kit-yellow-gold:focus {
   --tw-border-opacity: 1;
   border-color: rgb(234 179 8 / var(--tw-border-opacity));

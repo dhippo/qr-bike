@@ -25,7 +25,7 @@
 
                             <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
 
                             <div class="flex focus:ring-red-500">
@@ -48,7 +48,7 @@
 
                             <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
 
                             <div class="flex">
