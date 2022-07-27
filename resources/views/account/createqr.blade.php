@@ -1,4 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.app')
+
 @section('content')
-    <livewire:createqr-livewire />
+
+    <livewire:createqr-livewire/>
+
 @endsection

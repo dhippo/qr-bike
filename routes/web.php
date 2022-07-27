@@ -8,7 +8,7 @@ use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MyaccountController;
-
+use App\Http\Controllers\MyqrController;
 
 
 /*
@@ -23,32 +23,38 @@ use App\Http\Controllers\MyaccountController;
 */
 
 Route::get('/test-livewire', function () {
-    return view('empty');})->name('test.livewire');
+    return view('empty');
+})->name('test.livewire');
 
 // *USER AUTHENTICATED* ROUTES
 Route::middleware(['auth', 'auth.session'])->group(function () {
 
     Route::get('/myaccount', [MyaccountController::class, 'formulaire'])->name('myaccount');
 
-    Route::get('/myqr', function () {
-        return view('account.myqr');})->name('myqr');
+    Route::get('/myqr', [MyqrController::class, 'emptyqr'])->name('myqr');
+    
 
     Route::get('/createqr', function () {
-        return view('account.createqr');})->name('createqr');
+        return view('account.createqr');
+    })->name('createqr');
 
     Route::get('/shop', function () {
-        return view('account.shop');})->name('shop');
+        return view('account.shop');
+    })->name('shop');
 
     Route::get('/help', function () {
-        return view('account.help');})->name('help');
+        return view('account.help');
+    })->name('help');
 
     Route::get('/settings', function () {
-        return view('account.settings');})->name('settings');
+        return view('account.settings');
+    })->name('settings');
 
     Route::get('/disconnect', [SigninController::class, 'youhavetogo'])->name('disconnect');
 
     Route::get('/templates', function () {
-        return view('account.templates');})->name('templates');
+        return view('account.templates');
+    })->name('templates');
 
 });
 
@@ -70,16 +76,20 @@ Route::get('/public/{token}', [PublicController::class, 'showInfo']);
 // HOMEPAGES ROUTES
 
 Route::get('/', function () {
-    return view('homepages.home');})->name('home');
+    return view('homepages.home');
+})->name('home');
 
 Route::get('/services', function () {
-    return view('homepages.services');})->name('services');
+    return view('homepages.services');
+})->name('services');
 
 Route::get('/aboutus', function () {
-    return view('homepages.aboutus');})->name('aboutus');
+    return view('homepages.aboutus');
+})->name('aboutus');
 
 Route::get('/contact', function () {
-    return view('homepages.contact');})->name('contact');
+    return view('homepages.contact');
+})->name('contact');
 
 
 
