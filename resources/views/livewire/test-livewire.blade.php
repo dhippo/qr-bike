@@ -22,15 +22,12 @@
 
             <div class="p-6 max-w-sm mx-auto">
                 <h3>{{ $value }}</h3>
-                <input type="text" name="nameInput-{{ $key }}" id="nameInput-{{ $key }}" value=""
+                <input type="text" name="nameInput-{{ $key }}" id="nameInput-{{ $key }}"
                        class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full
                        sm:text-sm border-gray-300 rounded-md" placeholder="{{ $value }}">
             </div>
 
         @endforeach
-        <p>
-
-        </p>
 
     </div>
 
@@ -42,6 +39,10 @@
         </button>
 
     </div>
+
+    <p>
+        {{ var_dump($inputs)}}
+    </p>
 
 
 </div>

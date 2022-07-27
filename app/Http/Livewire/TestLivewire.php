@@ -2,20 +2,21 @@
 
 namespace App\Http\Livewire;
 
-use App\Model s\Qrcode;
+use App\Models\Qrcode;
 use Illuminate\Support\Str;
 use Livewire\Component;
 
 class TestLivewire extends Component
 {
     public string $nameInput = '';
-    public array $inputs = [];
 
+    public array $inputs = [];
 
 
     public function addInput()
     {
         $this->inputs[] = $this->nameInput;
+        $this->nameInput = '';
 
     }
 
@@ -31,6 +32,8 @@ class TestLivewire extends Component
             'user_id' => $id,
             'token' => $token,
         ]);
+
+        $this->render();
     }
 
     public function render()
