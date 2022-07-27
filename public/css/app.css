@@ -1354,9 +1354,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(186 217 234 / var(--tw-bg-opacity));
 }
-.bg-brandcolor-fourth200 {
+.bg-kit-green-light {
   --tw-bg-opacity: 1;
-  background-color: rgb(184 229 216 / var(--tw-bg-opacity));
+  background-color: rgb(217 234 186 / var(--tw-bg-opacity));
 }
 .bg-brandcolor-first700 {
   --tw-bg-opacity: 1;
@@ -1370,10 +1370,6 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(26 182 217 / var(--tw-bg-opacity));
 }
-.bg-brandcolor-fourth500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(80 191 160 / var(--tw-bg-opacity));
-}
 .bg-brandcolor-fifth500 {
   --tw-bg-opacity: 1;
   background-color: rgb(242 193 46 / var(--tw-bg-opacity));
@@ -1382,9 +1378,9 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(23 67 99 / var(--tw-bg-opacity));
 }
-.bg-kit-green-light {
+.bg-brandcolor-fourth500 {
   --tw-bg-opacity: 1;
-  background-color: rgb(217 234 186 / var(--tw-bg-opacity));
+  background-color: rgb(80 191 160 / var(--tw-bg-opacity));
 }
 .bg-indigo-600 {
   --tw-bg-opacity: 1;

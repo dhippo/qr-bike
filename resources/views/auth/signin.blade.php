@@ -20,6 +20,8 @@
                             <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
+                                <x-form.input :errors=“$errors” label=“Email” name=“Email” type=“email” color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold" value=“{{old(‘Email’)}}” />
+
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
                                 <div class="mt-1">
