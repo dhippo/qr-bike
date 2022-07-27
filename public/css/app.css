@@ -1395,6 +1395,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(254 177 165 / var(--tw-bg-opacity));
 }
+.bg-kit-green-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 234 186 / var(--tw-bg-opacity));
+}
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }
@@ -1660,6 +1664,9 @@ select {
 }
 .leading-6 {
   line-height: 1.5rem;
+}
+.leading-4 {
+  line-height: 1rem;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -1996,6 +2003,11 @@ input{
   border-color: rgb(99 102 241 / var(--tw-border-opacity));
 }
 
+.focus\:border-kit-red-dark:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(167 49 55 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -2039,6 +2051,16 @@ input{
 .focus\:ring-brandcolor-first700:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(23 67 99 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-kit-red-dark:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(167 49 55 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-red-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(239 68 68 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {

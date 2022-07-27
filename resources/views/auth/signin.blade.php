@@ -20,9 +20,10 @@
                             <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                                <x-inputv2 :errors="$errors" label="Email" name="email" type="email" value="{{old('email')}}" color="kit-yellow-gold"/>
+                                <x-inputv2 :errors="$errors" label="Email" name="email" type="email" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
 
-                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="kit-yellow-gold"/>
+                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
+
 
                             <div class="flex">
                                 <button type="submit"
@@ -40,7 +41,7 @@
 
                                 <x-inputv2 :errors="$errors" label="Email" name="email" type="email" value="{{old('email')}}" color="kit-yellow-gold"/>
 
-                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="kit-yellow-gold"/>
+                                <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('email')}}" color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold"/>
 
 
                             <div class="flex">

@@ -1,7 +1,7 @@
 <div>
     <label for="{{$name}}" class="block text-sm font-medium text-gray-700"> {{$label}} </label>
     <div class="mt-1">
-        <input id="{{$name}}" name="{{$name}}" value="{{ old( $value ) }}" type="{{$type}}" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-{{$color}} focus:border-{{$color}} sm:text-sm">
+        <input id="{{$name}}" name="{{$name}}" value="{{ old( $value ) }}" type="{{$type}}" autocomplete="current-password" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none {{$color}} sm:text-sm">
         @if($errors->has('password'))
             <div class="bg-red-50 border-l-4 border-red-400 p-2 mt-1.5">
                 <div class="flex">
@@ -37,4 +37,7 @@
             </div>
         @endif
     </div>
+    <style>#{{$name}}:focus{
+            --tw-ring-color: {{ $color }};
+        }</style>
 </div>

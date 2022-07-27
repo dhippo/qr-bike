@@ -19,15 +19,15 @@
                         <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <div class="flex">
+                            <div class="flex focus:ring-red-500">
                                 <button type="submit"
                                         class="bg-kit-red-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
                                     Create your account
@@ -41,13 +41,13 @@
                         <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password-confirmation" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
 
 
                             <div class="flex">
