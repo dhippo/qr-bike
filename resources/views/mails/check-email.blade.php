@@ -3,7 +3,7 @@
 
 Click on the button bellow to activate your account and start creating your own QR code. .
 
-@component('mail::button', ['url' => '/welcome', 'token' => $token])
+@component('mail::button', ['url' => route('welcome', ['token' =>  $token])])
 Validate
 @endcomponent
 

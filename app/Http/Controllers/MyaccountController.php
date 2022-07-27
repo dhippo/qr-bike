@@ -10,9 +10,18 @@ class MyaccountController extends Controller
 {
     public function formulaire()
     {
-        // todo 'blinder la vue et faire passer des données dans le mail'
+        $token = auth()->user()->token;
+        $email = auth()->user()->email;
+        $lastname = auth()->user()->lastname;
+        $firstname = auth()->user()->firstname;
 
-        return view('account.myaccount');
+
+        return view("account.myaccount", [
+            'email' => $email,
+            'lastname' => $lastname,
+            'firstname' => $firstname,
+            'token' => $token,
+        ]);
 
     }
 

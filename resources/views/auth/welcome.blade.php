@@ -22,7 +22,7 @@
                     <div style=" width: 25vw; margin-left:100px; margin-top: -70px" class="mt-8" >
 
                         <div class="mt-6">
-                            <form  class="space-y-6 mr-56" action="{{ route('welcome-post', ['token'=>$token]) }}" method="post">
+                            <form  class="space-y-6 mr-56" action="{{ route('welcome-post') }}" method="post">
                                 {{ csrf_field() }}
 
                                 <div>
@@ -120,6 +120,7 @@
                                         @endif
                                     </div>
                                 </div>
+                                <input label="token" name="token" type="hidden" value="{{$token}}" />
 
                                 <div class="flex">
                                     <input type="submit" name="Envoyer">

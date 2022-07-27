@@ -58,7 +58,7 @@ Route::get('/login', [SigninController::class, 'pleaselogin'])->name('login');
 Route::post('/signin', [SigninController::class, 'traitement'])->name('signin-post');
 
 Route::get('/welcome/{token}', [WelcomeController::class, 'formulaire'])->name('welcome');
-Route::post('/welcome/{token}', [WelcomeController::class, 'traitement'])->name('welcome-post');
+Route::post('/welcome', [WelcomeController::class, 'traitement'])->name('welcome-post');
 
 
 Route::get('/public/{token}', [PublicController::class, 'showInfo']);
