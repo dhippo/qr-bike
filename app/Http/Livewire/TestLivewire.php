@@ -24,7 +24,6 @@ class TestLivewire extends Component
 
         $id = auth()->user()->id;
         $token = Str::uuid();
-        $count = 0;
 
 
         $qrcode = Qrcode::create([
