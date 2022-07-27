@@ -3,13 +3,15 @@
 namespace App\Http\Livewire;
 
 use App\Models\Qrcode;
+use Illuminate\Support\Str;
 use Livewire\Component;
 
 class TestLivewire extends Component
 {
-    public int $sum = 1;
     public string $nameInput = '';
     public array $inputs = [];
+
+
 
     public function addInput()
     {
@@ -19,11 +21,23 @@ class TestLivewire extends Component
 
     public function save()
     {
+
+        $id = auth()->user()->id;
+        $token = Str::uuid();
+        $count = 0;
+
+
+
         foreach ($this->inputs as $input){
-            $qrcode = Qrcode::create([
-                'infos' => $input
-            ]);
+
+
         }
+
+        $qrcode = Qrcode::create([
+            'infos' => $input,
+            'user_id' => $id,
+            'token' => $token,
+        ]);
     }
 
     public function like()
