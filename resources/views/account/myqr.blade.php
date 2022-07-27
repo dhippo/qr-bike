@@ -124,7 +124,7 @@
                 <main class="flex-1 overflow-y-auto">
                     <div class="pt-8 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="flex">
-                            <h1 class="flex-1 text-2xl font-bold text-gray-900">Photos</h1>
+                            <h1 class="flex-1 text-2xl font-bold text-gray-900">My codes QR</h1>
                             <div class="ml-6 bg-gray-100 p-0.5 rounded-lg flex items-center sm:hidden">
                                 <button type="button"
                                         class="p-1.5 rounded-md text-gray-400 hover:bg-white hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -241,7 +241,7 @@
                                 <div>
                                     <h2 class="text-lg font-medium text-gray-900"><span
                                                 class="sr-only">Details for </span>IMG_4985.HEIC</h2>
-                                    <p class="text-sm font-medium text-gray-500">3.9 MB</p>
+                                    <p class="text-sm font-medium text-gray-500" MB>'taille qr' MB</p>
                                 </div>
                                 <button type="button"
                                         class="ml-4 bg-white rounded-full h-8 w-8 flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500">
@@ -260,27 +260,27 @@
                             <dl class="mt-2 border-t border-b border-gray-200 divide-y divide-gray-200">
                                 <div class="py-3 flex justify-between text-sm font-medium">
                                     <dt class="text-gray-500">Uploaded by</dt>
-                                    <dd class="text-gray-900">Marie Culver</dd>
+                                    <dd class="text-gray-900">Proprietaire</dd>
                                 </div>
 
                                 <div class="py-3 flex justify-between text-sm font-medium">
                                     <dt class="text-gray-500">Created</dt>
-                                    <dd class="text-gray-900">June 8, 2020</dd>
+                                    <dd class="text-gray-900">$timestamp</dd>
                                 </div>
 
                                 <div class="py-3 flex justify-between text-sm font-medium">
                                     <dt class="text-gray-500">Last modified</dt>
-                                    <dd class="text-gray-900">June 8, 2020</dd>
+                                    <dd class="text-gray-900">$timestamp</dd>
                                 </div>
 
                                 <div class="py-3 flex justify-between text-sm font-medium">
-                                    <dt class="text-gray-500">Dimensions</dt>
-                                    <dd class="text-gray-900">4032 x 3024</dd>
+                                    <dt class="text-gray-500">Octets</dt>
+                                    <dd class="text-gray-900">$int Ko</dd>
                                 </div>
 
                                 <div class="py-3 flex justify-between text-sm font-medium">
-                                    <dt class="text-gray-500">Resolution</dt>
-                                    <dd class="text-gray-900">72 x 72</dd>
+                                    <dt class="text-gray-500">number of data items</dt>
+                                    <dd class="text-gray-900">72?</dd>
                                 </div>
                             </dl>
                         </div>
