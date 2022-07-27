@@ -163,6 +163,9 @@
             </template>
             <button type="submit" class="w-full mr-auto justify-center py-2 px-4 border border-transparent"></button>
         </form>
-    </div>
+    </div>  //binder
+
+    livewier interagir avec du php (enregistrer en base faire un tablaeu
+    assancrone si rafrechissement -> perte de donée
 
 @endsection
