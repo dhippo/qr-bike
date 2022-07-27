@@ -29,7 +29,7 @@ class SignupController extends Controller
         if ($userExist) {
 
             return redirect(route('signin'))->withErrors([
-                'checkInBox' => 'Your account already exists !',
+                'email' => 'Your account already exists !',
             ]);
         } else { // CREATION NEW USER WITHOUT PASSWORD
             $uniqueToken = Str::uuid();

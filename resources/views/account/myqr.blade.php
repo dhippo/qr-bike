@@ -3,7 +3,6 @@
 @section('content')
 
     @if($exist == 0)
-
         <div class="flex flex-col">
             <div class="max-w-7xl mx-auto flex justify-center flex-col text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
                 <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
@@ -28,7 +27,10 @@
 
     @else
 
-        <h1>qr </h1>
+        <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <span class="block">MY QR</span><br>
+            <span class="block">List of your QR.</span>
+        </h2>
 
     @endif
 

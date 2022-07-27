@@ -19,7 +19,7 @@ class MyqrController extends Controller
         }
 
         return view('account.myqr', [
-            'firstqr' => $exist,
+            'exist' => $exist,
         ]);
     }
 
