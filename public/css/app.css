@@ -1382,6 +1382,10 @@ select {
   --tw-bg-opacity: 1;
   background-color: rgb(23 67 99 / var(--tw-bg-opacity));
 }
+.bg-kit-green-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(217 234 186 / var(--tw-bg-opacity));
+}
 .bg-opacity-75 {
   --tw-bg-opacity: 0.75;
 }

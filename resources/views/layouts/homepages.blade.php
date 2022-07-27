@@ -30,7 +30,7 @@ use Illuminate\Routing\Route;
                         @elseif ( Request::routeIs('aboutus'))
                             <div id="bodydiv" class="h-screen w-screen bg-brandcolor-third200">
                                 @elseif ( Request::routeIs('contact'))
-                                    <div id="bodydiv" class="h-screen w-screen bg-brandcolor-fourth200">
+                                    <div id="bodydiv" class="h-screen w-screen bg-kit-green-light">
                                         @endif
 
 
@@ -89,8 +89,8 @@ use Illuminate\Routing\Route;
                                                                    hovercolor="#1AB6D9"/>
 
                                                         <x-navlink href="{{ route('contact') }}" name="contact"
-                                                                   color="bg-brandcolor-fourth500" value="Contact"
-                                                                   hovercolor="#50BFA0"/>
+                                                                   color="bg-kit-green-dark" value="Contact"
+                                                                   hovercolor="#47641d"/>
 
                                                     </nav>
                                                     <!--====== BUTTON SIGN IN / UP PART  ======-->
