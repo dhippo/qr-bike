@@ -12,11 +12,13 @@
 
     <title>qr-bike</title>
 
+    <!-- He who is contented is rich. - Laozi -->
+
+    <!-- Simplicity is the consequence of refined emotions. - Jean D'Alembert -->
+
 </head>
 <body>
 
-
-<!-- Simplicity is the consequence of refined emotions. - Jean D'Alembert -->
 
 <div x-data="{ openWin: false }" class="h-full flex">
 
@@ -49,10 +51,10 @@
                 </div>
 
                 <div class="flex-1 flex flex-col h-0 pt-5 pb-4 overflow-y-auto">
-                    <div class="flex-shrink-0 flex items-center px-4">
-                        <img class="h-8 w-auto"
+                    <div class="flex-shrink-0 flex justify-center items-center px-4">
+                        <img class="h-24 w-auto"
                              src="{{URL::asset('/images/logonightblue.png')}}"
-                             alt="MY QR">
+                             alt="company's logo">
                     </div>
 
                     <nav class="mt-5 flex-auto flex flex-col justify-between" aria-label="Sidebar">
@@ -179,7 +181,7 @@
         </div>
     </div>
 
-    <!-- Static sidebar for desktop -->
+    <!-- BIGSCREEN SIDEBAR -->
     <div class="h-screen hidden lg:flex lg:flex-shrink-0">
         <div class="flex flex-col w-64">
             <!-- Sidebar component, swap this element with another sidebar if you like -->
@@ -188,7 +190,7 @@
                     <div class="flex items-center justify-center px-4">
                         <img class="h-24 w-auto"
                              src="{{URL::asset('/images/logonightblue.png')}}"
-                             alt="Workflow">
+                             alt="company's logo">
                     </div>
 
                     <nav class="mt-5 flex-1 flex flex-col justify-between" aria-label="Sidebar">
@@ -307,12 +309,16 @@
             </div>
         </div>
     </div>
+
+
     <div class="flex flex-col min-w-0 flex-1 overflow-hidden">
+
+        <!-- MIDSCREEN and MOBILE 'header' or menu -->
         <div class="lg:hidden">
             <div class="flex items-center justify-between bg-gray-50 border-b border-gray-200 px-4 py-1.5">
                 <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-pink-500.svg"
-                         alt="Workflow">
+                    <img class="h-24 w-auto" src="{{URL::asset('/images/logonightblue.png')}}"
+                         alt="company's logo">
                 </div>
                 <div>
                     <button @click="openWin = !openWin" type="button"
@@ -341,7 +347,6 @@
     </div>
 </div>
 
-<!-- He who is contented is rich. - Laozi -->
 
 
 <!--======  FOOTER PART  ======-->

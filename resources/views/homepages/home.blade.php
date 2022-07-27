@@ -3,89 +3,14 @@
 @section('content')
 <div class="background" style="background-color: rgba(186,217,234,255)">
 
-    <!-- Base -->
-    <section  class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
-        <div class="md:flex-1 md:mr-10">
-            <h1 class="font-pt-serif text-5xl font-bold mb-7">
-                Create simple QR in a fev minutes.
-                <span class="bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
-              cool website
-            </span>
-            </h1>
-            <p class="font-pt-serif font-normal mb-7">
-                The purpose of our project is to offer a solution to athletes that would allow them to generate a QR code in order to access their health data in case of emergency.
-                Thus, they will be able to print the generated QR code and find a way to stick it on their bike, their helmet, their equipment.<br /><br />
 
-            </p>
-            <div class="font-montserrat">
-                <button class="bg-black px-6 py-4 rounded-lg border-2 border-black border-solid text-white mr-2 mb-2">
-                    Sign in
-                </button>
-                <button class="px-6 py-4 border-2 border-black border-solid rounded-lg">
-                    Get Started
-                </button>
-            </div>
-        </div>
-
-    </section>
-
-
-    <!-- Features -->
-    <div class="py-12">
-        <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 ">
-
-            <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 flex flex-col md:flex-row" >
-                <div class="mx-8  ">
-                    <dt>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                            <!-- Heroicon name: outline/globe-alt -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                            </svg>
-                        </div>
-                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</p>
-                    </dt>
-                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
-
-                <div class="mx-8">
-                    <dt>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                            <!-- Heroicon name: outline/scale -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                            </svg>
-                        </div>
-                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
-                    </dt>
-                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
-
-                <div class="mx-8">
-                    <dt>
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                            <!-- Heroicon name: outline/lightning-bolt -->
-                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Transfers are instant</p>
-                    </dt>
-                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
-                </div>
-            </dl>
-        </div>
-    </div>
-
-
-
-    <!-- get suscribe -->
-    <div class="">
-        <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <!-- BIG HOME TITLE -->
+    <div class="pt-24">
+        <div class="max-w-7xl mx-auto px-4 sm:py-24 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">How it works</h2>
-                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">All the information you need to make the most of our application.</p>
-                <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Start building for free, then add a site plan to go live. Account plans unlock additional features.</p>
+                <h2 class="text-base font-semibold text-kit-blue-dark tracking-wide uppercase">How it works</h2>
+                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">All the information you need to need to share quickly in our application.</p>
+                <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">Start building for free simple web page easily to share data as you want.</p>
             </div>
         </div>
     </div>
@@ -160,7 +85,79 @@
         <hr class="w-full bg-white" />
 
     </section>
+    <!-- Base -->
+    <section  class="pt-24 md:mt-0 md:h-screen flex flex-col justify-center text-center md:text-left md:flex-row md:justify-between md:items-center lg:px-48 md:px-12 px-4 bg-secondary">
+        <div class="md:flex-1 md:mr-10">
+            <h1 class="font-pt-serif text-5xl font-bold mb-7">
+                Create simple QR in a fev minutes.
+                <span class="bg-underline1 bg-left-bottom bg-no-repeat pb-2 bg-100%">
+              cool website
+            </span>
+            </h1>
+            <p class="font-pt-serif font-normal mb-7">
+                The purpose of our project is to offer a solution to athletes that would allow them to generate a QR code in order to access their health data in case of emergency.
+                Thus, they will be able to print the generated QR code and find a way to stick it on their bike, their helmet, their equipment.<br /><br />
 
+            </p>
+            <div class="font-montserrat">
+                <button class="bg-black px-6 py-4 rounded-lg border-2 border-black border-solid text-white mr-2 mb-2">
+                    Sign in
+                </button>
+                <button class="px-6 py-4 border-2 border-black border-solid rounded-lg">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Features -->
+    <div class="py-12">
+        <div class="mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 ">
+
+            <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8 flex flex-col md:flex-row" >
+                <div class="mx-8  ">
+                    <dt>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-kit-blue-dark text-white">
+                            <!-- Heroicon name: outline/globe-alt -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Competitive exchange rates</p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
+                </div>
+
+                <div class="mx-8">
+                    <dt>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-kit-blue-dark text-white">
+                            <!-- Heroicon name: outline/scale -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">No hidden fees</p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
+                </div>
+
+                <div class="mx-8">
+                    <dt>
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-kit-blue-dark text-white">
+                            <!-- Heroicon name: outline/lightning-bolt -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <p class="mt-5 text-lg leading-6 font-medium text-gray-900">Transfers are instant</p>
+                    </dt>
+                    <dd class="mt-2 text-base text-gray-500">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
 
 </div>
 
