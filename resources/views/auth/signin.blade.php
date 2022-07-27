@@ -20,7 +20,6 @@
                             <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                                <x-form.input :errors=“$errors” label=“Email” name=“Email” type=“email” color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold" value=“{{old(‘Email’)}}” />
 
                             <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
@@ -45,6 +44,7 @@
                                     @endif
                                 </div>
                             </div>
+
 
                             <div>
                                 <label for="password" class="block text-sm font-medium text-gray-700"> Password </label>
@@ -84,7 +84,10 @@
                             <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                            <div>
+                                <x-form.input :errors=“$errors” label=“Email” name=“email” color="focus:ring-kit-yellow-gold focus:border-kit-yellow-gold" type=“email” value={{old(‘email’)}} />
+
+
+                                <div>
                                 <label for="email" class="block text-sm font-medium text-gray-700 "> Email address </label>
                                 <div class="mt-1">
                                     <input id="email" name="email" value="{{ old('email') }}" type="text" autocomplete="email" class="h-14 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-full shadow-sm placeholder-gray-400 focus:outline-none focus:ring-kit-yellow-gold focus:border-kit-yellow-gold sm:text-sm">
@@ -138,10 +141,7 @@
                                 </button>
                             </div>
                         </form>
-                        </div>
-
-
-
+                    </div>
                 </div>
             </div>
         </div>

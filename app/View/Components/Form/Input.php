@@ -16,7 +16,7 @@ class Input extends Component
 
     public $errors;
 
-    public $class;
+    public $color;
 
 
 
@@ -25,13 +25,13 @@ class Input extends Component
      *
      * @return void
      */
-    public function __construct($type, $label, $name, $value, $errors, $class)
+    public function __construct($type, $label, $name, $value, $errors, $color)
     {
         $this->type = $type;
         $this->label = $label;
         $this->name = $name;
         $this->value = $value;
-        $this->class = $class;
+        $this->color = $color;
         $this->errors = $errors;
     }
 
