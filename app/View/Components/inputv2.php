@@ -22,6 +22,7 @@ class inputv2 extends Component
     public function __construct($type, $label, $name, $value, $errors, $color)
     {
         $this->type = $type;
+        $this->color = $color;
         $this->label = $label;
         $this->name = $name;
         $this->value = $value;

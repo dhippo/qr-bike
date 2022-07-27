@@ -19,13 +19,13 @@
                         <form class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-yellow-500 focus:border-yellow-500"/>
+                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
 
                             <div class="flex focus:ring-red-500">
@@ -42,13 +42,13 @@
                         <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('signin-post')}}" method="post">
                             {{ csrf_field() }}
 
-                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-kit-green-dark focus:border-kit-green-dark"/>
+                            <x-inputv2 :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:outline-none focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Last Name" name="lastname" type="text" value="{{old('lastname')}}" color="focus:outline-none focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password" name="password" type="password" value="{{old('password')}}" color="focus:outline-none focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-kit-red-dark focus:border-kit-red-dark"/>
+                            <x-inputv2 :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:outline-none focus:ring-red-700 focus:border-red-700"/>
 
 
                             <div class="flex">

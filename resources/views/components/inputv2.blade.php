@@ -1,9 +1,12 @@
 <div>
     <label for="{{$name}}" class="block text-sm font-medium text-gray-700"> {{$label}} </label>
     <div class="mt-1">
-        <input id="{{$name}}" name="{{$name}}" value="{{$value}}" type="{{$type}}" autocomplete="current-password"
-class="h-14 appearance-none border-none block w-full px-3 py-2 rounded-full shadow-sm placeholder-gray-400 sm:text-sm
-        focus:outline-none focus:ring-kit-red-dark">
+        <input id="{{$name}}" name="{{$name}}" value="{{$value}}" type="{{$type}}"
+class="h-14 appearance-none block w-full px-3 py-2
+        border border-transparent rounded-full shadow-sm
+        placeholder-gray-400
+
+        {{ $color }} sm:text-sm">
 
 
 
