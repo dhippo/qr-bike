@@ -16,7 +16,7 @@
 
                     <!--====== SMALL AND MOBILE SCREEN FORM  ======-->
                     <div class="xl:hidden -mt-52">
-                        <form class="space-y-6" action="{{route('signin-post')}}" method="post">
+                        <form class="space-y-6" action="{{route('welcome-post')}}" method="post">
                             {{ csrf_field() }}
 
                             <x-form.inputwelcome :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-red-700 focus:border-red-700"/>
@@ -27,12 +27,11 @@
 
                             <x-form.inputwelcome :errors="$errors" label="Password Confirmation" name="password-confirmation" type="password" value="{{old('password')}}" color="focus:ring-red-700 focus:border-red-700"/>
 
-                            <x-form.inputwelcome :errors="$errors" label="First Name" name="firstname" type="hidden" value="{{$token}}" color="focus:ring-red-700 focus:border-red-700"/>
-
+                            <x-form.inputwelcome :errors="$errors" label=" " name="token" type="hidden" value="{{$token}}" color="focus:ring-red-700 focus:border-red-700"/>
 
                             <div class="flex focus:ring-red-500">
                                 <button type="submit"
-                                        class="bg-kit-red-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
+                                        class="bg-kit-red-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-red-dark">
                                     Create your account
                                 </button>
                             </div>
@@ -41,7 +40,7 @@
 
                     <!--====== BIG SCREEN FORM  ======-->
                     <div class="hidden xl:block mt-6">
-                        <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('signin-post')}}" method="post">
+                        <form style="margin-top:-180px; margin-left: -140px; margin-right: 50px" class="space-y-6" action="{{route('welcome-post')}}" method="post">
                             {{ csrf_field() }}
 
                             <x-form.inputwelcome :errors="$errors" label="First Name" name="firstname" type="text" value="{{old('firstname')}}" color="focus:ring-red-700 focus:border-red-700"/>
@@ -57,12 +56,13 @@
 
                             <div class="flex">
                                 <button type="submit"
-                                        class="bg-kit-red-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white hover:bg-kit-yellow-gold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-yellow-gold">
+                                        class="bg-kit-red-dark h-14 w-full mt-6 mr-auto h-10 justify-center py-2 px-4 border border-transparent rounded-full shadow-sm text-l font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-kit-red-dark">
                                     Create your account
                                 </button>
                             </div>
                         </form>
                     </div>
+
 
 
 

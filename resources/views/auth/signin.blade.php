@@ -23,12 +23,12 @@
                             {{ csrf_field() }}
 
 
-                            <x-form.input :errors="$errors" label="Email"
+                            <x-form.inputwelcome :errors="$errors" label="Email"
                                           color="focus:ring-yellow-500 focus:border-yellow-500" name="email"
                                           type="Email" value="{{old('Email')}}"/>
 
 
-                            <x-form.input :errors="$errors" label="Password"
+                            <x-form.inputwelcome :errors="$errors" label="Password"
                                           color="focus:ring-yellow-500 focus:border-yellow-500" name="password"
                                           type="password" value="{{old('password')}}"/>
 

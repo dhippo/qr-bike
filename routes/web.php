@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\DisconnectController;
-use App\Http\Controllers\HealthinfoController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
@@ -9,6 +8,7 @@ use App\Http\Controllers\SigninController;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\MyaccountController;
 use App\Http\Controllers\MyqrController;
+use App\Http\Livewire\TestLivewire;
 
 
 /*
@@ -22,7 +22,7 @@ use App\Http\Controllers\MyqrController;
 |
 */
 
-Route::get('/test-livewire', function () {
+Route::get('/liv', function () {
     return view('empty');
 })->name('test.livewire');
 
