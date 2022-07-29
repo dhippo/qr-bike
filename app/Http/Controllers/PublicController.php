@@ -3,19 +3,26 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use SimpleSoftwareIO\QrCode\Facades\QrCode;
+use App\Models\Qrcode;
 
 class PublicController extends Controller
 {
     public function showInfo($token)
     {
-        $user = User::where('token', $token)->first();
+        $qrcode = Qrcode::where('token', $token)->first();
+
+        $infos = json_decode($qrcode->infos, true);
 
 
-        return view("public", [
-            'token' => $token,
-            'user' => $user,
-        ]);
+        if($qrcode){
+            return view("public", [
+                'token' => $token,
+                'infos' => json_decode($qrcode->infos, true),
+            ]);
+        }else{
+            abort(404);
+        }
+
 
     }
 }

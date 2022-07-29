@@ -4,7 +4,12 @@
 
 @section('content')
 
-    test
+
+
+    <h1 class="text-2xl">{{ $infos[0]['label'] . ' = ' . $infos[0]['value'] }}</h1>
+
+    <h1 class="text-2xl">{{ $infos[1]['label'] . ' = ' . $infos[1]['value'] }}</h1>
+
 
 
     <div x-data="{ openWin: false }">
@@ -66,5 +71,7 @@
             </div>
         </div>
     </main>
+
+
 
 @endsection
