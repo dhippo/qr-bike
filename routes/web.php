@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DisconnectController;
 use App\Http\Controllers\WelcomeController;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SignupController;
 use App\Http\Controllers\SigninController;
@@ -25,6 +26,10 @@ use App\Http\Livewire\TestLivewire;
 Route::get('/liv', function () {
     return view('empty');
 })->name('test.livewire');
+
+Route::get('/testo/{qrcodeid?}', function (Request $request, $qrcodeid = null) {
+    return view('empty', ['qrcodeid' => $qrcodeid]);
+})->name('testo');
 
 // *USER AUTHENTICATED* ROUTES
 Route::middleware(['auth', 'auth.session'])->group(function () {

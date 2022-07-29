@@ -51,12 +51,12 @@
 
 
             <!--====== BIG SCREEN BODY  ======-->
-            <div style="width: 100%" class="mx-auto w-full hidden xl:block ">
+            <div class="mx-auto w-full hidden xl:block ">
 
                 <div class="mt-8" >
 
                     <div  class="mt-6">
-                        <form style="margin-top: -80px; " class="space-y-6 hidden xl:block" action="{{ route('signup-post') }}" method="post">
+                        <form class="mt-[80px] space-y-6 hidden xl:block" action="{{ route('signup-post') }}" method="post">
                             {{ csrf_field() }}
                             <h1 style="width: 35vw; color: rgba(23,67,99,255); margin-left: 9vw;" class="text-white font-semibold text-6xl"> Store your data in a single application and manage your QR</h1>
                             <div style="width: 34vw" class="flex relative">
