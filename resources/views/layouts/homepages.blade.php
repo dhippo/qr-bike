@@ -30,7 +30,7 @@ use Illuminate\Routing\Route;
                         @elseif ( Request::routeIs('aboutus'))
                             <div id="bodydiv" class="h-screen w-screen bg-brandcolor-third200">
                                 @elseif ( Request::routeIs('contact'))
-                                    <div id="bodydiv" class="h-screen w-screen bg-brandcolor-fourth200">
+                                    <div id="bodydiv" class="h-screen w-screen bg-kit-green-light">
                                         @elseif ( Request::routeIs('welcome') || Request::is('/welcome/{token}'))
                                             <div id="bodydiv" class="h-screen w-screen bg-kit-red-light">
                                                 @endif
@@ -248,7 +248,7 @@ use Illuminate\Routing\Route;
 
                                         <!--======  FOOTER PART  ======-->
 
-                                        <footer class="bg-white">
+                                        <footer class="bg-white mb-0 pb-0 position-absolute">
                                             <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
                                                 <nav class="-mx-5 -my-2 flex flex-wrap justify-center"
                                                      aria-label="Footer">

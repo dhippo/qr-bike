@@ -22,8 +22,9 @@ class TestLivewire extends Component
 
     public function save($fields)
     {
+        $fieldsJSON = $fields->toJson();
 
-        return dd($fields);
+        return dd($fieldsJSON);
     }
 
     public function like()

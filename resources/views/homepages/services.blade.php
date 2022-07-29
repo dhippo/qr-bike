@@ -3,19 +3,21 @@
 @section('content')
 
     <!-- This example Tailwind  for services page -->
-    <div class="bg-brandcolor-second200">
+    <div class="bg-brandcolor-second200 mt-16">
+
+<!--        IMAGE EN DEGRADE
+
         <div aria-hidden="true" class="relative">
             <img src="https://tailwindui.com/img/ecommerce-images/product-feature-02-full-width.jpg" alt=""
                  class="w-full h-96 object-center object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-brandcolor-second200"></div>
         </div>
-
+-->
         <div class="relative -mt-12 max-w-7xl mx-auto pb-16 px-4 sm:pb-24 sm:px-6 lg:px-8">
             <div class="max-w-2xl mx-auto text-center lg:max-w-4xl">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Technical
+                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Services
                     Specifications</h2>
-                <p class="mt-4 text-gray-500">Organize is a system to keep your desk tidy and photo-worthy all day long.
-                    Procrastinate your work while you meticulously arrange items into dedicated trays.</p>
+                <p class="mt-4 text-gray-500">Organize data to keep your private data and photos all day long aside you.</p>
             </div>
 
             <dl class="mt-16 max-w-2xl mx-auto grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:max-w-none lg:grid-cols-3 lg:gap-x-8">
